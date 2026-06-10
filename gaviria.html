@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>César Gaviria 1990–1994 — Análisis de Gobierno</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#222;background:#f4f7fd;line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;background:#fff;min-height:100vh}
+a{color:#1a56db}a:hover{text-decoration:underline}
+.back-btn{display:inline-block;background:#eef2ff;color:#1a56db;border:1px solid #b4c6f7;border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:#dce8ff}
+.hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px}
+.hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
+.hero .years{font-size:11pt;color:#b4c6f7;margin-bottom:6px}
+.hero .partido{font-size:9.5pt;color:#dce8ff}
+h2{font-size:12.5pt;color:#fff;background:#0d2252;padding:7px 16px;margin:26px 0 12px;border-radius:4px;letter-spacing:.3px}
+h2.sec-logros{background:#155724}
+h2.sec-fracasos{background:#721c24}
+h3{font-size:10.5pt;color:#0d2252;border-bottom:2px solid #b4c6f7;padding-bottom:4px;margin:18px 0 8px}
+.resumen{background:#f8faff;border-left:4px solid #1a56db;padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
+.resumen strong{color:#0d2252}
+.note{font-size:8.5pt;color:#555;font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid #ccd8f0}
+.note strong{color:#333;font-style:normal}
+table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:10px 0 18px}
+th{background:#0d2252;color:#fff;padding:7px 10px;text-align:left;font-weight:600;font-size:9pt}
+td{padding:6px 10px;border-bottom:1px solid #e0e8f8}
+tr:nth-child(even) td{background:#f4f7fd}
+.g{color:#155724;font-weight:700}.r{color:#721c24;font-weight:700}.y{color:#7a4c00;font-weight:700}
+ul{padding-left:20px;margin:8px 0 14px}
+ul li{margin-bottom:7px;font-size:10pt}
+.fuentes-list{font-size:9pt}
+.fuentes-list li{margin-bottom:9px}
+.disclaimer{background:#fff8e1;border-left:4px solid #f9a825;padding:10px 14px;margin:28px 0 0;border-radius:3px;font-size:9.5pt}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pres-dark.css">
+</head>
+<body class="dark-mode">
+<div id="sidebar-overlay" onclick="toggleSidebar()"></div>
+<button id="ham-btn" type="button" onclick="toggleSidebar()" aria-label="Menú"><span></span><span></span><span></span></button>
+<button type="button" id="mob-theme-btn" class="mob-theme-btn" onclick="setTheme(document.body.classList.contains('dark-mode')?'light':'dark')" title="Cambiar tema">🌙</button>
+<nav id="sidebar">
+  <div class="sb-brand"><svg width="26" height="32" viewBox="0 0 44 52" fill="none"><clipPath id="sbsc"><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z"/></clipPath><g clip-path="url(#sbsc)"><rect x="3.5" y="3.5" width="37" height="22.5" fill="#fcd116"/><rect x="3.5" y="26" width="37" height="11.25" fill="#003087"/><rect x="3.5" y="37.25" width="37" height="11.25" fill="#ce1126"/></g><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/></svg><div class="sb-title">Indicadores<br>de Gobierno<br>Colombia</div></div>
+  <a class="sb-back" href="colombia-indicadores-gobierno.html">← Informe comparativo</a>
+  <div class="theme-toggle">
+    <button type="button" class="theme-half active" id="btn-dark-mode" onclick="setTheme('dark')" title="Modo oscuro">🌙</button>
+    <button type="button" class="theme-half"        id="btn-light-mode" onclick="setTheme('light')" title="Modo claro">☀️</button>
+  </div>
+  <div class="sb-section"><div class="sb-label">Este artículo</div>
+    <a class="sb-link" href="#sec-ind">📊 Indicadores clave</a>
+    <a class="sb-link" href="#sec-logros">✅ Logros</a>
+    <a class="sb-link" href="#sec-fracasos">❌ Fracasos</a>
+    <a class="sb-link" href="#sec-fuentes">📚 Fuentes</a>
+  </div>
+  <div class="sb-section"><div class="sb-label">Otros presidentes</div>
+    <a class="sb-link active" href="gaviria.html">Gaviria 1990–94</a>
+    <a class="sb-link" href="samper.html">Samper 1994–98</a>
+    <a class="sb-link" href="pastrana.html">Pastrana 1998–02</a>
+    <a class="sb-link" href="uribe.html">Uribe 2002–10</a>
+    <a class="sb-link" href="santos.html">Santos 2010–18</a>
+    <a class="sb-link" href="duque.html">Duque 2018–22</a>
+    <a class="sb-link" href="petro.html">Petro 2022–</a>
+  </div>
+  <div class="sb-footer">Mayo 2026 · v2.1</div>
+</nav>
+<script>
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
+(function(){var ids=['sec-ind','sec-logros','sec-fracasos','sec-fuentes'];window.addEventListener('scroll',function(){var y=window.scrollY+80;ids.forEach(function(id){var el=document.getElementById(id);var link=document.querySelector('#sidebar a[href="#'+id+'"]');if(!el||!link)return;link.classList.toggle('active',y>=el.offsetTop&&y<el.offsetTop+el.offsetHeight)})},{passive:true})})();
+window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dark-mode',d);document.body.classList.toggle('light-mode',!d);var bm=document.getElementById('btn-dark-mode'),bl=document.getElementById('btn-light-mode');if(bm)bm.classList.toggle('active',d);if(bl)bl.classList.toggle('active',!d);var mob=document.getElementById('mob-theme-btn');if(mob)mob.textContent=d?'🌙':'☀️';localStorage.setItem('pres-theme',m)};
+(function(){var s=localStorage.getItem('pres-theme')||'dark';if(s!=='dark')window.setTheme('light')})();
+</script>
+<div class="page">
+
+<a class="back-btn" href="colombia-indicadores-gobierno.html">← Volver al informe comparativo</a>
+
+<div class="hero">
+  <h1>César Gaviria Trujillo</h1>
+  <div class="years">7 de agosto de 1990 — 7 de agosto de 1994</div>
+  <div class="partido">Partido Liberal Colombiano &nbsp;·&nbsp; Presidente n.º 28 de Colombia</div>
+</div>
+
+<div class="resumen">
+  <strong>Resumen ejecutivo:</strong> El gobierno de Gaviria fue un período de transformación institucional sin precedentes. La Constitución Política de 1991 refundó el país sobre nuevas bases democráticas. Sin embargo, el mandato coincidió con el <strong>peor índice de violencia en la historia moderna de Colombia</strong>: 77.6 homicidios por cada 100.000 habitantes, impulsado por el auge simultáneo de los carteles de Medellín y Cali y la expansión guerrillera. La apertura económica acelerada modernizó la economía pero destruyó sectores industriales sin período de adaptación.
+</div>
+
+<h2 id="sec-ind">INDICADORES CLAVE DEL MANDATO</h2>
+<p class="note">Promedios de los cuatro años del mandato, salvo donde se indica. <a href="colombia-indicadores-gobierno.html">Ver comparativo completo de todos los presidentes →</a></p>
+<table>
+  <thead><tr><th>Indicador</th><th>Valor (Gaviria)</th><th>Contexto vs. otros gobiernos</th></tr></thead>
+  <tbody>
+    <tr><td>Homicidios prom. (/100K hab.)</td><td class="r">77.6</td><td class="r">⚠ El más alto de los 7 gobiernos</td></tr>
+    <tr><td>Masacres (prom. anual)</td><td class="r">308 / año</td><td class="r">⚠ El más alto de los 7 gobiernos</td></tr>
+    <tr><td>Secuestros (prom. anual)</td><td class="y">1.333 / año</td><td class="y">3.º más alto (Pastrana fue peor)</td></tr>
+    <tr><td>Desplazamiento forzado (prom. anual)</td><td class="g">95.000 / año</td><td class="g">✔ El más bajo de los 7 gobiernos</td></tr>
+    <tr><td>Crecimiento PIB promedio</td><td class="y">4.0 %</td><td class="y">3.º más alto (Uribe fue mejor)</td></tr>
+    <tr><td>PIB per cápita (fin mandato, USD)</td><td class="y">$1.721</td><td>El más bajo en términos absolutos (época)</td></tr>
+    <tr><td>Inflación prom. (IPC)</td><td class="r">28.1 %</td><td class="r">⚠ La más alta de los 7 gobiernos</td></tr>
+    <tr><td>Desempleo promedio</td><td class="g">9.6 %</td><td class="g">✔ El más bajo de los 7 gobiernos</td></tr>
+    <tr><td>Deuda pública GNC (% PIB)</td><td class="g">23 %</td><td class="g">✔ La más baja de los 7 gobiernos</td></tr>
+    <tr><td>Pobreza monetaria (fin mandato)</td><td class="r">51 %</td><td>Alta, contexto de menor medición sistemática</td></tr>
+    <tr><td>Cultivos de coca (fin mandato, ha)</td><td class="g">51.000</td><td class="g">✔ El nivel más bajo de los 7 gobiernos</td></tr>
+    <tr><td>IDH (cierre mandato)</td><td class="y">0.597</td><td>El más bajo, pero en tendencia de mejora</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sec-logros" class="sec-logros">LOGROS</h2>
+
+<ul>
+  <li><strong>Constitución Política de 1991:</strong> La carta magna más importante desde 1886. Consagró la acción de tutela, los derechos fundamentales explícitos, la Corte Constitucional, la Defensoría del Pueblo, la descentralización y la diversidad étnica. Transformó el Estado colombiano en un Estado Social de Derecho. <a href="https://www.corteconstitucional.gov.co/inicio/Constitucion%20politica%20de%20Colombia%20-%202015.pdf" target="_blank">[Texto oficial]</a></li>
+
+  <li><strong>Muerte de Pablo Escobar (diciembre de 1993):</strong> El operativo del Bloque de Búsqueda, con coordinación de inteligencia nacional e internacional, liquidó al jefe del Cartel de Medellín, el hombre más buscado del mundo. Marcó el inicio del fin del narcoterrorismo sistémico como política del crimen organizado. <a href="https://www.eltiempo.com/colombia/otras-ciudades/pablo-escobar-se-cumplen-30-anos-de-la-muerte-del-narcotraficante-734891" target="_blank">[El Tiempo]</a></li>
+
+  <li><strong>Apertura económica y modernización institucional:</strong> La eliminación de aranceles y barreras al comercio, la creación de la Superintendencia de Industria y Comercio moderna y las reformas al DANE y DANE modernizaron el Estado. El PIB creció en promedio 4.0% anual y el desempleo se mantuvo en el mínimo histórico del período moderno (9.6%).</li>
+
+  <li><strong>Deuda pública mínima histórica:</strong> Colombia terminó el mandato con una deuda pública de apenas el 23% del PIB, la más baja de cualquier gobierno posterior. La disciplina fiscal de Gaviria contrastó fuertemente con los gobiernos que le siguieron. <a href="https://www.banrep.gov.co/es/estadisticas/finanzas-publicas-gnc" target="_blank">[BanRep — Finanzas públicas]</a></li>
+
+  <li><strong>Ley 100 de 1993 — Reforma al sistema de salud y pensiones:</strong> Creó el Sistema General de Seguridad Social en Salud (SGSSS), ampliando la cobertura en salud a sectores previamente excluidos y estableciendo la competencia mixta público-privada en el sistema pensional.</li>
+
+  <li><strong>Tratados de libre comercio y reconocimiento internacional:</strong> Colombia firmó acuerdos de integración con Venezuela, Ecuador y México (G-3, 1994), posicionando al país en los mercados regionales y atrayendo inversión extranjera directa. <a href="https://www.dane.gov.co" target="_blank">[DANE]</a></li>
+
+  <li><strong>Menor nivel de cultivos de coca registrado:</strong> Con 51.000 hectáreas, Gaviria entregó el nivel más bajo de cultivos ilícitos de todos los presidentes del período estudiado, aunque la tendencia ya era creciente hacia el final del mandato. <a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">[UNODC Colombia]</a></li>
+</ul>
+
+<h2 id="sec-fracasos" class="sec-fracasos">FRACASOS Y CRÍTICAS</h2>
+
+<ul>
+  <li><strong>Peor tasa de homicidios de la historia moderna:</strong> Con 77.6 homicidios por 100.000 habitantes en promedio, y años individuales superando los 80/100K, Colombia vivió bajo Gaviria el período más violento de su historia reciente. Medellín superó 380 homicidios/100K en su peor momento. El Estado no tenía capacidad de respuesta suficiente ante la guerra simultánea contra carteles, guerrilla y paramilitares. <a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">[INMLCF FORENSIS]</a></li>
+
+  <li><strong>La Catedral — El escándalo de la "cárcel de lujo" de Escobar:</strong> En 1991, el gobierno negoció la entrega de Escobar a cambio de una cárcel de lujo en Envigado, construida según sus especificaciones y controlada por sus hombres. Escobar continuó ordenando crímenes desde allí. En julio de 1992, escapó antes de ser trasladado a una cárcel regular, en uno de los mayores escándalos de impunidad de la historia colombiana. <a href="https://www.semana.com" target="_blank">[Semana]</a></li>
+
+  <li><strong>Shock de la apertura económica:</strong> La eliminación brusca de aranceles sin períodos de transición destruyó sectores industriales (textiles, calzado, metalmecánica, electrónica de consumo) que no podían competir con importaciones asiáticas. La desindustrialización generada en este período nunca se revirtió completamente, contribuyendo a la baja complejidad económica estructural de Colombia. <a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">[BanRep — PIB sectorial]</a></li>
+
+  <li><strong>Inflación de 28.1% — la más alta del período moderno:</strong> A pesar de las reformas, la inflación se mantuvo en niveles que erosionaron el poder adquisitivo de la población, especialmente de los sectores más vulnerables. El Banco de la República apenas comenzaba a ganar autonomía real. <a href="https://www.banrep.gov.co/es/estadisticas/indice-precios-consumidor-ipc" target="_blank">[BanRep — IPC]</a></li>
+
+  <li><strong>Explosión de masacres y paramilitarismo:</strong> Con 308 masacres anuales en promedio, el gobierno no logró controlar la escalada paramilitar. Las Autodefensas Unidas (AUC en formación) operaban libremente en Córdoba, Urabá y Meta, con vínculos documentados con sectores de las Fuerzas Militares. <a href="https://www.hrw.org/americas/colombia" target="_blank">[Human Rights Watch Colombia]</a></li>
+
+  <li><strong>Expansión guerrillera:</strong> Durante el mandato de Gaviria, la FARC y el ELN consolidaron su presencia en territorios rurales y profundizaron el control de corredores estratégicos. Los secuestros comenzaron su escalada histórica (1.333/año en promedio), sentando las bases para el peor período bajo Pastrana. <a href="https://insightcrime.org/colombia/" target="_blank">[InSight Crime — Colombia]</a></li>
+</ul>
+
+<h2 id="sec-fuentes">FUENTES PRINCIPALES</h2>
+<ul class="fuentes-list">
+  <li><a href="https://www.corteconstitucional.gov.co/inicio/Constitucion%20politica%20de%20Colombia%20-%202015.pdf" target="_blank">Corte Constitucional — Constitución Política de Colombia 1991</a></li>
+  <li><a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">Instituto Nacional de Medicina Legal — FORENSIS: Datos para la vida (series históricas)</a></li>
+  <li><a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">Banco de la República — Cuentas Nacionales: PIB histórico</a></li>
+  <li><a href="https://www.banrep.gov.co/es/estadisticas/finanzas-publicas-gnc" target="_blank">Banco de la República — Finanzas Públicas GNC: deuda histórica</a></li>
+  <li><a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/mercado-laboral" target="_blank">DANE — Mercado laboral: desempleo histórico</a></li>
+  <li><a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">UNODC — Colombia Coca Cultivation Surveys</a></li>
+  <li><a href="https://www.hrw.org/world-report/1994/country-chapters/colombia" target="_blank">Human Rights Watch — World Report 1994: Colombia</a></li>
+  <li><a href="https://hdr.undp.org/data-center/country-insights" target="_blank">PNUD — Human Development Reports: Colombia IDH</a></li>
+  <li><a href="https://data.worldbank.org/country/CO" target="_blank">Banco Mundial — Colombia: datos de desarrollo</a></li>
+</ul>
+
+<div class="disclaimer">
+  <strong>⚠ Aviso:</strong> Este artículo fue elaborado con asistencia de <strong>Inteligencia Artificial</strong> (Claude, Anthropic) y puede contener errores o imprecisiones. No debe utilizarse como fuente primaria sin verificación independiente. Consulte siempre las fuentes originales citadas.
+</div>
+
+</div>
+</body>
+</html>

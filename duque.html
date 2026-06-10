@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Iván Duque 2018–2022 — Análisis de Gobierno</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#222;background:#f4f7fd;line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;background:#fff;min-height:100vh}
+a{color:#1a56db}a:hover{text-decoration:underline}
+.back-btn{display:inline-block;background:#eef2ff;color:#1a56db;border:1px solid #b4c6f7;border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:#dce8ff}
+.hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px}
+.hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
+.hero .years{font-size:11pt;color:#b4c6f7;margin-bottom:6px}
+.hero .partido{font-size:9.5pt;color:#dce8ff}
+h2{font-size:12.5pt;color:#fff;background:#0d2252;padding:7px 16px;margin:26px 0 12px;border-radius:4px;letter-spacing:.3px}
+h2.sec-logros{background:#155724}
+h2.sec-fracasos{background:#721c24}
+h2.sec-pand{background:#b45309}
+h2.sec-especial{background:#1e3a5f}
+h3{font-size:10.5pt;color:#0d2252;border-bottom:2px solid #b4c6f7;padding-bottom:4px;margin:18px 0 8px}
+.resumen{background:#f8faff;border-left:4px solid #1a56db;padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
+.resumen strong{color:#0d2252}
+.note{font-size:8.5pt;color:#555;font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid #ccd8f0}
+table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:10px 0 18px}
+th{background:#0d2252;color:#fff;padding:7px 10px;text-align:left;font-weight:600;font-size:9pt}
+td{padding:6px 10px;border-bottom:1px solid #e0e8f8}
+tr:nth-child(even) td{background:#f4f7fd}
+.g{color:#155724;font-weight:700}.r{color:#721c24;font-weight:700}.y{color:#7a4c00;font-weight:700}
+ul{padding-left:20px;margin:8px 0 14px}
+ul li{margin-bottom:7px;font-size:10pt}
+.fuentes-list{font-size:9pt}
+.fuentes-list li{margin-bottom:9px}
+.pand-box{background:#fffbeb;border-left:4px solid #d97706;padding:14px 18px;margin:16px 0 20px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
+.pand-box strong{color:#b45309}
+.spec-box{background:#eff6ff;border-left:4px solid #1d4ed8;padding:14px 18px;margin:16px 0 20px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
+.spec-box strong{color:#1e3a5f}
+.covid-compare{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:12px 0}
+.cov-col{border:1px solid #e0e8f8;border-radius:6px;overflow:hidden}
+.cov-col .cov-hd{padding:7px 10px;font-size:9pt;font-weight:700;text-align:center;color:#fff}
+.cov-col .cov-hd.pre{background:#155724}
+.cov-col .cov-hd.mid{background:#721c24}
+.cov-col .cov-hd.post{background:#1e3a5f}
+.cov-col .cov-row{padding:5px 10px;font-size:9pt;border-bottom:1px solid #f0f4ff}
+.cov-col .cov-row .lbl{color:#555;font-size:8.5pt}
+.disclaimer{background:#fff8e1;border-left:4px solid #f9a825;padding:10px 14px;margin:28px 0 0;border-radius:3px;font-size:9.5pt}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pres-dark.css">
+</head>
+<body class="dark-mode">
+<div id="sidebar-overlay" onclick="toggleSidebar()"></div>
+<button id="ham-btn" type="button" onclick="toggleSidebar()" aria-label="Menú"><span></span><span></span><span></span></button>
+<button type="button" id="mob-theme-btn" class="mob-theme-btn" onclick="setTheme(document.body.classList.contains('dark-mode')?'light':'dark')" title="Cambiar tema">🌙</button>
+<nav id="sidebar">
+  <div class="sb-brand"><svg width="26" height="32" viewBox="0 0 44 52" fill="none"><clipPath id="sbsc"><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z"/></clipPath><g clip-path="url(#sbsc)"><rect x="3.5" y="3.5" width="37" height="22.5" fill="#fcd116"/><rect x="3.5" y="26" width="37" height="11.25" fill="#003087"/><rect x="3.5" y="37.25" width="37" height="11.25" fill="#ce1126"/></g><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/></svg><div class="sb-title">Indicadores<br>de Gobierno<br>Colombia</div></div>
+  <a class="sb-back" href="colombia-indicadores-gobierno.html">← Informe comparativo</a>
+  <div class="theme-toggle">
+    <button type="button" class="theme-half active" id="btn-dark-mode" onclick="setTheme('dark')" title="Modo oscuro">🌙</button>
+    <button type="button" class="theme-half"        id="btn-light-mode" onclick="setTheme('light')" title="Modo claro">☀️</button>
+  </div>
+  <div class="sb-section"><div class="sb-label">Este artículo</div>
+    <a class="sb-link" href="#sec-ind">📊 Indicadores clave</a>
+    <a class="sb-link" href="#sec-logros">✅ Logros</a>
+    <a class="sb-link" href="#sec-fracasos">❌ Fracasos</a>
+    <a class="sb-link" href="#sec-pand">🦠 Impacto COVID-19</a>
+    <a class="sb-link" href="#sec-especial">🔥 Fuego cruzado</a>
+    <a class="sb-link" href="#sec-fuentes">📚 Fuentes</a>
+  </div>
+  <div class="sb-section"><div class="sb-label">Otros presidentes</div>
+    <a class="sb-link" href="gaviria.html">Gaviria 1990–94</a>
+    <a class="sb-link" href="samper.html">Samper 1994–98</a>
+    <a class="sb-link" href="pastrana.html">Pastrana 1998–02</a>
+    <a class="sb-link" href="uribe.html">Uribe 2002–10</a>
+    <a class="sb-link" href="santos.html">Santos 2010–18</a>
+    <a class="sb-link active" href="duque.html">Duque 2018–22</a>
+    <a class="sb-link" href="petro.html">Petro 2022–</a>
+  </div>
+  <div class="sb-footer">Mayo 2026 · v2.1</div>
+</nav>
+<script>
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
+(function(){var ids=['sec-ind','sec-logros','sec-fracasos','sec-pand','sec-especial','sec-fuentes'];window.addEventListener('scroll',function(){var y=window.scrollY+80;ids.forEach(function(id){var el=document.getElementById(id);var link=document.querySelector('#sidebar a[href="#'+id+'"]');if(!el||!link)return;link.classList.toggle('active',y>=el.offsetTop&&y<el.offsetTop+el.offsetHeight)})},{passive:true})})();
+window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dark-mode',d);document.body.classList.toggle('light-mode',!d);var bm=document.getElementById('btn-dark-mode'),bl=document.getElementById('btn-light-mode');if(bm)bm.classList.toggle('active',d);if(bl)bl.classList.toggle('active',!d);var mob=document.getElementById('mob-theme-btn');if(mob)mob.textContent=d?'🌙':'☀️';localStorage.setItem('pres-theme',m)};
+(function(){var s=localStorage.getItem('pres-theme')||'dark';if(s!=='dark')window.setTheme('light')})();
+</script>
+<div class="page">
+
+<a class="back-btn" href="colombia-indicadores-gobierno.html">← Volver al informe comparativo</a>
+
+<div class="hero">
+  <h1>Iván Duque Márquez</h1>
+  <div class="years">7 de agosto de 2018 — 7 de agosto de 2022</div>
+  <div class="partido">Centro Democrático &nbsp;·&nbsp; Presidente n.º 33 de Colombia</div>
+</div>
+
+<div class="resumen">
+  <strong>Resumen ejecutivo:</strong> El mandato de Duque fue definido por dos fuerzas externas de magnitud histórica: la <strong>pandemia de COVID-19</strong> (2020-2021), que causó la peor caída del PIB en la historia moderna de Colombia (−6.8% en 2020) y disparó temporalmente la pobreza y el desempleo; y la <strong>desestabilización sistemática</strong> por parte de las disidencias de las FARC y el ELN, financiadas por la economía cocalera heredada del período Santos. El paro nacional de 2021 paralizó el país durante semanas. A pesar de ello, Duque logró: la tasa de homicidios más baja de la historia (26.4/100K), un récord de reservas internacionales ($56.7B), avances en infraestructura vial y la mayor reducción de deforestación del período.
+</div>
+
+<h2 id="sec-ind">INDICADORES CLAVE DEL MANDATO</h2>
+<p class="note">Promedios del mandato (2018–2022), salvo donde se indica. <a href="colombia-indicadores-gobierno.html">Ver comparativo completo →</a></p>
+<table>
+  <thead><tr><th>Indicador</th><th>Valor (Duque)</th><th>Contexto vs. otros gobiernos</th></tr></thead>
+  <tbody>
+    <tr><td>Homicidios prom. (/100K hab.)</td><td class="g">26.4</td><td class="g">✔ El más bajo de los 7 gobiernos (mínimo histórico)</td></tr>
+    <tr><td>Masacres (prom. anual)</td><td class="y">75 / año</td><td class="y">Empeoró vs. Santos (56); ELN y disidencias FARC</td></tr>
+    <tr><td>Secuestros (prom. anual)</td><td class="g">204 / año</td><td class="g">Siguió bajando (249 bajo Santos)</td></tr>
+    <tr><td>Desplazamiento forzado</td><td class="r">335.000 / año</td><td class="r">Aumentó significativamente vs. Santos (217K)</td></tr>
+    <tr><td>Crecimiento PIB promedio</td><td class="y">3.6 %</td><td class="y">Igual a Santos en prom.; pero −6.8% en 2020</td></tr>
+    <tr><td>PIB per cápita (fin mandato, USD)</td><td class="g">$6.663</td><td>Casi igual a Santos (COVID distorsionó)</td></tr>
+    <tr><td>Inflación prom. (IPC)</td><td class="y">4.7 %</td><td>Moderada, pero aceleró al final (2022: 13.1%)</td></tr>
+    <tr><td>Desempleo promedio</td><td class="r">12.8 %</td><td class="r">Subió vs. Santos (9.7%); COVID en 2020: 15.9%</td></tr>
+    <tr><td>Deuda pública GNC (% PIB)</td><td class="r">60 %</td><td class="r">Subió de 50% a 60%; COVID forzó gasto masivo</td></tr>
+    <tr><td>Pobreza monetaria (fin mandato)</td><td class="y">36.6 %</td><td class="y">Rebotó de 27% por COVID; 36.6% al cierre</td></tr>
+    <tr><td>Cultivos de coca (fin mandato, ha)</td><td class="r">204.000</td><td class="r">Nuevo récord (169K Santos → 204K Duque)</td></tr>
+    <tr><td>Reservas internacionales</td><td class="g">$56.7 B</td><td class="g">✔ Récord histórico hasta ese momento</td></tr>
+    <tr><td>Deforestación (prom. anual, ha)</td><td class="g">158.000</td><td class="g">✔ La más baja — tendencia continúa</td></tr>
+    <tr><td>ECI HS92 (prom. mandato)</td><td class="r">0.15</td><td class="r">⚠ Mínimo histórico: COVID y restricciones comerciales</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sec-logros" class="sec-logros">LOGROS</h2>
+
+<ul>
+  <li><strong>Tasa de homicidios más baja de la historia moderna (26.4/100K):</strong> Duque entregó el país con la menor tasa de homicidios registrada en las últimas cinco décadas, continuando la tendencia de reducción iniciada por Uribe y continuada por Santos. <a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">[INMLCF FORENSIS]</a></li>
+
+  <li><strong>Gestión de la pandemia — Ingreso Solidario y apoyos económicos:</strong> El gobierno implementó transferencias de emergencia (Ingreso Solidario, $160.000 mensuales a 3 millones de hogares), subsidios de nómina (PAEF, que protegió 2.5 millones de empleos), créditos garantizados por el Estado (Colombia Responde) y vacunación masiva. Sin esta respuesta, la caída económica habría sido aún peor. <a href="https://www.dnp.gov.co" target="_blank">[DNP — Programas COVID]</a></li>
+
+  <li><strong>Récord de reservas internacionales ($56.7 B):</strong> Las reservas crecieron a niveles nunca vistos en la historia de Colombia, proporcionando un colchón macroeconómico que amortigó los efectos de la pandemia y mantuvo la estabilidad del peso. <a href="https://www.banrep.gov.co/es/estadisticas/reservas-internacionales" target="_blank">[BanRep — Reservas]</a></li>
+
+  <li><strong>Continuación de la infraestructura vial — 19.200 km:</strong> La red vial pavimentada creció a 19.200 km, con avances en proyectos 4G (cuarta generación de concesiones): Autopistas para la Prosperidad, Ruta del Sol y varios tramos andinos. <a href="https://www.ani.gov.co" target="_blank">[ANI — Agencia Nacional de Infraestructura]</a></li>
+
+  <li><strong>Menor deforestación del período estudiado — 158.000 ha/año:</strong> A pesar de las dificultades de gobernanza en zonas de conflicto, la tasa de deforestación continuó bajando, con la Amazonía recibiendo mayor atención institucional. <a href="https://www.ideam.gov.co" target="_blank">[IDEAM — Deforestación]</a></li>
+
+  <li><strong>Política de paz con legalidad — sometimiento de estructuras criminales:</strong> El gobierno promovió el sometimiento a la justicia de estructuras del Clan del Golfo y otras bandas criminales, con operativos que capturaron líderes como "Otoniel" (2021, mayor captura de narcotraficante desde Escobar). <a href="https://www.fiscalia.gov.co" target="_blank">[Fiscalía General de la Nación]</a></li>
+</ul>
+
+<h2 id="sec-fracasos" class="sec-fracasos">FRACASOS Y CRÍTICAS</h2>
+
+<ul>
+  <li><strong>Explosión de la coca — nuevo récord (204.000 ha):</strong> A pesar de erradicaciones récord (130.000 ha en 2021 según UNODC), los cultivos siguieron creciendo por la resurgencia de siembras en otras zonas. La decisión de Santos de suspender fumigaciones con glifosato (nunca revertida) limitó severamente las herramientas disponibles. <a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">[UNODC]</a></li>
+
+  <li><strong>Paro Nacional 2021 — 62 días de bloqueos:</strong> Entre abril y junio de 2021, protestas contra la reforma tributaria y la reforma a la salud evolucionaron en bloqueos de vías y violencia. La brutalidad policial en algunos casos fue documentada por la CIDH; también se documentaron infiltraciones de grupos armados en las protestas. El costo económico del paro superó $2 billones de pesos. <a href="https://www.eltiempo.com" target="_blank">[El Tiempo — Paro 2021]</a></li>
+
+  <li><strong>Desplazamiento forzado en aumento — 335.000/año:</strong> El incremento del desplazamiento refleja la activación del ELN y las disidencias de las FARC en territorios donde el Acuerdo de Paz creó vacíos de poder. Nariño, Cauca, Chocó y Norte de Santander concentraron la mayoría de los eventos. <a href="https://www.acnur.org/colombia.html" target="_blank">[ACNUR Colombia]</a></li>
+
+  <li><strong>ECI en mínimo histórico — complejidad económica (0.15):</strong> La crisis del COVID-19 colapsó el comercio exterior manufacturero. El índice de complejidad económica cayó al valor más bajo del período estudiado. La dependencia en materias primas quedó expuesta. <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/XTAQMC" target="_blank">[Harvard Dataverse — ECI]</a></li>
+
+  <li><strong>Reforma tributaria retirada (2021) — señal de debilidad institucional:</strong> El gobierno presentó y luego retiró la reforma tributaria "Ley de Solidaridad Sostenible" ante las protestas masivas, debilitando la posición fiscal del Estado justo cuando más recursos necesitaba para la reactivación post-COVID. <a href="https://www.minhacienda.gov.co" target="_blank">[Ministerio de Hacienda]</a></li>
+</ul>
+
+<h2 id="sec-pand" class="sec-pand">EL IMPACTO DE LA PANDEMIA EN LOS INDICADORES</h2>
+<p class="note">Análisis 2019 (pre-COVID) vs. 2020 (peor año) vs. 2022 (cierre mandato) para aislar el efecto COVID</p>
+
+<div class="pand-box">
+  <strong>Contexto:</strong> El COVID-19 golpeó Colombia entre marzo de 2020 y mediados de 2021. El país tuvo una de las cuarentenas más largas de América Latina (más de 100 días continuos). Varios indicadores del gobierno Duque reflejan este shock exógeno más que la gestión propia. Aislar ambos efectos es indispensable para evaluar el gobierno con justicia.
+</div>
+
+<h3>Comparativo: pre-COVID (2019) vs. peor año COVID (2020) vs. cierre mandato (2022)</h3>
+<div class="covid-compare">
+  <div class="cov-col">
+    <div class="cov-hd pre">2019 (Pre-COVID)</div>
+    <div class="cov-row"><div class="lbl">PIB crecimiento</div><strong>+3.2%</strong></div>
+    <div class="cov-row"><div class="lbl">Desempleo</div><strong>10.5%</strong></div>
+    <div class="cov-row"><div class="lbl">Pobreza monetaria</div><strong>35.7%</strong></div>
+    <div class="cov-row"><div class="lbl">Deuda % PIB</div><strong>49.8%</strong></div>
+    <div class="cov-row"><div class="lbl">Homicidios /100K</div><strong>25.0</strong></div>
+  </div>
+  <div class="cov-col">
+    <div class="cov-hd mid">2020 (Peor año COVID)</div>
+    <div class="cov-row"><div class="lbl">PIB crecimiento</div><strong class="r">−6.8%</strong></div>
+    <div class="cov-row"><div class="lbl">Desempleo</div><strong class="r">15.9%</strong></div>
+    <div class="cov-row"><div class="lbl">Pobreza monetaria</div><strong class="r">42.5%</strong></div>
+    <div class="cov-row"><div class="lbl">Deuda % PIB</div><strong class="r">65.0%</strong></div>
+    <div class="cov-row"><div class="lbl">Homicidios /100K</div><strong>25.3</strong></div>
+  </div>
+  <div class="cov-col">
+    <div class="cov-hd post">2022 (Cierre mandato)</div>
+    <div class="cov-row"><div class="lbl">PIB crecimiento</div><strong class="g">+7.5%</strong></div>
+    <div class="cov-row"><div class="lbl">Desempleo</div><strong class="y">11.2%</strong></div>
+    <div class="cov-row"><div class="lbl">Pobreza monetaria</div><strong class="y">36.6%</strong></div>
+    <div class="cov-row"><div class="lbl">Deuda % PIB</div><strong class="y">60.0%</strong></div>
+    <div class="cov-row"><div class="lbl">Homicidios /100K</div><strong class="g">24.3</strong></div>
+  </div>
+</div>
+
+<p style="font-size:10pt;margin:10px 0 14px"><strong>Lectura del comparativo:</strong> En 2019 (antes de la pandemia), el gobierno Duque mostraba indicadores macroeconómicos saludables y en línea con Santos. El colapso de 2020 es un shock exógeno atribuible al COVID-19, no a la gestión económica. Para 2022, la recuperación había sido notable: el PIB creció 7.5% (el mayor crecimiento en décadas), la pobreza se redujo 5.9 puntos vs. 2020, y el desempleo bajó a 11.2%. La deuda quedó elevada porque el gasto de emergencia fue inevitable y acertado. <a href="https://americaeconomica.com/noticia/economia/el-pib-de-colombia-cae-un-68-en-2020-la-mayor-contraccion-de-su-historia-a-causa-del-covid-19.html" target="_blank">[América Economía — PIB Colombia 2020]</a></p>
+
+<h3>Indicadores que NO son culpa del COVID</h3>
+<ul>
+  <li><strong>Coca en 204.000 ha:</strong> El COVID no explica el crecimiento de los cultivos ilícitos, que dependió de la falta de fumigaciones y la expansión de las disidencias.</li>
+  <li><strong>Desplazamiento en 335.000/año:</strong> Tampoco es un efecto COVID — refleja la activación del ELN y el EMC de las FARC en el post-acuerdo.</li>
+  <li><strong>Masacres aumentando vs. Santos:</strong> Este deterioro en seguridad rural es independiente de la pandemia.</li>
+</ul>
+
+<h2 id="sec-especial" class="sec-especial">GOBERNAR BAJO FUEGO CRUZADO</h2>
+<p class="note">El rol de las disidencias de las FARC y el ELN en la desestabilización 2018–2022</p>
+
+<div class="spec-box">
+  <strong>El contexto:</strong> Las disidencias de las FARC (EMC e Iván Márquez/Segunda Marquetalia) y el ELN, financiados con ingresos de la coca expandida durante el gobierno Santos, ejecutaron una campaña sistemática de desestabilización contra el gobierno Duque. Analistas de InSight Crime, la Fundación Paz y Reconciliación y la FIP documentaron más de 300 atentados a infraestructura entre 2019 y 2022.
+</div>
+
+<h3>Atentados e interferencia documentados</h3>
+<ul>
+  <li><strong>Oleoducto Caño Limón-Coveñas:</strong> Más de 60 voladuras en el mandato, causando derrames y pérdidas en producción petrolera estimadas en cientos de millones de dólares.</li>
+  <li><strong>Torres eléctricas y vías:</strong> El ELN y el EMC ejecutaron bloqueos de vías y ataques a la infraestructura energética especialmente en Arauca, Cauca y Norte de Santander.</li>
+  <li><strong>Paro armado del ELN (2021):</strong> Coincidió con el paro nacional civil, amplificando el impacto y complicando la distinción entre protesta legítima y presión armada.</li>
+  <li><strong>Financiamiento de candidatos locales (2019-2022):</strong> Investigaciones de InSight Crime y la Fundación Paz y Reconciliación documentan el control que ejercen los grupos armados sobre la política electoral en municipios del Pacífico, Cauca y Norte de Santander. <a href="https://insightcrime.org/news/colombia-criminal-groups-preparing-presidential-elections/" target="_blank">[InSight Crime 2022]</a></li>
+</ul>
+
+<p style="font-size:10pt;margin:10px 0">Los ingresos de la coca —estimados entre $1.5 y $2 mil millones USD anuales para el conjunto de grupos armados colombianos— proporcionaron la base económica para sostener estas operaciones durante todo el mandato Duque. Es una herencia directa del fracaso en implementar el Punto 4 del Acuerdo de Paz (sustitución de cultivos). <a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">[UNODC]</a></p>
+
+<h2 id="sec-fuentes">FUENTES PRINCIPALES</h2>
+<ul class="fuentes-list">
+  <li><a href="https://americaeconomica.com/noticia/economia/el-pib-de-colombia-cae-un-68-en-2020-la-mayor-contraccion-de-su-historia-a-causa-del-covid-19.html" target="_blank">América Economía — PIB Colombia cae −6.8% en 2020</a></li>
+  <li><a href="https://www.eltiempo.com/economia/sectores/economia-en-pandemia-como-ha-caido-el-pib-de-colombia-frente-a-otros-paises-del-mundo-531918" target="_blank">El Tiempo — Economía en pandemia: caída del PIB comparada</a></li>
+  <li><a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">UNODC — Colombia Coca Cultivation Surveys 2018-2022</a></li>
+  <li><a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">INMLCF — FORENSIS: homicidios, masacres 2018-2022</a></li>
+  <li><a href="https://www.banrep.gov.co/es/estadisticas" target="_blank">Banco de la República — Estadísticas macroeconómicas 2018-2022</a></li>
+  <li><a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida" target="_blank">DANE — Pobreza monetaria 2019-2022 (impacto COVID)</a></li>
+  <li><a href="https://insightcrime.org/news/colombia-criminal-groups-preparing-presidential-elections/" target="_blank">InSight Crime — Colombia's Criminal Groups: Elections 2022</a></li>
+  <li><a href="https://www.hrw.org/world-report/2022/country-chapters/colombia" target="_blank">Human Rights Watch — World Report 2022: Colombia</a></li>
+  <li><a href="https://www.acnur.org/colombia.html" target="_blank">ACNUR — Desplazamiento forzado Colombia 2018-2022</a></li>
+  <li><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/XTAQMC" target="_blank">Harvard Dataverse — ECI Colombia 2018-2022</a></li>
+  <li><a href="https://www.ani.gov.co" target="_blank">ANI — Proyectos de infraestructura vial 4G</a></li>
+</ul>
+
+<div class="disclaimer">
+  <strong>⚠ Aviso:</strong> Este artículo fue elaborado con asistencia de <strong>Inteligencia Artificial</strong> (Claude, Anthropic) y puede contener errores o imprecisiones. No debe utilizarse como fuente primaria sin verificación independiente. Consulte siempre las fuentes originales citadas.
+</div>
+
+</div>
+</body>
+</html>

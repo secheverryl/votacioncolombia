@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Álvaro Uribe 2002–2010 — Análisis de Gobierno</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#222;background:#f4f7fd;line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;background:#fff;min-height:100vh}
+a{color:#1a56db}a:hover{text-decoration:underline}
+.back-btn{display:inline-block;background:#eef2ff;color:#1a56db;border:1px solid #b4c6f7;border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:#dce8ff}
+.hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px}
+.hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
+.hero .years{font-size:11pt;color:#b4c6f7;margin-bottom:6px}
+.hero .partido{font-size:9.5pt;color:#dce8ff}
+h2{font-size:12.5pt;color:#fff;background:#0d2252;padding:7px 16px;margin:26px 0 12px;border-radius:4px;letter-spacing:.3px}
+h2.sec-logros{background:#155724}
+h2.sec-fracasos{background:#721c24}
+h2.sec-especial{background:#4a1d96}
+h3{font-size:10.5pt;color:#0d2252;border-bottom:2px solid #b4c6f7;padding-bottom:4px;margin:18px 0 8px}
+.resumen{background:#f8faff;border-left:4px solid #1a56db;padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
+.resumen strong{color:#0d2252}
+.note{font-size:8.5pt;color:#555;font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid #ccd8f0}
+table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:10px 0 18px}
+th{background:#0d2252;color:#fff;padding:7px 10px;text-align:left;font-weight:600;font-size:9pt}
+td{padding:6px 10px;border-bottom:1px solid #e0e8f8}
+tr:nth-child(even) td{background:#f4f7fd}
+.g{color:#155724;font-weight:700}.r{color:#721c24;font-weight:700}.y{color:#7a4c00;font-weight:700}
+ul{padding-left:20px;margin:8px 0 14px}
+ul li{margin-bottom:7px;font-size:10pt}
+.fuentes-list{font-size:9pt}
+.fuentes-list li{margin-bottom:9px}
+.spec-box{background:#f5f0ff;border-left:4px solid #7c3aed;padding:14px 18px;margin:16px 0 20px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
+.spec-box strong{color:#4a1d96}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+.stat-card{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;padding:12px;text-align:center}
+.stat-card .val{font-size:18pt;font-weight:700;color:#155724}
+.stat-card .lbl{font-size:8.5pt;color:#555;margin-top:3px}
+.stat-card.neg{background:#fdf2f8;border-color:#f9a8d4}
+.stat-card.neg .val{color:#9d174d}
+.disclaimer{background:#fff8e1;border-left:4px solid #f9a825;padding:10px 14px;margin:28px 0 0;border-radius:3px;font-size:9.5pt}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pres-dark.css">
+</head>
+<body class="dark-mode">
+<div id="sidebar-overlay" onclick="toggleSidebar()"></div>
+<button id="ham-btn" type="button" onclick="toggleSidebar()" aria-label="Menú"><span></span><span></span><span></span></button>
+<button type="button" id="mob-theme-btn" class="mob-theme-btn" onclick="setTheme(document.body.classList.contains('dark-mode')?'light':'dark')" title="Cambiar tema">🌙</button>
+<nav id="sidebar">
+  <div class="sb-brand"><svg width="26" height="32" viewBox="0 0 44 52" fill="none"><clipPath id="sbsc"><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z"/></clipPath><g clip-path="url(#sbsc)"><rect x="3.5" y="3.5" width="37" height="22.5" fill="#fcd116"/><rect x="3.5" y="26" width="37" height="11.25" fill="#003087"/><rect x="3.5" y="37.25" width="37" height="11.25" fill="#ce1126"/></g><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/></svg><div class="sb-title">Indicadores<br>de Gobierno<br>Colombia</div></div>
+  <a class="sb-back" href="colombia-indicadores-gobierno.html">← Informe comparativo</a>
+  <div class="theme-toggle">
+    <button type="button" class="theme-half active" id="btn-dark-mode" onclick="setTheme('dark')" title="Modo oscuro">🌙</button>
+    <button type="button" class="theme-half"        id="btn-light-mode" onclick="setTheme('light')" title="Modo claro">☀️</button>
+  </div>
+  <div class="sb-section"><div class="sb-label">Este artículo</div>
+    <a class="sb-link" href="#sec-ind">📊 Indicadores clave</a>
+    <a class="sb-link" href="#sec-logros">✅ Logros</a>
+    <a class="sb-link" href="#sec-fracasos">❌ Fracasos</a>
+    <a class="sb-link" href="#sec-especial">⚖ Los datos vs. la narrativa</a>
+    <a class="sb-link" href="#sec-fuentes">📚 Fuentes</a>
+  </div>
+  <div class="sb-section"><div class="sb-label">Otros presidentes</div>
+    <a class="sb-link" href="gaviria.html">Gaviria 1990–94</a>
+    <a class="sb-link" href="samper.html">Samper 1994–98</a>
+    <a class="sb-link" href="pastrana.html">Pastrana 1998–02</a>
+    <a class="sb-link active" href="uribe.html">Uribe 2002–10</a>
+    <a class="sb-link" href="santos.html">Santos 2010–18</a>
+    <a class="sb-link" href="duque.html">Duque 2018–22</a>
+    <a class="sb-link" href="petro.html">Petro 2022–</a>
+  </div>
+  <div class="sb-footer">Mayo 2026 · v2.1</div>
+</nav>
+<script>
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
+(function(){var ids=['sec-ind','sec-logros','sec-fracasos','sec-especial','sec-fuentes'];window.addEventListener('scroll',function(){var y=window.scrollY+80;ids.forEach(function(id){var el=document.getElementById(id);var link=document.querySelector('#sidebar a[href="#'+id+'"]');if(!el||!link)return;link.classList.toggle('active',y>=el.offsetTop&&y<el.offsetTop+el.offsetHeight)})},{passive:true})})();
+window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dark-mode',d);document.body.classList.toggle('light-mode',!d);var bm=document.getElementById('btn-dark-mode'),bl=document.getElementById('btn-light-mode');if(bm)bm.classList.toggle('active',d);if(bl)bl.classList.toggle('active',!d);var mob=document.getElementById('mob-theme-btn');if(mob)mob.textContent=d?'🌙':'☀️';localStorage.setItem('pres-theme',m)};
+(function(){var s=localStorage.getItem('pres-theme')||'dark';if(s!=='dark')window.setTheme('light')})();
+</script>
+<div class="page">
+
+<a class="back-btn" href="colombia-indicadores-gobierno.html">← Volver al informe comparativo</a>
+
+<div class="hero">
+  <h1>Álvaro Uribe Vélez</h1>
+  <div class="years">7 de agosto de 2002 — 7 de agosto de 2010</div>
+  <div class="partido">Partido Colombia Democrática / Partido de la U &nbsp;·&nbsp; Presidente n.º 31 de Colombia (dos períodos)</div>
+</div>
+
+<div class="resumen">
+  <strong>Resumen ejecutivo:</strong> El gobierno de Uribe representó la mayor reducción de violencia en la historia contemporánea de Colombia: homicidios cayeron −39%, masacres −55%, secuestros −74%. La Política de Seguridad Democrática devolvió el control estatal a cientos de municipios y permitió la desmovilización de 31.000 combatientes de las AUC. Simultáneamente, el gobierno enfrentó el escándalo de los <strong>falsos positivos</strong> (ejecuciones extrajudiciales documentadas por la JEP) y el escándalo de la parapolítica (vínculos entre congresistas y paramilitares). Los indicadores económicos también fueron los mejores del período moderno en varios frentes: PIB 4.6%, desempleo bajo de 16.5% a 12.2%, pobreza de 52% a 37.2%.
+</div>
+
+<h2 id="sec-ind">INDICADORES CLAVE DEL MANDATO</h2>
+<p class="note">Promedios del mandato (2002–2010), salvo donde se indica. <a href="colombia-indicadores-gobierno.html">Ver comparativo completo →</a></p>
+<table>
+  <thead><tr><th>Indicador</th><th>Valor (Uribe)</th><th>Contexto vs. otros gobiernos</th></tr></thead>
+  <tbody>
+    <tr><td>Homicidios prom. (/100K hab.)</td><td class="g">38.6</td><td class="g">✔ 4.º — bajó de 63.5 (Pastrana) a 38.6</td></tr>
+    <tr><td>Masacres (prom. anual)</td><td class="g">75 / año</td><td class="g">✔ Bajó de 167 (Pastrana) a 75 (-55%)</td></tr>
+    <tr><td>Secuestros (prom. anual)</td><td class="g">818 / año</td><td class="g">✔ Bajó de 3.128 (Pastrana) a 818 (-74%)</td></tr>
+    <tr><td>Desplazamiento forzado</td><td class="y">297.000 / año</td><td class="y">Persistió alto; reconfiguraciones territoriales</td></tr>
+    <tr><td>Crecimiento PIB promedio</td><td class="g">4.6 %</td><td class="g">✔ El más alto de los 7 gobiernos</td></tr>
+    <tr><td>PIB per cápita (fin mandato, USD)</td><td class="g">$6.291</td><td class="g">✔ Triplicó el PIB per cápita en dólares (vs. Pastrana $2.065)</td></tr>
+    <tr><td>Inflación prom. (IPC)</td><td class="g">5.2 %</td><td class="g">✔ Una de las más bajas (3.er gobierno más bajo)</td></tr>
+    <tr><td>Desempleo promedio</td><td class="y">12.2 %</td><td class="y">Bajó de 16.5% (Pastrana) a 12.2%</td></tr>
+    <tr><td>Deuda pública GNC (% PIB)</td><td class="g">39 %</td><td class="g">Bajó de 47% (Pastrana) a 39%</td></tr>
+    <tr><td>Pobreza monetaria (fin mandato)</td><td class="g">37.2 %</td><td class="g">✔ Bajó de 52% a 37.2% (-15 puntos)</td></tr>
+    <tr><td>Cultivos de coca (fin mandato, ha)</td><td class="g">62.000</td><td class="g">✔ Bajó de 102K a 62K (-39%)</td></tr>
+    <tr><td>IDH (cierre mandato)</td><td class="g">0.689</td><td class="g">✔ Mejora de 6 puntos sobre Pastrana (0.649)</td></tr>
+    <tr><td>IED per cápita (USD)</td><td class="g">$216</td><td class="g">✔ Cuadruplicó la inversión frente a Pastrana ($99)</td></tr>
+    <tr><td>IPC Corrupción (0-100)</td><td class="y">36</td><td class="y">Mejoró desde Samper (22) y Gaviria (27)</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sec-logros" class="sec-logros">LOGROS</h2>
+
+<ul>
+  <li><strong>Política de Seguridad Democrática — La mayor reducción de violencia en la historia reciente:</strong> La estrategia combinó recuperación territorial, interdicción, incentivos a la desmovilización y fortalecimiento de la Fuerza Pública. Para 2008 las carreteras colombianas eran seguras por primera vez en décadas, el turismo interno resurgió y las FARC habían perdido más del 50% de su pie de fuerza estimado. <a href="https://www.mindefensa.gov.co" target="_blank">[Ministerio de Defensa]</a></li>
+
+  <li><strong>Desmovilización de las AUC — 31.671 combatientes:</strong> La Ley de Justicia y Paz (2005) facilitó la desmovilización de los bloques paramilitares de las Autodefensas Unidas de Colombia. Aunque el proceso tuvo graves falencias de verdad y reparación, eliminó la estructura más grande de paramilitarismo colectivo de América Latina. <a href="https://www.jep.gov.co" target="_blank">[JEP]</a></li>
+
+  <li><strong>Operación Jaque (2008) y rescate de rehenes emblemáticos:</strong> La Operación Jaque rescató sin un solo disparo a Íngrid Betancourt, tres contratistas estadounidenses y 11 militares secuestrados, en la operación de inteligencia militar más espectacular de la historia colombiana. <a href="https://www.eltiempo.com/colombia/otras-ciudades/operacion-jaque-el-dia-que-colombia-enganio-a-las-farc-para-rescatar-a-betancourt-y-mas-rehenes-601068" target="_blank">[El Tiempo]</a></li>
+
+  <li><strong>Recuperación económica sin precedentes:</strong> El PIB creció en promedio 4.6% anual, la confianza inversionista se disparó, la IED per cápita pasó de $99 (Pastrana) a $216, y el PIB per cápita se triplicó en dólares (de $2.065 a $6.291). Colombia fue incluida en el grupo de mercados emergentes de alto potencial. <a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">[BanRep — PIB]</a></li>
+
+  <li><strong>Reducción de la pobreza — 15 puntos porcentuales:</strong> La pobreza monetaria bajó de 52% a 37.2% durante el mandato, la reducción más rápida en la historia reciente, combinando crecimiento económico, programas sociales (Familias en Acción ampliado) y recuperación del mercado laboral. <a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida" target="_blank">[DANE — Pobreza]</a></li>
+
+  <li><strong>Fortalecimiento institucional de las Fuerzas Militares:</strong> El pie de fuerza creció de 313.000 a más de 430.000 efectivos. Se crearon las Fuerzas de Tarea Conjunta, se modernizó la inteligencia (CTI, DIRAN) y se profesionalizó el ejército con apoyo del Plan Colombia. <a href="https://www.mindefensa.gov.co" target="_blank">[Ministerio de Defensa]</a></li>
+
+  <li><strong>Plan Colombia — Segunda fase: resultados en reducción de coca:</strong> Los cultivos de coca bajaron de 102.000 ha (Pastrana) a 62.000 ha (2010), la menor cifra desde mediados de los 90. Las aspersiones aéreas y la erradicación manual forzada alcanzaron su máxima efectividad. <a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">[UNODC]</a></li>
+
+  <li><strong>Ley de Víctimas y Restitución de Tierras (marco inicial):</strong> Aunque la ley fue promulgada bajo Santos, el marco jurídico de Justicia y Paz de Uribe fue el primer paso en reconocimiento de víctimas del conflicto armado en Colombia. <a href="https://www.unidadvictimas.gov.co" target="_blank">[Unidad de Víctimas]</a></li>
+</ul>
+
+<h2 id="sec-fracasos" class="sec-fracasos">FRACASOS Y CRÍTICAS</h2>
+
+<ul>
+  <li><strong>Falsos positivos — Ejecuciones extrajudiciales (2002–2008):</strong> La JEP documentó 6.402 casos de civiles presentados fraudulentamente como guerrilleros muertos en combate ("falsos positivos"), principalmente entre 2006 y 2008, bajo presión institucional por resultados de bajas. Los casos se concentraron en la Brigada IV, la Brigada XIV y otras unidades. Jefes militares como el General Mario Montoya fueron señalados. Los falsos positivos son crímenes de lesa humanidad, innegables e inadmisibles. <a href="https://www.jep.gov.co/Sala-de-Prensa/Paginas/La-JEP-hace-p%C3%BAblica-la-estrategia-de-priorizaci%C3%B3n-dentro-del-Caso-03,-conocido-como-el-de-falsos-positivos.aspx" target="_blank">[JEP — Caso 03]</a> <a href="https://www.semana.com/nacion/articulo/atencion-la-jep-dice-que-fueron-6402-mil-falsos-positivos-en-colombia-y-no-2248-como-se-reporto/202106/" target="_blank">[Semana — JEP: 6.402 casos]</a></li>
+
+  <li><strong>Parapolítica — 62 congresistas condenados:</strong> Investigaciones de la Corte Suprema de Justicia revelaron que decenas de congresistas electos con el apoyo político de Uribe habían firmado pactos con jefes paramilitares. 62 congresistas fueron condenados, en el mayor escándalo de corrupción política en la historia colombiana moderna. <a href="https://www.semana.com" target="_blank">[Semana — Parapolítica]</a></li>
+
+  <li><strong>Escándalo del DAS — Chuzadas y vínculos paramilitares:</strong> El Departamento Administrativo de Seguridad (DAS) interceptó ilegalmente teléfonos de periodistas, opositores, magistrados y defensores de derechos humanos. Directores del DAS fueron condenados, y la entidad fue liquidada en 2011. También se documentaron vínculos de agentes del DAS con estructuras paramilitares. <a href="https://www.eltiempo.com" target="_blank">[El Tiempo — DAS]</a></li>
+
+  <li><strong>Desplazamiento persistente — 297.000/año:</strong> A pesar de la recuperación de seguridad en áreas urbanas, el desplazamiento forzado se mantuvo elevado por las operaciones militares, las bacrim (bandas criminales surgidas tras desmovilización AUC) y los enfrentamientos en zonas rurales. <a href="https://www.unhcr.org/colombia" target="_blank">[ACNUR]</a></li>
+
+  <li><strong>Reelección y reforma constitucional (2004):</strong> El acto legislativo que habilitó la reelección presidencial fue cuestionado por presuntos sobornos a congresistas (el "yidispolítica"). La Corte Constitucional anuló el intento de un tercer período (2010). <a href="https://www.corteconstitucional.gov.co" target="_blank">[Corte Constitucional]</a></li>
+</ul>
+
+<h2 id="sec-especial" class="sec-especial">LOS DATOS VS. LA NARRATIVA</h2>
+<p class="note">¿Fue Uribe el presidente "más sanguinario"? Lo que dicen los indicadores objetivos</p>
+
+<div class="spec-box">
+  <strong>El argumento:</strong> Sectores de izquierda sostienen que Uribe gobernó mediante el terror y fue el presidente más violento de la historia colombiana. Los datos del INMLCF, UNODC y Banco Mundial muestran exactamente lo contrario: Uribe presidió la reducción de violencia más dramática en la historia contemporánea del país.
+</div>
+
+<h3>Las reducciones más grandes de la historia moderna</h3>
+<div class="stat-grid">
+  <div class="stat-card">
+    <div class="val">−39%</div>
+    <div class="lbl">Homicidios<br>63.5 → 38.6 /100K</div>
+  </div>
+  <div class="stat-card">
+    <div class="val">−55%</div>
+    <div class="lbl">Masacres<br>167 → 75 / año</div>
+  </div>
+  <div class="stat-card">
+    <div class="val">−74%</div>
+    <div class="lbl">Secuestros<br>3.128 → 818 / año</div>
+  </div>
+</div>
+
+<p style="font-size:10pt;margin:8px 0 14px">Estas cifras representan decenas de miles de vidas colombianas salvadas. Para 2009, la tasa de homicidios era la más baja desde los años 70. El contraste más relevante: bajo Pastrana (el gobierno inmediatamente anterior) Colombia vivió el peor período de secuestros de su historia. Bajo Uribe, ese indicador cayó un 74%.</p>
+
+<h3>Los falsos positivos en perspectiva (sin minimizarlos)</h3>
+<p style="font-size:10pt;margin:8px 0">La JEP documentó <strong>6.402 casos de falsos positivos</strong> entre 2002 y 2008. Estos son crímenes de lesa humanidad: civiles inocentes asesinados y presentados fraudulentamente como bajas en combate. No tienen justificación ni atenuante moral.</p>
+<p style="font-size:10pt;margin:8px 0 14px">Sin embargo, la perspectiva cuantitativa importa para entender la dimensión relativa: durante los 8 años de gobierno Uribe se registraron aproximadamente <strong>275.000 homicidios totales</strong> (INMLCF), incluyendo guerrilla, paramilitares, delincuencia común y la propia Fuerza Pública. Los 6.402 casos documentados representan el <strong>2.3% de ese total</strong>. La guerrilla (FARC, ELN) y el paramilitarismo tardío fueron responsables de decenas de miles de los homicidios restantes — que <em>bajaron</em> un 39% precisamente durante este período.</p>
+
+<div class="spec-box" style="background:#fef2f2;border-left-color:#dc2626">
+  <strong>Ambas verdades coexisten:</strong> Uribe presidió la mayor reducción de violencia en la historia moderna de Colombia — y también el mayor escándalo de crímenes de Estado documentados en el mismo período. Los falsos positivos no cancelan las decenas de miles de vidas salvadas por la reducción de la violencia generalizada. Pero tampoco son cancelados por ella. Son hechos independientes que deben juzgarse en sus propios términos.
+</div>
+
+<h3>¿Por qué persiste la narrativa?</h3>
+<p style="font-size:10pt;margin:8px 0 14px">La narrativa del "gobierno del terror" se alimenta de: (1) los falsos positivos, que son reales y gravísimos; (2) el uso político interesado de esos crímenes para desacreditar cualquier política de seguridad; (3) la concentración mediática en casos individuales que generan más impacto emocional que las estadísticas agregadas. En un contexto de polarización política, los datos objetivos quedan subordinados a la identidad ideológica.</p>
+
+<h2 id="sec-fuentes">FUENTES PRINCIPALES</h2>
+<ul class="fuentes-list">
+  <li><a href="https://www.jep.gov.co/Sala-de-Prensa/Paginas/La-JEP-hace-p%C3%BAblica-la-estrategia-de-priorizaci%C3%B3n-dentro-del-Caso-03,-conocido-como-el-de-falsos-positivos.aspx" target="_blank">JEP — Caso 03: Falsos Positivos (estrategia de priorización, Auto 033/2021)</a></li>
+  <li><a href="https://www.semana.com/nacion/articulo/atencion-la-jep-dice-que-fueron-6402-mil-falsos-positivos-en-colombia-y-no-2248-como-se-reporto/202106/" target="_blank">Semana — La JEP confirma 6.402 falsos positivos (2021)</a></li>
+  <li><a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">INMLCF — FORENSIS: series históricas homicidios, masacres, secuestros 2002-2010</a></li>
+  <li><a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">UNODC — Colombia Coca Cultivation Surveys 2002-2010</a></li>
+  <li><a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">Banco de la República — PIB histórico, crecimiento 2002-2010</a></li>
+  <li><a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida" target="_blank">DANE — Pobreza monetaria histórica Colombia</a></li>
+  <li><a href="https://www.hrw.org/world-report/2010/country-chapters/colombia" target="_blank">Human Rights Watch — World Report 2010: Colombia</a></li>
+  <li><a href="https://insightcrime.org/colombia/" target="_blank">InSight Crime — FARC, AUC y paramilitarismo en Colombia</a></li>
+  <li><a href="https://www.eltiempo.com/colombia/otras-ciudades/operacion-jaque-el-dia-que-colombia-enganio-a-las-farc-para-rescatar-a-betancourt-y-mas-rehenes-601068" target="_blank">El Tiempo — Operación Jaque (detalle histórico)</a></li>
+  <li><a href="https://data.worldbank.org/country/CO" target="_blank">Banco Mundial — Colombia: indicadores de desarrollo 2002-2010</a></li>
+  <li><a href="https://www.mindefensa.gov.co" target="_blank">Ministerio de Defensa Nacional — Logros Política de Seguridad Democrática</a></li>
+</ul>
+
+<div class="disclaimer">
+  <strong>⚠ Aviso:</strong> Este artículo fue elaborado con asistencia de <strong>Inteligencia Artificial</strong> (Claude, Anthropic) y puede contener errores o imprecisiones. No debe utilizarse como fuente primaria sin verificación independiente. Consulte siempre las fuentes originales citadas.
+</div>
+
+</div>
+</body>
+</html>

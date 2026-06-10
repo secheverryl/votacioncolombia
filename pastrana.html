@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Andrés Pastrana 1998–2002 — Análisis de Gobierno</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#222;background:#f4f7fd;line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;background:#fff;min-height:100vh}
+a{color:#1a56db}a:hover{text-decoration:underline}
+.back-btn{display:inline-block;background:#eef2ff;color:#1a56db;border:1px solid #b4c6f7;border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:#dce8ff}
+.hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px}
+.hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
+.hero .years{font-size:11pt;color:#b4c6f7;margin-bottom:6px}
+.hero .partido{font-size:9.5pt;color:#dce8ff}
+h2{font-size:12.5pt;color:#fff;background:#0d2252;padding:7px 16px;margin:26px 0 12px;border-radius:4px;letter-spacing:.3px}
+h2.sec-logros{background:#155724}
+h2.sec-fracasos{background:#721c24}
+h3{font-size:10.5pt;color:#0d2252;border-bottom:2px solid #b4c6f7;padding-bottom:4px;margin:18px 0 8px}
+.resumen{background:#f8faff;border-left:4px solid #1a56db;padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
+.resumen strong{color:#0d2252}
+.note{font-size:8.5pt;color:#555;font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid #ccd8f0}
+.note strong{color:#333;font-style:normal}
+table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:10px 0 18px}
+th{background:#0d2252;color:#fff;padding:7px 10px;text-align:left;font-weight:600;font-size:9pt}
+td{padding:6px 10px;border-bottom:1px solid #e0e8f8}
+tr:nth-child(even) td{background:#f4f7fd}
+.g{color:#155724;font-weight:700}.r{color:#721c24;font-weight:700}.y{color:#7a4c00;font-weight:700}
+ul{padding-left:20px;margin:8px 0 14px}
+ul li{margin-bottom:7px;font-size:10pt}
+.fuentes-list{font-size:9pt}
+.fuentes-list li{margin-bottom:9px}
+.disclaimer{background:#fff8e1;border-left:4px solid #f9a825;padding:10px 14px;margin:28px 0 0;border-radius:3px;font-size:9.5pt}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pres-dark.css">
+</head>
+<body class="dark-mode">
+<div id="sidebar-overlay" onclick="toggleSidebar()"></div>
+<button id="ham-btn" type="button" onclick="toggleSidebar()" aria-label="Menú"><span></span><span></span><span></span></button>
+<button type="button" id="mob-theme-btn" class="mob-theme-btn" onclick="setTheme(document.body.classList.contains('dark-mode')?'light':'dark')" title="Cambiar tema">🌙</button>
+<nav id="sidebar">
+  <div class="sb-brand"><svg width="26" height="32" viewBox="0 0 44 52" fill="none"><clipPath id="sbsc"><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z"/></clipPath><g clip-path="url(#sbsc)"><rect x="3.5" y="3.5" width="37" height="22.5" fill="#fcd116"/><rect x="3.5" y="26" width="37" height="11.25" fill="#003087"/><rect x="3.5" y="37.25" width="37" height="11.25" fill="#ce1126"/></g><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/></svg><div class="sb-title">Indicadores<br>de Gobierno<br>Colombia</div></div>
+  <a class="sb-back" href="colombia-indicadores-gobierno.html">← Informe comparativo</a>
+  <div class="theme-toggle">
+    <button type="button" class="theme-half active" id="btn-dark-mode" onclick="setTheme('dark')" title="Modo oscuro">🌙</button>
+    <button type="button" class="theme-half"        id="btn-light-mode" onclick="setTheme('light')" title="Modo claro">☀️</button>
+  </div>
+  <div class="sb-section"><div class="sb-label">Este artículo</div>
+    <a class="sb-link" href="#sec-ind">📊 Indicadores clave</a>
+    <a class="sb-link" href="#sec-logros">✅ Logros</a>
+    <a class="sb-link" href="#sec-fracasos">❌ Fracasos</a>
+    <a class="sb-link" href="#sec-fuentes">📚 Fuentes</a>
+  </div>
+  <div class="sb-section"><div class="sb-label">Otros presidentes</div>
+    <a class="sb-link" href="gaviria.html">Gaviria 1990–94</a>
+    <a class="sb-link" href="samper.html">Samper 1994–98</a>
+    <a class="sb-link active" href="pastrana.html">Pastrana 1998–02</a>
+    <a class="sb-link" href="uribe.html">Uribe 2002–10</a>
+    <a class="sb-link" href="santos.html">Santos 2010–18</a>
+    <a class="sb-link" href="duque.html">Duque 2018–22</a>
+    <a class="sb-link" href="petro.html">Petro 2022–</a>
+  </div>
+  <div class="sb-footer">Mayo 2026 · v2.1</div>
+</nav>
+<script>
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
+(function(){var ids=['sec-ind','sec-logros','sec-fracasos','sec-fuentes'];window.addEventListener('scroll',function(){var y=window.scrollY+80;ids.forEach(function(id){var el=document.getElementById(id);var link=document.querySelector('#sidebar a[href="#'+id+'"]');if(!el||!link)return;link.classList.toggle('active',y>=el.offsetTop&&y<el.offsetTop+el.offsetHeight)})},{passive:true})})();
+window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dark-mode',d);document.body.classList.toggle('light-mode',!d);var bm=document.getElementById('btn-dark-mode'),bl=document.getElementById('btn-light-mode');if(bm)bm.classList.toggle('active',d);if(bl)bl.classList.toggle('active',!d);var mob=document.getElementById('mob-theme-btn');if(mob)mob.textContent=d?'🌙':'☀️';localStorage.setItem('pres-theme',m)};
+(function(){var s=localStorage.getItem('pres-theme')||'dark';if(s!=='dark')window.setTheme('light')})();
+</script>
+<div class="page">
+
+<a class="back-btn" href="colombia-indicadores-gobierno.html">← Volver al informe comparativo</a>
+
+<div class="hero">
+  <h1>Andrés Pastrana Arango</h1>
+  <div class="years">7 de agosto de 1998 — 7 de agosto de 2002</div>
+  <div class="partido">Partido Conservador Colombiano &nbsp;·&nbsp; Presidente n.º 30 de Colombia</div>
+</div>
+
+<div class="resumen">
+  <strong>Resumen ejecutivo:</strong> El mandato de Pastrana estuvo definido por dos grandes apuestas que terminaron en fracaso: el proceso de paz del Caguán (1999-2002) y la gestión de la peor crisis económica desde los años 30. Los secuestros alcanzaron el <strong>récord absoluto de la historia colombiana (3.128/año)</strong>, la FARC utilizó la Zona de Distensión para fortalecerse militarmente, y el desempleo llegó al 16.5%. Sin embargo, su gobierno negoció y puso en marcha el <strong>Plan Colombia</strong> con Estados Unidos, la inversión más grande en seguridad y desarrollo alternativo que Colombia haya recibido, cuyos frutos se recogerían en el gobierno siguiente.
+</div>
+
+<h2 id="sec-ind">INDICADORES CLAVE DEL MANDATO</h2>
+<p class="note">Promedios del mandato, salvo donde se indica. <a href="colombia-indicadores-gobierno.html">Ver comparativo completo →</a></p>
+<table>
+  <thead><tr><th>Indicador</th><th>Valor (Pastrana)</th><th>Contexto vs. otros gobiernos</th></tr></thead>
+  <tbody>
+    <tr><td>Homicidios prom. (/100K hab.)</td><td class="r">63.5</td><td class="r">3.º más alto; muy elevado</td></tr>
+    <tr><td>Masacres (prom. anual)</td><td class="y">167 / año</td><td class="y">3.º más alto; bajó frente a Samper</td></tr>
+    <tr><td>Secuestros (prom. anual)</td><td class="r">3.128 / año</td><td class="r">⚠ El más alto de todos los gobiernos</td></tr>
+    <tr><td>Desplazamiento forzado</td><td class="r">343.000 / año</td><td class="r">⚠ El más alto de todos los gobiernos</td></tr>
+    <tr><td>Crecimiento PIB promedio</td><td class="r">0.7 %</td><td class="r">⚠ El más bajo de los 7 gobiernos</td></tr>
+    <tr><td>Inflación prom. (IPC)</td><td class="g">8.6 %</td><td class="g">✔ Una de las más bajas (3.º mejor)</td></tr>
+    <tr><td>Desempleo promedio</td><td class="r">16.5 %</td><td class="r">⚠ El más alto de los 7 gobiernos</td></tr>
+    <tr><td>Deuda pública GNC (% PIB)</td><td class="r">47 %</td><td class="r">⚠ Subió de 30% a 47% (escalada fiscal)</td></tr>
+    <tr><td>PIB per cápita (fin mandato, USD)</td><td class="r">$2.065</td><td class="r">Cayó en dólares frente a Samper ($2.583)</td></tr>
+    <tr><td>Cultivos de coca (fin mandato, ha)</td><td class="r">102.000</td><td class="r">Se mantuvo en niveles elevados</td></tr>
+    <tr><td>IDH (cierre mandato)</td><td class="y">0.649</td><td>Siguió mejorando levemente</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sec-logros" class="sec-logros">LOGROS</h2>
+
+<ul>
+  <li><strong>Plan Colombia — La mayor inversión en seguridad y desarrollo de la historia:</strong> Pastrana negoció con el presidente Clinton el Plan Colombia (1999), que comprometió inicialmente 1.300 millones de dólares estadounidenses (y eventualmente más de 10.000 millones hasta su conclusión en 2015) en modernización de las FFMM, lucha antinarcóticos, fumigaciones y desarrollo alternativo. Los resultados se materializaron en el gobierno Uribe, pero el diseño y la financiación fueron obra de Pastrana. <a href="https://2001-2009.state.gov/p/wha/rls/fs/2001/1042.htm" target="_blank">[Dept. of State — Plan Colombia Fact Sheet]</a></li>
+
+  <li><strong>Modernización y profesionalización de las Fuerzas Militares:</strong> Con los recursos iniciales del Plan Colombia, se inició la transformación de la inteligencia militar, la movilidad aérea (helicópteros Blackhawk y Huey II) y las capacidades logísticas del Ejército y la Policía. Esta base permitió la efectividad de la Política de Seguridad Democrática de Uribe. <a href="https://www.mindefensa.gov.co" target="_blank">[Ministerio de Defensa]</a></li>
+
+  <li><strong>Reducción de la inflación a un dígito:</strong> La inflación cayó de 19.2% (Samper) a 8.6% en promedio bajo Pastrana, en parte por la recesión pero también por la mayor efectividad de la política monetaria del Banco de la República, recién autónomo. <a href="https://www.banrep.gov.co/es/estadisticas/indice-precios-consumidor-ipc" target="_blank">[BanRep — IPC]</a></li>
+
+  <li><strong>Diálogos de paz: experiencia acumulada e información estratégica:</strong> Aunque el proceso del Caguán fracasó, Colombia acumuló información crucial sobre la estructura interna de las FARC, sus objetivos y líneas rojas, que fue utilizada posteriormente en inteligencia y en los procesos de paz de Santos. <a href="https://insightcrime.org/colombia/" target="_blank">[InSight Crime — FARC]</a></li>
+
+  <li><strong>Inicio de la fumigación aérea con glifosato:</strong> Si bien controversial, el programa de fumigación con glifosato se intensificó bajo Pastrana con apoyo del Plan Colombia, contribuyendo a presionar los cultivos de coca hacia finales del mandato. Los cultivos no bajaron (se mantuvieron en ~102K ha) pero se frenó el crecimiento. <a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">[UNODC]</a></li>
+</ul>
+
+<h2 id="sec-fracasos" class="sec-fracasos">FRACASOS Y CRÍTICAS</h2>
+
+<ul>
+  <li><strong>Zona de Distensión del Caguán — El mayor error estratégico del conflicto:</strong> Pastrana otorgó a las FARC una zona de despeje de 42.000 km² (el tamaño de Suiza) durante 3 años. En ese territorio libre de Fuerza Pública, las FARC entrenaron tropas, almacenaron armas, procesaron coca y ejecutaron secuestros. El investigador Alfredo Rangel documentó que las FARC usaron el Caguán para consolidar una economía de guerra que les permitiría sostener el conflicto por décadas. El proceso terminó en ruptura en febrero de 2002. <a href="https://insightcrime.org/colombia/" target="_blank">[InSight Crime]</a></li>
+
+  <li><strong>Récord absoluto de secuestros: 3.128 por año:</strong> Bajo Pastrana se registró el mayor número de secuestros de la historia colombiana, con un promedio de 3.128 casos anuales. El ELN y las FARC secuestraron aviones, iglesias, asambleas departamentales y miles de civiles en las carreteras del país. El negocio del secuestro financió masivamente la expansión guerrillera. <a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">[INMLCF]</a></li>
+
+  <li><strong>La peor crisis económica desde 1929:</strong> La economía colombiana cayó −4.2% en 1999, el peor año desde la Gran Depresión. La crisis del UPAC heredada de Samper, combinada con el choque del precio del petróleo y la incertidumbre por el conflicto, generó el cierre de decenas de miles de empresas y el desempleo más alto de la historia moderna (16.5%). <a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">[BanRep — PIB histórico]</a></li>
+
+  <li><strong>Explosión de la deuda pública — de 30% a 47% del PIB:</strong> Para financiar el gasto social durante la recesión y el esfuerzo bélico inicial, la deuda pública saltó 17 puntos porcentuales del PIB en solo 4 años, sentando las bases de la presión fiscal que todos los gobiernos posteriores heredaron. <a href="https://www.banrep.gov.co/es/estadisticas/finanzas-publicas-gnc" target="_blank">[BanRep — Finanzas públicas]</a></li>
+
+  <li><strong>Homicidios y desplazamiento en niveles extremos:</strong> Con 63.5 homicidios/100K y 343.000 desplazados anuales —el mayor desplazamiento de todos los gobiernos— el Estado colombiano perdió el control sobre amplias franjas de territorio rural. Las FARC llegaron a controlar el 40% del territorio nacional según estimaciones de las propias FFMM. <a href="https://www.unhcr.org/colombia" target="_blank">[ACNUR Colombia]</a></li>
+
+  <li><strong>Ataque de las FARC a Mitú (1998):</strong> En noviembre de 1998, poco después de posesionarse Pastrana, las FARC tomaron la capital del Vaupés por varios días, demostrando su capacidad de ataque a cabeceras municipales. Fue una señal temprana de que el proceso de paz coexistía con una ofensiva militar guerrillera. <a href="https://www.eltiempo.com" target="_blank">[El Tiempo — Archivo]</a></li>
+</ul>
+
+<h2 id="sec-fuentes">FUENTES PRINCIPALES</h2>
+<ul class="fuentes-list">
+  <li><a href="https://2001-2009.state.gov/p/wha/rls/fs/2001/1042.htm" target="_blank">U.S. Department of State — Plan Colombia: A Progress Report (2001)</a></li>
+  <li><a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">UNODC — Colombia Coca Cultivation Surveys 1999-2002</a></li>
+  <li><a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">INMLCF — FORENSIS: series históricas de homicidios y secuestros</a></li>
+  <li><a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">Banco de la República — PIB histórico (crisis 1999)</a></li>
+  <li><a href="https://www.banrep.gov.co/es/estadisticas/finanzas-publicas-gnc" target="_blank">Banco de la República — Deuda pública GNC histórica</a></li>
+  <li><a href="https://www.hrw.org/world-report/2002/country-chapters/colombia" target="_blank">Human Rights Watch — World Report 2002: Colombia</a></li>
+  <li><a href="https://insightcrime.org/colombia/" target="_blank">InSight Crime — Análisis del conflicto colombiano</a></li>
+  <li><a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/mercado-laboral" target="_blank">DANE — Mercado laboral: desempleo histórico</a></li>
+  <li><a href="https://hdr.undp.org/data-center/country-insights" target="_blank">PNUD — Human Development Index Colombia</a></li>
+</ul>
+
+<div class="disclaimer">
+  <strong>⚠ Aviso:</strong> Este artículo fue elaborado con asistencia de <strong>Inteligencia Artificial</strong> (Claude, Anthropic) y puede contener errores o imprecisiones. No debe utilizarse como fuente primaria sin verificación independiente. Consulte siempre las fuentes originales citadas.
+</div>
+
+</div>
+</body>
+</html>

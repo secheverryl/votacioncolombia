@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Juan Manuel Santos 2010–2018 — Análisis de Gobierno</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#222;background:#f4f7fd;line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;background:#fff;min-height:100vh}
+a{color:#1a56db}a:hover{text-decoration:underline}
+.back-btn{display:inline-block;background:#eef2ff;color:#1a56db;border:1px solid #b4c6f7;border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:#dce8ff}
+.hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px}
+.hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
+.hero .years{font-size:11pt;color:#b4c6f7;margin-bottom:6px}
+.hero .partido{font-size:9.5pt;color:#dce8ff}
+h2{font-size:12.5pt;color:#fff;background:#0d2252;padding:7px 16px;margin:26px 0 12px;border-radius:4px;letter-spacing:.3px}
+h2.sec-logros{background:#155724}
+h2.sec-fracasos{background:#721c24}
+h2.sec-especial{background:#92400e}
+h3{font-size:10.5pt;color:#0d2252;border-bottom:2px solid #b4c6f7;padding-bottom:4px;margin:18px 0 8px}
+.resumen{background:#f8faff;border-left:4px solid #1a56db;padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
+.resumen strong{color:#0d2252}
+.note{font-size:8.5pt;color:#555;font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid #ccd8f0}
+table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:10px 0 18px}
+th{background:#0d2252;color:#fff;padding:7px 10px;text-align:left;font-weight:600;font-size:9pt}
+td{padding:6px 10px;border-bottom:1px solid #e0e8f8}
+tr:nth-child(even) td{background:#f4f7fd}
+.g{color:#155724;font-weight:700}.r{color:#721c24;font-weight:700}.y{color:#7a4c00;font-weight:700}
+ul{padding-left:20px;margin:8px 0 14px}
+ul li{margin-bottom:7px;font-size:10pt}
+.fuentes-list{font-size:9pt}
+.fuentes-list li{margin-bottom:9px}
+.spec-box{background:#fffbeb;border-left:4px solid #d97706;padding:14px 18px;margin:16px 0 20px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
+.spec-box strong{color:#92400e}
+.coca-timeline{margin:14px 0;border-left:3px solid #d97706;padding-left:14px}
+.coca-event{margin-bottom:10px;font-size:10pt}
+.coca-event .year{font-weight:700;color:#92400e;display:inline-block;width:46px}
+.disclaimer{background:#fff8e1;border-left:4px solid #f9a825;padding:10px 14px;margin:28px 0 0;border-radius:3px;font-size:9.5pt}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pres-dark.css">
+</head>
+<body class="dark-mode">
+<div id="sidebar-overlay" onclick="toggleSidebar()"></div>
+<button id="ham-btn" type="button" onclick="toggleSidebar()" aria-label="Menú"><span></span><span></span><span></span></button>
+<button type="button" id="mob-theme-btn" class="mob-theme-btn" onclick="setTheme(document.body.classList.contains('dark-mode')?'light':'dark')" title="Cambiar tema">🌙</button>
+<nav id="sidebar">
+  <div class="sb-brand"><svg width="26" height="32" viewBox="0 0 44 52" fill="none"><clipPath id="sbsc"><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z"/></clipPath><g clip-path="url(#sbsc)"><rect x="3.5" y="3.5" width="37" height="22.5" fill="#fcd116"/><rect x="3.5" y="26" width="37" height="11.25" fill="#003087"/><rect x="3.5" y="37.25" width="37" height="11.25" fill="#ce1126"/></g><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/></svg><div class="sb-title">Indicadores<br>de Gobierno<br>Colombia</div></div>
+  <a class="sb-back" href="colombia-indicadores-gobierno.html">← Informe comparativo</a>
+  <div class="theme-toggle">
+    <button type="button" class="theme-half active" id="btn-dark-mode" onclick="setTheme('dark')" title="Modo oscuro">🌙</button>
+    <button type="button" class="theme-half"        id="btn-light-mode" onclick="setTheme('light')" title="Modo claro">☀️</button>
+  </div>
+  <div class="sb-section"><div class="sb-label">Este artículo</div>
+    <a class="sb-link" href="#sec-ind">📊 Indicadores clave</a>
+    <a class="sb-link" href="#sec-logros">✅ Logros</a>
+    <a class="sb-link" href="#sec-fracasos">❌ Fracasos</a>
+    <a class="sb-link" href="#sec-especial">🌿 Efecto invernadero</a>
+    <a class="sb-link" href="#sec-fuentes">📚 Fuentes</a>
+  </div>
+  <div class="sb-section"><div class="sb-label">Otros presidentes</div>
+    <a class="sb-link" href="gaviria.html">Gaviria 1990–94</a>
+    <a class="sb-link" href="samper.html">Samper 1994–98</a>
+    <a class="sb-link" href="pastrana.html">Pastrana 1998–02</a>
+    <a class="sb-link" href="uribe.html">Uribe 2002–10</a>
+    <a class="sb-link active" href="santos.html">Santos 2010–18</a>
+    <a class="sb-link" href="duque.html">Duque 2018–22</a>
+    <a class="sb-link" href="petro.html">Petro 2022–</a>
+  </div>
+  <div class="sb-footer">Mayo 2026 · v2.1</div>
+</nav>
+<script>
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
+(function(){var ids=['sec-ind','sec-logros','sec-fracasos','sec-especial','sec-fuentes'];window.addEventListener('scroll',function(){var y=window.scrollY+80;ids.forEach(function(id){var el=document.getElementById(id);var link=document.querySelector('#sidebar a[href="#'+id+'"]');if(!el||!link)return;link.classList.toggle('active',y>=el.offsetTop&&y<el.offsetTop+el.offsetHeight)})},{passive:true})})();
+window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dark-mode',d);document.body.classList.toggle('light-mode',!d);var bm=document.getElementById('btn-dark-mode'),bl=document.getElementById('btn-light-mode');if(bm)bm.classList.toggle('active',d);if(bl)bl.classList.toggle('active',!d);var mob=document.getElementById('mob-theme-btn');if(mob)mob.textContent=d?'🌙':'☀️';localStorage.setItem('pres-theme',m)};
+(function(){var s=localStorage.getItem('pres-theme')||'dark';if(s!=='dark')window.setTheme('light')})();
+</script>
+<div class="page">
+
+<a class="back-btn" href="colombia-indicadores-gobierno.html">← Volver al informe comparativo</a>
+
+<div class="hero">
+  <h1>Juan Manuel Santos Calderón</h1>
+  <div class="years">7 de agosto de 2010 — 7 de agosto de 2018</div>
+  <div class="partido">Partido de la U &nbsp;·&nbsp; Presidente n.º 32 de Colombia (dos períodos) &nbsp;·&nbsp; Premio Nobel de Paz 2016</div>
+</div>
+
+<div class="resumen">
+  <strong>Resumen ejecutivo:</strong> El gobierno Santos alcanzó el hito histórico de firmar el <strong>Acuerdo de Paz con las FARC</strong> en 2016, poniendo fin a más de 50 años de conflicto armado con esa organización y ganando el Premio Nobel de Paz. Los indicadores sociales mejoraron sustancialmente: la pobreza bajó de 37.2% a 27%, el IDH alcanzó 0.747 y la esperanza de vida llegó a 75.2 años. Sin embargo, la misma economía de guerra que Santos intentó desmantelar creció bajo sus pies: los cultivos de coca se <strong>triplicaron</strong> de 62.000 a 169.000 ha durante las negociaciones, y las disidencias de las FARC que no se desmovilizaron heredaron esos recursos para financiar la desestabilización del gobierno siguiente y la campaña de 2022.
+</div>
+
+<h2 id="sec-ind">INDICADORES CLAVE DEL MANDATO</h2>
+<p class="note">Promedios del mandato (2010–2018), salvo donde se indica. <a href="colombia-indicadores-gobierno.html">Ver comparativo completo →</a></p>
+<table>
+  <thead><tr><th>Indicador</th><th>Valor (Santos)</th><th>Contexto vs. otros gobiernos</th></tr></thead>
+  <tbody>
+    <tr><td>Homicidios prom. (/100K hab.)</td><td class="g">27.5</td><td class="g">✔ Continuó bajando desde Uribe (38.6)</td></tr>
+    <tr><td>Masacres (prom. anual)</td><td class="g">56 / año</td><td class="g">✔ El más bajo hasta ese momento</td></tr>
+    <tr><td>Secuestros (prom. anual)</td><td class="g">249 / año</td><td class="g">✔ Bajó de 818 (Uribe) a 249 (-70%)</td></tr>
+    <tr><td>Desplazamiento forzado</td><td class="y">217.000 / año</td><td class="y">Bajó, pero sigue siendo alto</td></tr>
+    <tr><td>Crecimiento PIB promedio</td><td class="g">3.6 %</td><td class="g">3.er más alto; caída al final del mandato (2016: 2.1%)</td></tr>
+    <tr><td>PIB per cápita (fin mandato, USD)</td><td class="g">$6.651</td><td class="g">Creció moderadamente</td></tr>
+    <tr><td>Inflación prom. (IPC)</td><td class="g">3.9 %</td><td class="g">✔ La más baja de los 7 gobiernos</td></tr>
+    <tr><td>Desempleo promedio</td><td class="g">9.7 %</td><td class="g">✔ 2.º más bajo (mejor solo Gaviria)</td></tr>
+    <tr><td>Deuda pública GNC (% PIB)</td><td class="r">50 %</td><td class="r">Subió de 39% (Uribe) a 50% (+11 pp)</td></tr>
+    <tr><td>Pobreza monetaria (fin mandato)</td><td class="g">27.0 %</td><td class="g">✔ La más baja: bajó de 37.2% a 27% (-10 pp)</td></tr>
+    <tr><td>Cultivos de coca (fin mandato, ha)</td><td class="r">169.000</td><td class="r">⚠ Se triplicó vs. Uribe (62K → 169K)</td></tr>
+    <tr><td>IDH (cierre mandato)</td><td class="g">0.747</td><td class="g">✔ El más alto de los 7 gobiernos</td></tr>
+    <tr><td>Reservas internacionales</td><td class="g">$48.4 B</td><td class="g">✔ Las más altas de la historia hasta ese momento</td></tr>
+    <tr><td>ECI (HS92, prom. mandato)</td><td class="y">0.27</td><td class="y">Sin mejora; complejidad económica estancada</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sec-logros" class="sec-logros">LOGROS</h2>
+
+<ul>
+  <li><strong>Acuerdo de Paz con las FARC (2016) — Premio Nobel de Paz:</strong> Tras cuatro años de negociaciones en La Habana, Colombia y las FARC-EP firmaron el Acuerdo Final el 24 de noviembre de 2016. El acuerdo incluyó el cese del fuego definitivo, la reincorporación política y económica de combatientes, la creación de la JEP y el SIVJRNR, y la Reforma Rural Integral. Santos recibió el Premio Nobel de Paz ese mismo año. <a href="https://www.cancilleria.gov.co/acuerdo-final" target="_blank">[Cancillería — Acuerdo Final]</a></li>
+
+  <li><strong>Reducción de la pobreza — mínimo histórico (27%):</strong> La pobreza monetaria cayó 10 puntos porcentuales durante el mandato, el resultado social más destacado de todos los gobiernos analizados en términos de punto de llegada. El crecimiento económico sostenido y los programas de transferencias condicionadas (More Families in Action) fueron los principales motores. <a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida" target="_blank">[DANE — Pobreza]</a></li>
+
+  <li><strong>Máximo IDH histórico (0.747) y esperanza de vida (75.2 años):</strong> Colombia alcanzó bajo Santos sus mejores indicadores de desarrollo humano, impulsados por mejoras en educación (cobertura universitaria al 55%), salud (mortalidad infantil 10.7/1000) y nivel de vida. <a href="https://hdr.undp.org/data-center/country-insights" target="_blank">[PNUD — IDH Colombia]</a></li>
+
+  <li><strong>Ley de Víctimas y Restitución de Tierras (1448/2011):</strong> Reconoció a más de 8 millones de víctimas del conflicto y estableció el marco más completo de reparación integral en la historia de Colombia. La Unidad de Víctimas registró y comenzó a atender a millones de desplazados y damnificados. <a href="https://www.unidadvictimas.gov.co" target="_blank">[Unidad para las Víctimas]</a></li>
+
+  <li><strong>Política exterior y reintegración internacional:</strong> Santos normalizó las relaciones con Venezuela (tras tensiones de la era Uribe), suscribió la Colombia al Tratado de Libre Comercio con EE.UU. (en vigor 2012) y fue admitido como observador en la OTAN (2017). <a href="https://www.cancilleria.gov.co" target="_blank">[Cancillería de Colombia]</a></li>
+
+  <li><strong>Auge de las reservas internacionales — $48.4 B:</strong> Las reservas internacionales crecieron hasta niveles récord, parte del "superciclo" de materias primas (2010-2014) con el petróleo llegando a $100/barril. Colombia se benefició de inversiones en el sector de hidrocarburos y minería. <a href="https://www.banrep.gov.co/es/estadisticas/reservas-internacionales" target="_blank">[BanRep — Reservas]</a></li>
+
+  <li><strong>Reducción de homicidios, masacres y secuestros continuada:</strong> La tendencia de reducción de violencia iniciada por Uribe continuó: homicidios bajaron a 27.5/100K, masacres a 56/año (mínimo histórico hasta ese punto), secuestros a 249/año. <a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">[INMLCF FORENSIS]</a></li>
+</ul>
+
+<h2 id="sec-fracasos" class="sec-fracasos">FRACASOS Y CRÍTICAS</h2>
+
+<ul>
+  <li><strong>Explosión de cultivos de coca — de 62K a 169K hectáreas (+172%):</strong> El indicador más grave del mandato. Mientras se negociaba la paz, los cultivos de coca casi se triplicaron. Colombia recuperó el dudoso liderazgo mundial que había cedido brevemente a Perú. Las FARC y sus estructuras usaron los territorios en "zona gris" de las negociaciones para expandir la economía cocalera. <a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">[UNODC — Colombia Coca Survey]</a></li>
+
+  <li><strong>Plebiscito rechazado (octubre 2016) — 50.2% No:</strong> El primer Acuerdo de Paz fue rechazado en referéndum por un margen mínimo. Si bien Santos modificó el texto y obtuvo la aprobación del Congreso, el rechazo popular reveló la profunda división del país frente al proceso y las condiciones para los comandantes de las FARC. <a href="https://www.registraduria.gov.co" target="_blank">[Registraduría — Resultados plebiscito 2016]</a></li>
+
+  <li><strong>Aumento de la deuda pública — de 39% a 50% del PIB:</strong> El gasto en el proceso de paz, la Ley de Víctimas y la caída del precio del petróleo (2014-2016) elevaron la deuda 11 puntos porcentuales. La reforma tributaria estructural de 2016 (Ley 1819) intentó compensar, pero la tendencia de endeudamiento quedó establecida. <a href="https://www.banrep.gov.co/es/estadisticas/finanzas-publicas-gnc" target="_blank">[BanRep — Finanzas públicas]</a></li>
+
+  <li><strong>Complejidad económica sin mejora (ECI estancado en 0.27):</strong> A pesar del crecimiento, la estructura productiva de Colombia no se diversificó. La dependencia de materias primas (petróleo, carbón) siguió dominando las exportaciones. El índice ECI HS92 se mantuvo en 0.27, el mismo valor que bajo Uribe, señalando una oportunidad perdida para la transformación productiva. <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/XTAQMC" target="_blank">[Harvard Dataverse — ECI Colombia]</a></li>
+
+  <li><strong>Ruptura con la doctrina de seguridad — debilitamiento de las FFMM:</strong> Durante las negociaciones, las operaciones militares ofensivas se suspendieron en varias regiones. Esto dio un respiro táctico a las FARC para reordenar sus estructuras, especialmente en Cauca, Nariño y Norte de Santander. <a href="https://insightcrime.org/colombia/" target="_blank">[InSight Crime]</a></li>
+</ul>
+
+<h2 id="sec-especial" class="sec-especial">EL EFECTO INVERNADERO DE LA PAZ</h2>
+<p class="note">Cómo la economía de guerra creció bajo las negociaciones y financió la desestabilización del gobierno siguiente</p>
+
+<div class="spec-box">
+  <strong>La paradoja:</strong> Santos negoció el acuerdo de paz más ambicioso de la historia de Colombia — y durante ese mismo período, la economía cocalera de las FARC alcanzó su máximo histórico. Los recursos generados por esa expansión fueron heredados por las disidencias que no se desmovilizaron, y usados para desestabilizar el gobierno Duque y financiar la actividad electoral de 2022.
+</div>
+
+<h3>La expansión de la coca durante las negociaciones (2012–2016)</h3>
+<div class="coca-timeline">
+  <div class="coca-event"><span class="year">2012</span>Se inician formalmente las negociaciones en La Habana. Cultivos de coca: ~78.000 ha</div>
+  <div class="coca-event"><span class="year">2013</span>Las FARC suspenden ataque a infraestructura como gesto unilateral — pero expanden cultivos en zonas sin presencia del Estado. Coca: ~90.000 ha</div>
+  <div class="coca-event"><span class="year">2014</span>Cese unilateral de operaciones en varias zonas por parte del Estado. Coca: ~100.000 ha. Las FARC consolidan "zonas de retaguardia" bajo pretexto de negociación</div>
+  <div class="coca-event"><span class="year">2015</span>Acuerdo de dejación de armas anunciado. Coca: ~96.000 ha (leve baja por fumigación, que luego se suspende)</div>
+  <div class="coca-event"><span class="year">2016</span>Firma del Acuerdo Final. La Corte Constitucional suspende fumigaciones con glifosato. Coca: <strong>146.000 ha</strong> (+87% vs. 2012)</div>
+  <div class="coca-event"><span class="year">2017</span>Zonas Veredales Transitorias de Normalización. Disidencias retienen el control de áreas cocaleras. Coca: <strong>171.000 ha</strong></div>
+  <div class="coca-event"><span class="year">2018</span>Fin del mandato Santos. Coca: <strong>169.000 ha</strong> (+172% vs. 2010)</div>
+</div>
+
+<h3>¿Por qué creció la coca durante la paz?</h3>
+<p style="font-size:10pt;margin:8px 0 14px">Tres factores convergieron: (1) La suspensión de las fumigaciones aéreas con glifosato (2015-2016) eliminó el principal instrumento de erradicación; (2) La "zona gris" de las negociaciones disuadió operaciones militares en territorios donde las FARC controlaban los cultivos; (3) Las FARC incentivaron activamente a campesinos a sembrar coca, prometiendo sustitución con el Acuerdo — pero sin cumplirla antes de la firma. UNODC documentó que el 60% del incremento ocurrió en zonas de histórica presencia de las FARC. <a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">[UNODC Colombia Coca Survey 2018]</a></p>
+
+<h3>La herencia de las disidencias: de la coca a la política</h3>
+<p style="font-size:10pt;margin:8px 0 10px">Un tercio de la estructura de las FARC — estimado en 5.000-8.000 combatientes — no se desmovilizó. Se reorganizaron en dos estructuras principales:</p>
+<ul>
+  <li><strong>Estado Mayor Central (EMC)</strong> — Bajo "Iván Mordisco", heredó el control de territorios cocaleros en Cauca, Nariño y Putumayo. Responsable de más de 200 atentados a infraestructura entre 2019 y 2022.</li>
+  <li><strong>Segunda Marquetalia</strong> — Fundada por "Iván Márquez" (quien abandonó la desmovilización en 2019), controla rutas de coca en Norte de Santander, Venezuela y Arauca. Sus ingresos estimados superan $500 millones USD anuales según InSight Crime.</li>
+</ul>
+<p style="font-size:10pt;margin:10px 0 14px">Ambas estructuras, con ingresos derivados de la expansión cocalera del período Santos, financiaron durante el gobierno Duque: ataques a infraestructura, paros armados en el suroccidente, movilizaciones políticas y — según investigaciones periodísticas y judiciales — actividad electoral en las regiones de su influencia. <a href="https://insightcrime.org/news/colombia-criminal-groups-preparing-presidential-elections/" target="_blank">[InSight Crime — Grupos criminales en elecciones 2022]</a></p>
+
+<div class="spec-box">
+  <strong>El legado no resuelto:</strong> El Acuerdo de Paz de Santos fue un logro histórico genuino. Pero la economía de guerra de la coca, que debía desmontarse con el Punto 4 del Acuerdo (sustitución de cultivos), nunca lo fue. Esos recursos siguen siendo el motor de financiamiento de los actores ilegales que operan en Colombia hoy — incluyendo la desestabilización del gobierno Duque y la influencia en las elecciones de 2022.
+</div>
+
+<h2 id="sec-fuentes">FUENTES PRINCIPALES</h2>
+<ul class="fuentes-list">
+  <li><a href="https://www.cancilleria.gov.co/acuerdo-final" target="_blank">Cancillería de Colombia — Acuerdo Final para la Terminación del Conflicto (texto completo)</a></li>
+  <li><a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">UNODC — Colombia Coca Cultivation Surveys 2010-2018 (series anuales)</a></li>
+  <li><a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida" target="_blank">DANE — Pobreza monetaria y multidimensional Colombia</a></li>
+  <li><a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">INMLCF — FORENSIS: datos de violencia 2010-2018</a></li>
+  <li><a href="https://hdr.undp.org/data-center/country-insights" target="_blank">PNUD — Human Development Reports: Colombia IDH histórico</a></li>
+  <li><a href="https://insightcrime.org/news/colombia-criminal-groups-preparing-presidential-elections/" target="_blank">InSight Crime — Colombia's Criminal Groups Are Preparing for the Presidential Election (2022)</a></li>
+  <li><a href="https://insightcrime.org/colombia/" target="_blank">InSight Crime — Colombia: monitoreo del conflicto y grupos armados</a></li>
+  <li><a href="https://www.banrep.gov.co/es/estadisticas" target="_blank">Banco de la República — Estadísticas macroeconómicas 2010-2018</a></li>
+  <li><a href="https://www.hrw.org/world-report/2018/country-chapters/colombia" target="_blank">Human Rights Watch — World Report 2018: Colombia</a></li>
+  <li><a href="https://www.unidadvictimas.gov.co" target="_blank">Unidad para las Víctimas — Registro Único de Víctimas</a></li>
+  <li><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/XTAQMC" target="_blank">Harvard Dataverse — ECI Colombia series históricas (HS92)</a></li>
+</ul>
+
+<div class="disclaimer">
+  <strong>⚠ Aviso:</strong> Este artículo fue elaborado con asistencia de <strong>Inteligencia Artificial</strong> (Claude, Anthropic) y puede contener errores o imprecisiones. No debe utilizarse como fuente primaria sin verificación independiente. Consulte siempre las fuentes originales citadas.
+</div>
+
+</div>
+</body>
+</html>

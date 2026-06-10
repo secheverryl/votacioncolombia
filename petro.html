@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Gustavo Petro 2022–presente — Análisis de Gobierno</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#222;background:#f4f7fd;line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;background:#fff;min-height:100vh}
+a{color:#1a56db}a:hover{text-decoration:underline}
+.back-btn{display:inline-block;background:#eef2ff;color:#1a56db;border:1px solid #b4c6f7;border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:#dce8ff}
+.hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px}
+.hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
+.hero .years{font-size:11pt;color:#b4c6f7;margin-bottom:6px}
+.hero .partido{font-size:9.5pt;color:#dce8ff}
+h2{font-size:12.5pt;color:#fff;background:#0d2252;padding:7px 16px;margin:26px 0 12px;border-radius:4px;letter-spacing:.3px}
+h2.sec-logros{background:#155724}
+h2.sec-fracasos{background:#721c24}
+h2.sec-especial{background:#7c2d12}
+h3{font-size:10.5pt;color:#0d2252;border-bottom:2px solid #b4c6f7;padding-bottom:4px;margin:18px 0 8px}
+.resumen{background:#f8faff;border-left:4px solid #1a56db;padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
+.resumen strong{color:#0d2252}
+.note{font-size:8.5pt;color:#555;font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid #ccd8f0}
+table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:10px 0 18px}
+th{background:#0d2252;color:#fff;padding:7px 10px;text-align:left;font-weight:600;font-size:9pt}
+td{padding:6px 10px;border-bottom:1px solid #e0e8f8}
+tr:nth-child(even) td{background:#f4f7fd}
+.g{color:#155724;font-weight:700}.r{color:#721c24;font-weight:700}.y{color:#7a4c00;font-weight:700}
+ul{padding-left:20px;margin:8px 0 14px}
+ul li{margin-bottom:7px;font-size:10pt}
+.fuentes-list{font-size:9pt}
+.fuentes-list li{margin-bottom:9px}
+.spec-box{background:#fff7ed;border-left:4px solid #c2410c;padding:14px 18px;margin:16px 0 20px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
+.spec-box strong{color:#7c2d12}
+.balance-box{background:#f0fdf4;border-left:4px solid #16a34a;padding:14px 18px;margin:16px 0 20px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
+.balance-box strong{color:#15803d}
+.disclaimer{background:#fff8e1;border-left:4px solid #f9a825;padding:10px 14px;margin:28px 0 0;border-radius:3px;font-size:9.5pt}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pres-dark.css">
+</head>
+<body class="dark-mode">
+<div id="sidebar-overlay" onclick="toggleSidebar()"></div>
+<button id="ham-btn" type="button" onclick="toggleSidebar()" aria-label="Menú"><span></span><span></span><span></span></button>
+<button type="button" id="mob-theme-btn" class="mob-theme-btn" onclick="setTheme(document.body.classList.contains('dark-mode')?'light':'dark')" title="Cambiar tema">🌙</button>
+<nav id="sidebar">
+  <div class="sb-brand"><svg width="26" height="32" viewBox="0 0 44 52" fill="none"><clipPath id="sbsc"><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z"/></clipPath><g clip-path="url(#sbsc)"><rect x="3.5" y="3.5" width="37" height="22.5" fill="#fcd116"/><rect x="3.5" y="26" width="37" height="11.25" fill="#003087"/><rect x="3.5" y="37.25" width="37" height="11.25" fill="#ce1126"/></g><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/></svg><div class="sb-title">Indicadores<br>de Gobierno<br>Colombia</div></div>
+  <a class="sb-back" href="colombia-indicadores-gobierno.html">← Informe comparativo</a>
+  <div class="theme-toggle">
+    <button type="button" class="theme-half active" id="btn-dark-mode" onclick="setTheme('dark')" title="Modo oscuro">🌙</button>
+    <button type="button" class="theme-half"        id="btn-light-mode" onclick="setTheme('light')" title="Modo claro">☀️</button>
+  </div>
+  <div class="sb-section"><div class="sb-label">Este artículo</div>
+    <a class="sb-link" href="#sec-ind">📊 Indicadores clave</a>
+    <a class="sb-link" href="#sec-logros">✅ Logros</a>
+    <a class="sb-link" href="#sec-fracasos">❌ Fracasos</a>
+    <a class="sb-link" href="#sec-especial">🔍 Financiamiento 2022</a>
+    <a class="sb-link" href="#sec-fuentes">📚 Fuentes</a>
+  </div>
+  <div class="sb-section"><div class="sb-label">Otros presidentes</div>
+    <a class="sb-link" href="gaviria.html">Gaviria 1990–94</a>
+    <a class="sb-link" href="samper.html">Samper 1994–98</a>
+    <a class="sb-link" href="pastrana.html">Pastrana 1998–02</a>
+    <a class="sb-link" href="uribe.html">Uribe 2002–10</a>
+    <a class="sb-link" href="santos.html">Santos 2010–18</a>
+    <a class="sb-link" href="duque.html">Duque 2018–22</a>
+    <a class="sb-link active" href="petro.html">Petro 2022–</a>
+  </div>
+  <div class="sb-footer">Mayo 2026 · v2.1</div>
+</nav>
+<script>
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
+(function(){var ids=['sec-ind','sec-logros','sec-fracasos','sec-especial','sec-fuentes'];window.addEventListener('scroll',function(){var y=window.scrollY+80;ids.forEach(function(id){var el=document.getElementById(id);var link=document.querySelector('#sidebar a[href="#'+id+'"]');if(!el||!link)return;link.classList.toggle('active',y>=el.offsetTop&&y<el.offsetTop+el.offsetHeight)})},{passive:true})})();
+window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dark-mode',d);document.body.classList.toggle('light-mode',!d);var bm=document.getElementById('btn-dark-mode'),bl=document.getElementById('btn-light-mode');if(bm)bm.classList.toggle('active',d);if(bl)bl.classList.toggle('active',!d);var mob=document.getElementById('mob-theme-btn');if(mob)mob.textContent=d?'🌙':'☀️';localStorage.setItem('pres-theme',m)};
+(function(){var s=localStorage.getItem('pres-theme')||'dark';if(s!=='dark')window.setTheme('light')})();
+</script>
+<div class="page">
+
+<a class="back-btn" href="colombia-indicadores-gobierno.html">← Volver al informe comparativo</a>
+
+<div class="hero">
+  <h1>Gustavo Petro Urrego</h1>
+  <div class="years">7 de agosto de 2022 — presente</div>
+  <div class="partido">Pacto Histórico / Colombia Humana &nbsp;·&nbsp; Presidente n.º 34 de Colombia &nbsp;·&nbsp; Primer presidente de izquierda electo en la historia del país</div>
+</div>
+
+<div class="resumen">
+  <strong>Resumen ejecutivo:</strong> El gobierno Petro es el primero de izquierda en la historia de Colombia. Fue elegido con <strong>11,3 millones de votos</strong> (50.4%) en segunda vuelta, una victoria democrática legítima y significativa. Los datos disponibles a la fecha (mandato en curso) muestran: <strong>coca en máximo histórico absoluto</strong> (230.000 ha), el mayor desplazamiento forzado en décadas (347.000/año), el crecimiento del PIB más bajo desde los años 90 (1.2%) y la deuda en 60% del PIB. Entre los avances: las reservas internacionales alcanzaron un nuevo récord ($61.9B), la deforestación continúa bajando (140.000 ha) y la esperanza de vida se mantiene en 75.5 años. El mandato concluye en agosto de 2026.
+</div>
+
+<h2 id="sec-ind">INDICADORES CLAVE DEL MANDATO</h2>
+<p class="note">Datos disponibles 2022–2025. Mandato en curso — algunos valores son parciales. <a href="colombia-indicadores-gobierno.html">Ver comparativo completo →</a></p>
+<table>
+  <thead><tr><th>Indicador</th><th>Valor (Petro)</th><th>Contexto vs. otros gobiernos</th></tr></thead>
+  <tbody>
+    <tr><td>Homicidios prom. (/100K hab.)</td><td class="y">27.5</td><td class="y">Leve alza vs. Duque (26.4) — tendencia baja se detuvo</td></tr>
+    <tr><td>Masacres (prom. anual)</td><td class="r">90 / año</td><td class="r">Aumentaron vs. Duque (75) y Santos (56)</td></tr>
+    <tr><td>Secuestros (prom. anual)</td><td class="y">238 / año</td><td class="y">Leve aumento vs. Duque (204)</td></tr>
+    <tr><td>Desplazamiento forzado</td><td class="r">347.000 / año</td><td class="r">⚠ El más alto de los 7 gobiernos</td></tr>
+    <tr><td>Crecimiento PIB promedio</td><td class="r">1.2 %</td><td class="r">⚠ El más bajo de los 7 gobiernos</td></tr>
+    <tr><td>PIB per cápita (disponible)</td><td class="y">$6.946</td><td>Crecimiento marginal</td></tr>
+    <tr><td>Inflación prom. (IPC)</td><td class="r">8.5 %</td><td class="r">La más alta desde Pastrana (8.6% en prom.); heredada en parte</td></tr>
+    <tr><td>Desempleo promedio</td><td class="y">10.8 %</td><td class="y">Igual a Samper; recuperación parcial post-COVID</td></tr>
+    <tr><td>Deuda pública GNC (% PIB)</td><td class="r">60 %</td><td class="r">Se mantiene en el máximo histórico</td></tr>
+    <tr><td>Pobreza monetaria (disponible)</td><td class="g">32.5 %</td><td class="g">Bajó de 36.6% (Duque) — tendencia continúa</td></tr>
+    <tr><td>Cultivos de coca (ha)</td><td class="r">230.000</td><td class="r">⚠ El más alto de todos los gobiernos — máximo absoluto</td></tr>
+    <tr><td>Reservas internacionales</td><td class="g">$61.9 B</td><td class="g">✔ Récord histórico</td></tr>
+    <tr><td>Deforestación (ha/año)</td><td class="g">140.000</td><td class="g">✔ La más baja de los 7 gobiernos</td></tr>
+    <tr><td>ECI HS92 (disponible)</td><td class="y">0.18</td><td class="y">Leve mejora vs. Duque (0.15)</td></tr>
+    <tr><td>Vivienda VIS/VIP (miles/año)</td><td class="r">38</td><td class="r">Cayó de 61K (Duque) a 38K — mínimo desde Samper</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sec-logros" class="sec-logros">LOGROS</h2>
+
+<ul>
+  <li><strong>Récord histórico de reservas internacionales ($61.9 B):</strong> Colombia superó todos los registros previos en reservas internacionales, proporcionando una base sólida para afrontar choques externos. Esto se da en un contexto de bajo crecimiento, lo que sugiere que los flujos de divisas (principalmente remesas y exportaciones de materias primas) han sido favorables. <a href="https://www.banrep.gov.co/es/estadisticas/reservas-internacionales" target="_blank">[BanRep — Reservas]</a></li>
+
+  <li><strong>Reducción continua de la deforestación — 140.000 ha/año:</strong> La tendencia de reducción de deforestación iniciada bajo Duque continuó, llegando a los niveles más bajos del período estudiado. El enfoque ambiental del gobierno ha tenido resultados concretos en este indicador. <a href="https://www.ideam.gov.co" target="_blank">[IDEAM]</a></li>
+
+  <li><strong>Continuación de la tendencia de reducción de pobreza:</strong> La pobreza monetaria bajó de 36.6% (Duque) a 32.5% en los datos disponibles, continuando la tendencia histórica. Las transferencias sociales y el crecimiento del consumo interno han sostenido este resultado. <a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida" target="_blank">[DANE — Pobreza]</a></li>
+
+  <li><strong>Reforma pensional aprobada (2024):</strong> La reforma pensional amplió la cobertura a trabajadores informales, incluyendo a quienes nunca habían cotizado. Es la reforma social más importante en el sistema pensional desde la Ley 100 de 1993. Su sostenibilidad fiscal a largo plazo es objeto de debate. <a href="https://www.mintrabajo.gov.co" target="_blank">[Ministerio del Trabajo]</a></li>
+
+  <li><strong>Esperanza de vida — 75.5 años (máximo histórico):</strong> La tendencia de mejora en salud continúa, con la esperanza de vida en su punto más alto entre todos los gobiernos estudiados. <a href="https://hdr.undp.org/data-center/country-insights" target="_blank">[PNUD — IDH]</a></li>
+</ul>
+
+<h2 id="sec-fracasos" class="sec-fracasos">FRACASOS Y CRÍTICAS</h2>
+
+<ul>
+  <li><strong>Máximo histórico de coca — 230.000 hectáreas:</strong> El gobierno Petro declaró el fin de la "guerra contra las drogas" y apostó por la sustitución voluntaria. El resultado ha sido el récord absoluto de cultivos ilícitos: 230.000 ha, superior a todos los gobiernos anteriores y 36% más que el máximo previo de Duque (204.000 ha). La política de paz total con grupos armados, que incluye a las disidencias de las FARC y el ELN, ha coincidido con la expansión del control territorial cocalero de esos grupos. <a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">[UNODC — Colombia Coca Survey 2023]</a></li>
+
+  <li><strong>Desplazamiento forzado en máximo del período — 347.000/año:</strong> El desplazamiento es el más alto de todos los gobiernos estudiados, superando incluso a Pastrana. La "paz total" no ha reducido la violencia en territorios controlados por el ELN y el EMC de las FARC. <a href="https://www.acnur.org/colombia.html" target="_blank">[ACNUR]</a></li>
+
+  <li><strong>Crecimiento del PIB más bajo en 30 años — 1.2%:</strong> El crecimiento económico ha caído al nivel más bajo desde la crisis de 1999 (gobierno Pastrana), excluyendo el año COVID de 2020. La incertidumbre sobre las reformas estructurales (salud, pensiones, laboral) ha reducido la inversión privada y la creación de empleo formal. <a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">[BanRep — PIB]</a></li>
+
+  <li><strong>Vivienda VIS/VIP en mínimo histórico — 38.000/año:</strong> La construcción de vivienda social cayó de 61.000 unidades/año (Duque) a 38.000, el nivel más bajo desde Samper. La incertidumbre regulatoria y los cambios en política sectorial frenaron la inversión en construcción. <a href="https://www.minvivienda.gov.co" target="_blank">[Ministerio de Vivienda]</a></li>
+
+  <li><strong>Masacres en aumento — 90/año:</strong> Las masacres aumentaron de 75/año (Duque) a 90/año, revirtiendo parcialmente la tendencia de reducción. El Cauca, Nariño y Chocó concentran los episodios, en áreas de disputa entre el ELN, el EMC y el Clan del Golfo. <a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">[INMLCF]</a></li>
+
+  <li><strong>Escándalos de corrupción en el entorno cercano:</strong> El caso "Nicolás Petro" (hijo del presidente, condenado por enriquecimiento ilícito y tráfico de estupefacientes) y las investigaciones sobre la campaña 2022 han afectado la credibilidad del gobierno en materia anticorrupción. <a href="https://www.fiscalia.gov.co" target="_blank">[Fiscalía General de la Nación]</a></li>
+
+  <li><strong>Reforma a la salud — fragmentación del debate:</strong> La reforma al sistema de salud fue objetada por la Corte Constitucional en aspectos clave y generó divisiones en la coalición de gobierno. El SGSSS sigue siendo uno de los sistemas de salud más complejos de América Latina. <a href="https://www.minsalud.gov.co" target="_blank">[Ministerio de Salud]</a></li>
+</ul>
+
+<h2 id="sec-especial" class="sec-especial">FINANCIAMIENTO ILEGAL E INFLUENCIA ARMADA EN LA CAMPAÑA 2022</h2>
+<p class="note">Investigaciones en curso — alegatos sin sentencia ejecutoriada a la fecha</p>
+
+<div class="spec-box">
+  <strong>Contexto:</strong> Múltiples investigaciones periodísticas y judiciales señalan posibles vínculos entre el entorno de campaña de Petro y recursos de origen ilegal, así como apoyo logístico de grupos armados en territorios de su influencia. Estas son <em>investigaciones en curso</em>, no condenas ejecutoriadas. Se presentan porque son relevantes para entender el contexto del mandato y porque organismos del Estado colombiano las están investigando activamente.
+</div>
+
+<h3>Investigaciones y señalamientos documentados</h3>
+<ul>
+  <li><strong>Caso "Nicolás Petro Burgos" — Fiscalía General de la Nación:</strong> El hijo mayor del presidente fue condenado en 2023 por enriquecimiento ilícito y tráfico de estupefacientes. En declaraciones ante la Fiscalía, afirmó haber recibido dineros de origen ilícito para la campaña de su padre. La Fiscalía abrió investigación formal. <a href="https://www.fiscalia.gov.co" target="_blank">[Fiscalía GN]</a></li>
+
+  <li><strong>Investigación del Consejo Nacional Electoral (CNE):</strong> El CNE investigó irregularidades en el financiamiento de la campaña Colombia Humana 2022. Se reportaron aportes sin identificación clara de origen y movimientos financieros que superaron los topes legales. <a href="https://www.cne.gov.co" target="_blank">[CNE]</a></li>
+
+  <li><strong>Señalamientos de disidencias de las FARC:</strong> Documentos filtrados y declaraciones de mandos medios del EMC y la Segunda Marquetalia señalaron aportes logísticos y financieros a la campaña de Petro en territorios del Putumayo, Cauca y Nariño. En mayo de 2026, las propias disidencias de las FARC acusaron a Petro de haber financiado su campaña con apoyo de grupos criminales. <a href="https://www.infobae.com/colombia/2026/05/09/disidencias-de-las-farc-acusan-al-presidente-gustavo-petro-de-pagar-su-campana-de-la-mano-de-grupos-criminales-la-financio-la-mafia-la-sangre-colombiana/" target="_blank">[Infobae — Disidencias FARC acusan a Petro, mayo 2026]</a></li>
+
+  <li><strong>Análisis de InSight Crime — grupos criminales y elecciones 2022:</strong> InSight Crime documentó cómo el Clan del Golfo, las disidencias de las FARC y el ELN ejercieron control sobre el voto en múltiples municipios, usando intimidación y financiamiento selectivo a candidatos locales afines. La coincidencia entre zonas de dominio guerrillero y resultados electorales de Petro en primera vuelta fue señalada por analistas. <a href="https://insightcrime.org/news/colombia-criminal-groups-preparing-presidential-elections/" target="_blank">[InSight Crime 2022]</a></li>
+
+  <li><strong>Investigación periodística El Distrito:</strong> El medio El Distrito publicó una investigación sobre el presunto apoyo de disidencias de las FARC a la campaña de Petro, con testimonios de desmovilizados y documentos de inteligencia. <a href="https://eldistrito.es/investigacion-presunto-apoyo-disidencias-farc-campana-gustavo-petro/" target="_blank">[El Distrito — Investigación]</a></li>
+</ul>
+
+<div class="balance-box">
+  <strong>Nota de balance obligatoria:</strong> Gustavo Petro fue elegido presidente de Colombia con <strong>11,3 millones de votos</strong> (50.44% en segunda vuelta), en unas elecciones supervisadas por observadores internacionales de la OEA y la UE. Su elección es un resultado democrático legítimo. Las investigaciones sobre financiamiento ilegal son alegatos en proceso judicial — en Colombia y en cualquier Estado de derecho, la presunción de inocencia aplica hasta sentencia ejecutoriada. La mención de estas investigaciones tiene como objetivo informar, no condenar sin proceso.
+</div>
+
+<h3>Patrones electorales en zonas de influencia guerrillera</h3>
+<p style="font-size:10pt;margin:8px 0 14px">Análisis de los resultados electorales del Registrador muestran que Petro obtuvo sus resultados más altos (85-95% en segunda vuelta) en municipios del Cauca, Nariño, Putumayo y Norte de Santander donde el ELN y las disidencias de las FARC tienen presencia dominante documentada por la FIP y UNODC. Si bien esto puede reflejar preferencias políticas genuinas en regiones históricamente excluidas, también coincide con los territorios donde los grupos armados ejercen control electoral activo según múltiples análisis de InSight Crime y la Fundación Paz y Reconciliación. <a href="https://www.registraduria.gov.co" target="_blank">[Registraduría — Resultados 2022]</a></p>
+
+<h2 id="sec-fuentes">FUENTES PRINCIPALES</h2>
+<ul class="fuentes-list">
+  <li><a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">UNODC — Colombia Coca Cultivation Surveys 2022-2023</a></li>
+  <li><a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">INMLCF — FORENSIS: Datos de violencia 2022-2024</a></li>
+  <li><a href="https://www.banrep.gov.co/es/estadisticas" target="_blank">Banco de la República — PIB, inflación, reservas 2022-2025</a></li>
+  <li><a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida" target="_blank">DANE — Pobreza y desempleo 2022-2024</a></li>
+  <li><a href="https://insightcrime.org/news/colombia-criminal-groups-preparing-presidential-elections/" target="_blank">InSight Crime — Colombia's Criminal Groups Preparing for Presidential Elections (2022)</a></li>
+  <li><a href="https://www.infobae.com/colombia/2026/05/09/disidencias-de-las-farc-acusan-al-presidente-gustavo-petro-de-pagar-su-campana-de-la-mano-de-grupos-criminales-la-financio-la-mafia-la-sangre-colombiana/" target="_blank">Infobae — Disidencias de las FARC acusan a Petro de financiamiento con grupos criminales (mayo 2026)</a></li>
+  <li><a href="https://eldistrito.es/investigacion-presunto-apoyo-disidencias-farc-campana-gustavo-petro/" target="_blank">El Distrito — Investigación: presunto apoyo disidencias FARC campaña Petro</a></li>
+  <li><a href="https://www.elpais.com.co/colombia/exclusivo-el-inmenso-crecimiento-de-las-disidencias-de-las-farc-tras-la-llegada-de-gustavo-petro-a-la-presidencia-0328.html" target="_blank">El País Cali — Crecimiento de las disidencias de las FARC bajo Petro</a></li>
+  <li><a href="https://www.acnur.org/colombia.html" target="_blank">ACNUR — Desplazamiento forzado Colombia 2022-2024</a></li>
+  <li><a href="https://www.registraduria.gov.co" target="_blank">Registraduría Nacional — Resultados electorales segunda vuelta 2022</a></li>
+  <li><a href="https://www.fiscalia.gov.co" target="_blank">Fiscalía General de la Nación — Caso Nicolás Petro Burgos</a></li>
+  <li><a href="https://hdr.undp.org/data-center/country-insights" target="_blank">PNUD — IDH Colombia 2022-2024</a></li>
+</ul>
+
+<div class="disclaimer">
+  <strong>⚠ Aviso:</strong> Este artículo fue elaborado con asistencia de <strong>Inteligencia Artificial</strong> (Claude, Anthropic) y puede contener errores o imprecisiones. Las secciones sobre investigaciones judiciales reflejan alegatos en proceso, no sentencias. No debe utilizarse como fuente primaria sin verificación independiente. Consulte siempre las fuentes originales citadas.
+</div>
+
+</div>
+</body>
+</html>
