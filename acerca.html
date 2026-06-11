@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="google-adsense-account" content="ca-pub-6272957192947399">
+<title>Acerca de — Indicadores de Gobierno Colombia</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;min-height:100vh}
+p{font-size:10pt;color:var(--text);margin-bottom:12px;line-height:1.7}
+.back-btn{display:inline-block;background:var(--surface);color:var(--accent2);border:1px solid var(--border);border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:var(--surface2)}
+.hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px;border:1px solid var(--border)}
+.hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
+.hero .sub{font-size:10pt;color:#b4c6f7;margin-top:6px}
+.source-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:14px 0}
+@media(max-width:600px){.source-grid{grid-template-columns:1fr}}
+.source-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.source-card strong{color:var(--accent2);display:block;margin-bottom:4px;font-size:9.5pt}
+.source-card span{font-size:9pt;color:var(--muted)}
+.contact-box{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin:20px 0;font-size:10pt;color:var(--text);line-height:1.8}
+.contact-box strong{color:var(--accent2)}
+.contact-meta{font-size:9pt;color:var(--muted)}
+.stat-row{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}
+.stat-item{background:#0d2252;color:#fff;border-radius:8px;padding:12px 20px;text-align:center;min-width:100px;border:1px solid var(--border)}
+.stat-item .num{font-size:18pt;font-weight:700;color:#60a5fa;display:block}
+.stat-item .lbl{font-size:8pt;color:#b4c6f7;text-transform:uppercase;letter-spacing:.8px}
+body.light-mode .source-card{background:#f8faff!important;border-color:#dce8ff!important}
+body.light-mode .source-card strong{color:#0d2252!important}
+body.light-mode .source-card span{color:#555!important}
+body.light-mode .contact-box{background:#f0f7ff!important;border-color:#b4c6f7!important;color:#333!important}
+body.light-mode .contact-box strong{color:#0d2252!important}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pres-dark.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6272957192947399" crossorigin="anonymous"></script>
+</head>
+<body class="dark-mode">
+<div id="sidebar-overlay" onclick="toggleSidebar()"></div>
+<button id="ham-btn" type="button" onclick="toggleSidebar()" aria-label="Menú"><span></span><span></span><span></span></button>
+<button type="button" id="mob-theme-btn" class="mob-theme-btn" onclick="setTheme(document.body.classList.contains('dark-mode')?'light':'dark')" title="Cambiar tema">🌙</button>
+<nav id="sidebar">
+  <div class="sb-brand"><svg width="26" height="32" viewBox="0 0 44 52" fill="none"><clipPath id="sbsc"><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z"/></clipPath><g clip-path="url(#sbsc)"><rect x="3.5" y="3.5" width="37" height="22.5" fill="#fcd116"/><rect x="3.5" y="26" width="37" height="11.25" fill="#003087"/><rect x="3.5" y="37.25" width="37" height="11.25" fill="#ce1126"/></g><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/></svg><div class="sb-title">Indicadores<br>de Gobierno<br>Colombia</div></div>
+  <a class="sb-back" href="index.html">← Informe comparativo</a>
+  <div class="theme-toggle">
+    <button type="button" class="theme-half active" id="btn-dark-mode" onclick="setTheme('dark')" title="Modo oscuro">🌙</button>
+    <button type="button" class="theme-half"        id="btn-light-mode" onclick="setTheme('light')" title="Modo claro">☀️</button>
+  </div>
+  <div class="sb-section"><div class="sb-label">Este sitio</div>
+    <a class="sb-link" href="privacidad.html">🔒 Política de privacidad</a>
+    <a class="sb-link active" href="acerca.html">ℹ️ Acerca de</a>
+  </div>
+  <div class="sb-section"><div class="sb-label">Presidentes</div>
+    <a class="sb-link" href="gaviria.html">Gaviria 1990–94</a>
+    <a class="sb-link" href="samper.html">Samper 1994–98</a>
+    <a class="sb-link" href="pastrana.html">Pastrana 1998–02</a>
+    <a class="sb-link" href="uribe.html">Uribe 2002–10</a>
+    <a class="sb-link" href="santos.html">Santos 2010–18</a>
+    <a class="sb-link" href="duque.html">Duque 2018–22</a>
+    <a class="sb-link" href="petro.html">Petro 2022–</a>
+  </div>
+  <div class="sb-footer">Mayo 2026 · v2.1</div>
+</nav>
+<script>
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
+window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dark-mode',d);document.body.classList.toggle('light-mode',!d);var bm=document.getElementById('btn-dark-mode'),bl=document.getElementById('btn-light-mode');if(bm)bm.classList.toggle('active',d);if(bl)bl.classList.toggle('active',!d);var mob=document.getElementById('mob-theme-btn');if(mob)mob.textContent=d?'🌙':'☀️';localStorage.setItem('pres-theme',m)};
+(function(){var s=localStorage.getItem('pres-theme')||'dark';if(s!=='dark')window.setTheme('light')})();
+</script>
+<div class="page">
+
+<a class="back-btn" href="index.html">← Volver al informe comparativo</a>
+
+<div class="hero">
+  <h1>ℹ️ Acerca de este sitio</h1>
+  <div class="sub">votacioncolombia.com — Indicadores de Gobierno Colombia 1990–2025</div>
+</div>
+
+<div class="resumen">
+  <strong>Misión:</strong> Poner a disposición de todos los colombianos información objetiva, verificada y comparativa sobre el desempeño de los gobiernos desde 1990, para que las decisiones de voto se tomen con datos — no con propaganda.
+</div>
+
+<div class="stat-row">
+  <div class="stat-item"><span class="num">7</span><span class="lbl">Presidentes</span></div>
+  <div class="stat-item"><span class="num">67</span><span class="lbl">Indicadores</span></div>
+  <div class="stat-item"><span class="num">35</span><span class="lbl">Años</span></div>
+  <div class="stat-item"><span class="num">3+</span><span class="lbl">Fuentes por dato</span></div>
+</div>
+
+<h2 id="sec-que">¿QUÉ ES ESTE SITIO?</h2>
+<p><strong>votacioncolombia.com</strong> es un informe de análisis comparativo independiente que cubre los siete gobiernos colombianos entre 1990 y 2025: Gaviria, Samper, Pastrana, Uribe, Santos, Duque y Petro. Mide 67 indicadores distribuidos en cinco bloques temáticos: seguridad pública, economía, social y salud, gobernanza, y medio ambiente.</p>
+<p>El enfoque central no es calificar presidentes con una nota, sino mostrar la <strong>evolución de cada indicador a lo largo del tiempo</strong> y permitir comparar lo que cada gobierno recibió con lo que entregó. Un mandato se juzga por los cambios que produjo en las condiciones que heredó — no por el estado absoluto del país al final.</p>
+
+<h2 id="sec-por-que">¿POR QUÉ EXISTE?</h2>
+<p>En Colombia, las decisiones de voto frecuentemente se basan en narrativas mediáticas, lealtades partidistas y simpatías personales antes que en evidencia. Los datos existen, pero están dispersos en cientos de PDFs, bases de datos institucionales y reportes técnicos que la mayoría de ciudadanos no tiene tiempo de cruzar.</p>
+<p>Este sitio centraliza esa información, la cruza con múltiples fuentes, la contextualiza históricamente y la presenta de forma clara para cualquier persona — sin importar su nivel de conocimiento económico o estadístico.</p>
+
+<h2 id="sec-metodologia">METODOLOGÍA</h2>
+
+<h3>Selección de indicadores</h3>
+<p>Los 67 indicadores fueron seleccionados por su disponibilidad histórica continua desde 1990, su relevancia para medir bienestar y gestión pública, y la existencia de fuentes primarias verificables. Se agrupan en cinco bloques: Seguridad (11), Economía (15), Social/Salud (20), Gobernanza (12) y Ambiente (10).</p>
+
+<h3>Validación de datos</h3>
+<p>Cada cifra fue cruzada con <strong>mínimo 3 fuentes independientes</strong>. Las discrepancias detectadas entre fuentes se señalan explícitamente con alertas ⚠️. Cuando las fuentes no coinciden se documenta el rango y la razón de la discrepancia.</p>
+
+<h3>Comparación entre mandatos</h3>
+<p>Los promedios de mandato se calculan sobre los años completos de gobierno. Para indicadores que varían estructuralmente (como el PIB per cápita en dólares corrientes), se presentan tanto valores absolutos como tasas de cambio relativas para permitir comparación justa entre períodos históricos.</p>
+
+<h3>Fuentes principales</h3>
+<div class="source-grid">
+  <div class="source-card"><strong>INMLCF — FORENSIS</strong><span>Homicidios, masacres, violencia. Fuente primaria anual.</span></div>
+  <div class="source-card"><strong>DANE</strong><span>PIB, empleo, pobreza, demografía, inflación (IPC).</span></div>
+  <div class="source-card"><strong>Banco de la República</strong><span>Macroeconomía, deuda, reservas, tasas de interés.</span></div>
+  <div class="source-card"><strong>UNODC</strong><span>Cultivos de coca, narcotráfico, drogas ilícitas.</span></div>
+  <div class="source-card"><strong>Banco Mundial / PNUD</strong><span>IDH, PIB per cápita, indicadores de desarrollo.</span></div>
+  <div class="source-card"><strong>ACNUR / CODHES</strong><span>Desplazamiento forzado interno.</span></div>
+  <div class="source-card"><strong>IDEAM</strong><span>Deforestación, medio ambiente, recursos naturales.</span></div>
+  <div class="source-card"><strong>Transparencia Internacional</strong><span>Índice de Percepción de Corrupción (IPC).</span></div>
+</div>
+
+<h2 id="sec-ia">AVISO SOBRE INTELIGENCIA ARTIFICIAL</h2>
+<div class="disclaimer">
+  <strong>⚠ Este informe fue elaborado con asistencia de Inteligencia Artificial</strong> (Claude, Anthropic). El proceso incluyó recopilación automatizada de datos, redacción de análisis y cruce de fuentes. Aunque cada dato fue contrastado con múltiples fuentes primarias, el proceso automatizado puede contener errores, imprecisiones o datos desactualizados.<br><br>
+  <strong>Este informe no debe utilizarse como fuente primaria</strong> sin verificación independiente. Consulta siempre las fuentes originales citadas en el informe.
+</div>
+
+<h2 id="sec-independencia">INDEPENDENCIA EDITORIAL</h2>
+<p>Este sitio es independiente y no tiene afiliación con ningún partido político, candidato, organización gubernamental ni grupo de interés. Los análisis buscan presentar los datos con la mayor objetividad posible, señalando logros y fracasos de todos los gobiernos sin distinción ideológica.</p>
+<p>Los anuncios publicitarios son gestionados por <strong>Google AdSense</strong> de forma automatizada y no representan endorsement hacia ningún producto, servicio o posición política.</p>
+
+<h2 id="sec-contacto">CONTACTO</h2>
+<div class="contact-box">
+  <strong>¿Encontraste un error? ¿Tienes una sugerencia?</strong><br><br>
+  <span class="contact-meta">Colombia · 2026 · Versión 2.1</span>
+</div>
+
+</div>
+</body>
+</html>

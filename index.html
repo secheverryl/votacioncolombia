@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-adsense-account" content="ca-pub-6272957192947399">
   <title>Comparativo de Indicadores de Gobierno — Colombia 1990–2025</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -535,6 +536,41 @@
       font-family:sans-serif; display:flex; align-items:center; gap:8px;
     }
     .why-cta-item span { font-weight:600; color:rgba(224,231,255,.88); }
+    .why-indicators-banner {
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(148,163,184,.2);
+      border-radius:10px;
+      padding:24px 26px;
+      margin-bottom:24px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:0 32px;
+    }
+    @media(max-width:700px){ .why-indicators-banner{ grid-template-columns:1fr; } }
+    .why-ib-intro {
+      grid-column:1/-1;
+      font-size:11.5pt; color:rgba(224,231,255,.88); line-height:1.7;
+      margin-bottom:18px;
+      border-bottom:1px solid rgba(255,255,255,.07);
+      padding-bottom:18px;
+    }
+    .why-ib-intro strong { color:#fde68a; }
+    .why-ib-col-title {
+      font-size:8.5pt; font-weight:700; letter-spacing:1.5px;
+      text-transform:uppercase; margin-bottom:10px;
+      font-family:sans-serif;
+    }
+    .why-ib-col-title.bad  { color:#fca5a5; }
+    .why-ib-col-title.good { color:#86efac; }
+    .why-ib-list { list-style:none; padding:0; margin:0; }
+    .why-ib-list li {
+      font-size:10pt; color:rgba(203,213,225,.8);
+      line-height:1.55; padding:5px 0;
+      border-bottom:1px solid rgba(255,255,255,.05);
+      display:flex; gap:8px;
+    }
+    .why-ib-list li:last-child { border-bottom:none; }
+    .why-ib-list li .ib-icon { flex-shrink:0; }
 
     /* ── PRINT BUTTON ── */
     .print-btn   { background:#1d4ed8 !important; top:14px !important; right:14px !important; font-size:11px !important; padding:8px 16px !important; }
@@ -787,6 +823,7 @@
     body.light-mode .rk-score-mid .rk-pts { color:#92400e !important; }
     body.light-mode .rk-score-lo  .rk-pts { color:#b91c1c !important; }
   </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6272957192947399" crossorigin="anonymous"></script>
 </head>
 <body class="dark-mode">
 
@@ -842,6 +879,12 @@
     <a class="sb-link" href="santos.html">Santos 2010–18</a>
     <a class="sb-link" href="duque.html">Duque 2018–22</a>
     <a class="sb-link" href="petro.html">Petro 2022–</a>
+  </div>
+
+  <div class="sb-section">
+    <div class="sb-label">Sitio</div>
+    <a class="sb-link" href="acerca.html">ℹ️ Acerca de</a>
+    <a class="sb-link" href="privacidad.html">🔒 Privacidad</a>
   </div>
 
   <div class="sb-footer">Mayo 2026 · v2.1<br>IA-asistido · Claude, Anthropic</div>
@@ -974,6 +1017,34 @@ window.setTheme = function(mode) {
         <div class="why-card-icon">🏚️</div>
         <div class="why-card-title">La metáfora de la casa heredada</div>
         <p>Imagina que recibes una casa con el techo caído, las tuberías rotas y deudas enormes. Si en 4 años el techo está reparado y la deuda bajó — hiciste algo bien, aunque la casa aún no sea perfecta. Pero si recibes una casa en buen estado y la entregas peor de como la encontraste — hay un problema serio, aunque todavía parezca habitable. <strong>Un gobierno se juzga por lo que hizo con lo que recibió.</strong></p>
+      </div>
+    </div>
+
+    <div class="why-indicators-banner">
+      <p class="why-ib-intro">
+        Un escándalo, una frase polémica, un meme viral, la noticia del día — eso es lo que normalmente mueve el voto en Colombia. Pero ninguna de esas cosas te dice si un gobierno <strong>realmente funcionó</strong>. Los indicadores sí. Un indicador no tiene ideología, no tiene agenda, no le importa quién gana las elecciones: simplemente registra lo que pasó con la economía, la seguridad, la salud y la calidad de vida de millones de personas durante un mandato. <strong>La gestión global de un gobierno siempre es más reveladora que sus noticias más ruidosas.</strong>
+      </p>
+      <div>
+        <p class="why-ib-col-title bad">❌ Lo que NO te dice si un gobierno fue bueno</p>
+        <ul class="why-ib-list">
+          <li><span class="ib-icon">📰</span>Noticias de escándalos puntuales</li>
+          <li><span class="ib-icon">📣</span>Propaganda del partido de gobierno</li>
+          <li><span class="ib-icon">📱</span>Memes y tendencias en redes sociales</li>
+          <li><span class="ib-icon">🎤</span>Discursos y promesas de campaña</li>
+          <li><span class="ib-icon">🗣️</span>Opinión de familiares o amigos</li>
+          <li><span class="ib-icon">📺</span>La simpatía o antipatía personal al presidente</li>
+        </ul>
+      </div>
+      <div>
+        <p class="why-ib-col-title good">✅ Lo que SÍ refleja la gestión real</p>
+        <ul class="why-ib-list">
+          <li><span class="ib-icon">📊</span>Evolución de homicidios, secuestros y violencia</li>
+          <li><span class="ib-icon">💰</span>Crecimiento económico y PIB per cápita</li>
+          <li><span class="ib-icon">📉</span>Pobreza, desempleo e inflación</li>
+          <li><span class="ib-icon">🏥</span>Esperanza de vida, educación y salud</li>
+          <li><span class="ib-icon">🌿</span>Deforestación y medio ambiente</li>
+          <li><span class="ib-icon">🏛️</span>Deuda pública y estabilidad institucional</li>
+        </ul>
       </div>
     </div>
 

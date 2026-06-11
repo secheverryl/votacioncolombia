@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="google-adsense-account" content="ca-pub-6272957192947399">
+<title>Política de Privacidad — Indicadores de Gobierno Colombia</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;min-height:100vh}
+p{font-size:10pt;color:var(--text);margin-bottom:12px;line-height:1.7}
+.back-btn{display:inline-block;background:var(--surface);color:var(--accent2);border:1px solid var(--border);border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:var(--surface2)}
+.hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px;border:1px solid var(--border)}
+.hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
+.hero .sub{font-size:10pt;color:#b4c6f7;margin-top:6px}
+.highlight-box{background:var(--surface);border-left:4px solid #f9a825;padding:12px 16px;margin:16px 0;border-radius:3px;font-size:9.5pt;color:var(--text)}
+.contact-box{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin:20px 0;font-size:10pt;color:var(--text)}
+.contact-box strong{color:var(--accent2)}
+.updated{font-size:8.5pt;color:var(--muted);margin-top:28px;padding-top:12px;border-top:1px solid var(--border)}
+body.light-mode .highlight-box{background:#fff8e1!important;border-left-color:#f9a825!important;color:#333!important}
+body.light-mode .contact-box{background:#f0f7ff!important;border-color:#b4c6f7!important;color:#333!important}
+body.light-mode .contact-box strong{color:#0d2252!important}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pres-dark.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6272957192947399" crossorigin="anonymous"></script>
+</head>
+<body class="dark-mode">
+<div id="sidebar-overlay" onclick="toggleSidebar()"></div>
+<button id="ham-btn" type="button" onclick="toggleSidebar()" aria-label="Menú"><span></span><span></span><span></span></button>
+<button type="button" id="mob-theme-btn" class="mob-theme-btn" onclick="setTheme(document.body.classList.contains('dark-mode')?'light':'dark')" title="Cambiar tema">🌙</button>
+<nav id="sidebar">
+  <div class="sb-brand"><svg width="26" height="32" viewBox="0 0 44 52" fill="none"><clipPath id="sbsc"><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z"/></clipPath><g clip-path="url(#sbsc)"><rect x="3.5" y="3.5" width="37" height="22.5" fill="#fcd116"/><rect x="3.5" y="26" width="37" height="11.25" fill="#003087"/><rect x="3.5" y="37.25" width="37" height="11.25" fill="#ce1126"/></g><path d="M22 3.5L3.5 11V26C3.5 37 11 45.5 22 48.5C33 45.5 40.5 37 40.5 26V11L22 3.5Z" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/></svg><div class="sb-title">Indicadores<br>de Gobierno<br>Colombia</div></div>
+  <a class="sb-back" href="index.html">← Informe comparativo</a>
+  <div class="theme-toggle">
+    <button type="button" class="theme-half active" id="btn-dark-mode" onclick="setTheme('dark')" title="Modo oscuro">🌙</button>
+    <button type="button" class="theme-half"        id="btn-light-mode" onclick="setTheme('light')" title="Modo claro">☀️</button>
+  </div>
+  <div class="sb-section"><div class="sb-label">Este sitio</div>
+    <a class="sb-link active" href="privacidad.html">🔒 Política de privacidad</a>
+    <a class="sb-link" href="acerca.html">ℹ️ Acerca de</a>
+  </div>
+  <div class="sb-section"><div class="sb-label">Presidentes</div>
+    <a class="sb-link" href="gaviria.html">Gaviria 1990–94</a>
+    <a class="sb-link" href="samper.html">Samper 1994–98</a>
+    <a class="sb-link" href="pastrana.html">Pastrana 1998–02</a>
+    <a class="sb-link" href="uribe.html">Uribe 2002–10</a>
+    <a class="sb-link" href="santos.html">Santos 2010–18</a>
+    <a class="sb-link" href="duque.html">Duque 2018–22</a>
+    <a class="sb-link" href="petro.html">Petro 2022–</a>
+  </div>
+  <div class="sb-footer">Mayo 2026 · v2.1</div>
+</nav>
+<script>
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
+window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dark-mode',d);document.body.classList.toggle('light-mode',!d);var bm=document.getElementById('btn-dark-mode'),bl=document.getElementById('btn-light-mode');if(bm)bm.classList.toggle('active',d);if(bl)bl.classList.toggle('active',!d);var mob=document.getElementById('mob-theme-btn');if(mob)mob.textContent=d?'🌙':'☀️';localStorage.setItem('pres-theme',m)};
+(function(){var s=localStorage.getItem('pres-theme')||'dark';if(s!=='dark')window.setTheme('light')})();
+</script>
+<div class="page">
+
+<a class="back-btn" href="index.html">← Volver al informe comparativo</a>
+
+<div class="hero">
+  <h1>🔒 Política de Privacidad</h1>
+  <div class="sub">votacioncolombia.com — Indicadores de Gobierno Colombia</div>
+</div>
+
+<div class="resumen">
+  Este sitio web respeta tu privacidad. Esta política explica qué información se recopila, cómo se usa y cuáles son tus derechos como usuario. Al navegar por este sitio, aceptas las prácticas descritas a continuación.
+</div>
+
+<h2 id="sec-datos">1. INFORMACIÓN QUE RECOPILAMOS</h2>
+
+<h3>Datos de navegación (automáticos)</h3>
+<p>Como la mayoría de sitios web, este sitio puede recopilar de forma automática información técnica estándar cuando lo visitas, incluyendo:</p>
+<ul>
+  <li>Dirección IP (anonimizada)</li>
+  <li>Tipo de navegador y sistema operativo</li>
+  <li>Páginas visitadas y tiempo de permanencia</li>
+  <li>Fuente de referencia (cómo llegaste al sitio)</li>
+</ul>
+<p>Esta información se usa únicamente con fines estadísticos agregados y no permite identificar a ningún usuario en particular.</p>
+
+<h3>Datos que tú proporcionas</h3>
+<p>Este sitio <strong>no tiene formularios de registro, inicio de sesión ni recopila datos personales directamente</strong>. No almacenamos nombres, correos electrónicos ni ninguna información de identificación personal.</p>
+
+<h2 id="sec-cookies">2. USO DE COOKIES</h2>
+
+<p>Este sitio utiliza cookies de dos tipos:</p>
+
+<h3>Cookies propias</h3>
+<p>Usamos una cookie técnica llamada <code>pres-theme</code> para recordar tu preferencia de modo claro u oscuro entre visitas. No contiene información personal y puede eliminarse desde la configuración de tu navegador.</p>
+
+<h3>Cookies de terceros — Google AdSense</h3>
+<div class="highlight-box">
+  <strong>⚠ Aviso sobre publicidad:</strong> Este sitio muestra anuncios a través de <strong>Google AdSense</strong>. Google utiliza cookies para personalizar los anuncios según tu historial de navegación. Estas cookies son gestionadas por Google y están sujetas a la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad de Google</a>.
+</div>
+<p>Puedes optar por no recibir publicidad personalizada de Google visitando <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
+
+<h2 id="sec-terceros">3. SERVICIOS DE TERCEROS</h2>
+<ul>
+  <li><strong>Google AdSense</strong> — Publicidad contextual. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Ver política de Google →</a></li>
+  <li><strong>Google Fonts</strong> — Tipografías web. Puede registrar la dirección IP al cargar las fuentes.</li>
+  <li><strong>GitHub Pages</strong> — Alojamiento del sitio web.</li>
+</ul>
+<p>No compartimos datos con ningún otro tercero ni vendemos información de usuarios.</p>
+
+<h2 id="sec-derechos">4. TUS DERECHOS</h2>
+<p>De acuerdo con la legislación colombiana (Ley 1581 de 2012 — Habeas Data) y el Reglamento General de Protección de Datos de la UE (RGPD), tienes derecho a acceder, rectificar, eliminar u oponerte al tratamiento de tus datos. Dado que este sitio no recopila datos personales directamente, el ejercicio de estos derechos aplica principalmente frente a los servicios de terceros (Google) mencionados anteriormente.</p>
+
+<h2 id="sec-menores">5. MENORES DE EDAD</h2>
+<p>Este sitio no está dirigido a menores de 13 años y no recopila intencionalmente información de menores.</p>
+
+<h2 id="sec-cambios">6. CAMBIOS A ESTA POLÍTICA</h2>
+<p>Podemos actualizar esta política ocasionalmente. Los cambios se publicarán en esta misma página con la fecha de actualización. El uso continuado del sitio implica la aceptación de la política actualizada.</p>
+
+<h2 id="sec-contacto">7. CONTACTO</h2>
+<div class="contact-box">
+  <strong>¿Preguntas sobre esta política?</strong><br><br>
+  Sitio web: <a href="index.html">votacioncolombia.com</a><br>
+  Colombia · 2026
+</div>
+
+<p class="updated">Última actualización: Junio 2026</p>
+
+</div>
+</body>
+</html>
