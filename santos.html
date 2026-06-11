@@ -8,11 +8,11 @@
 <title>Juan Manuel Santos 2010–2018 — Análisis de Gobierno</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;color:#222;background:#f4f7fd;line-height:1.6}
-.page{max-width:860px;margin:0 auto;padding:24px 20px;background:#fff;min-height:100vh}
-a{color:#1a56db}a:hover{text-decoration:underline}
-.back-btn{display:inline-block;background:#eef2ff;color:#1a56db;border:1px solid #b4c6f7;border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
-.back-btn:hover{background:#dce8ff}
+body{font-family:Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;background:var(--surface);min-height:100vh}
+a{color:var(--accent2)}a:hover{text-decoration:underline}
+.back-btn{display:inline-block;background:var(--surface);color:var(--accent2);border:1px solid var(--border);border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:var(--bg)}
 .hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px}
 .hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
 .hero .years{font-size:11pt;color:#b4c6f7;margin-bottom:6px}
@@ -21,15 +21,16 @@ h2{font-size:12.5pt;color:#fff;background:#0d2252;padding:7px 16px;margin:26px 0
 h2.sec-logros{background:#155724}
 h2.sec-fracasos{background:#721c24}
 h2.sec-especial{background:#92400e}
-h3{font-size:10.5pt;color:#0d2252;border-bottom:2px solid #b4c6f7;padding-bottom:4px;margin:18px 0 8px}
-.resumen{background:#f8faff;border-left:4px solid #1a56db;padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
-.resumen strong{color:#0d2252}
-.note{font-size:8.5pt;color:#555;font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid #ccd8f0}
+h3{font-size:10.5pt;color:var(--accent2);border-bottom:2px solid var(--border);padding-bottom:4px;margin:18px 0 8px}
+.resumen{background:var(--bg);border-left:4px solid var(--accent);padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:var(--text)}
+.resumen strong{color:var(--accent2)}
+.note{font-size:8.5pt;color:var(--muted);font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid var(--border)}
 table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:10px 0 18px}
 th{background:#0d2252;color:#fff;padding:7px 10px;text-align:left;font-weight:600;font-size:9pt}
-td{padding:6px 10px;border-bottom:1px solid #e0e8f8}
-tr:nth-child(even) td{background:#f4f7fd}
-.g{color:#155724;font-weight:700}.r{color:#721c24;font-weight:700}.y{color:#7a4c00;font-weight:700}
+td{padding:6px 10px;border-bottom:1px solid var(--border);color:var(--text)}
+tr:nth-child(even) td{background:var(--bg)}
+.g{color:#4ade80;font-weight:700}.r{color:#f87171;font-weight:700}.y{color:#fbbf24;font-weight:700}
+body.light-mode .g{color:#166534}body.light-mode .r{color:#991b1b}body.light-mode .y{color:#92400e}
 ul{padding-left:20px;margin:8px 0 14px}
 ul li{margin-bottom:7px;font-size:10pt}
 .fuentes-list{font-size:9pt}
@@ -39,6 +40,9 @@ ul li{margin-bottom:7px;font-size:10pt}
 .coca-timeline{margin:14px 0;border-left:3px solid #d97706;padding-left:14px}
 .coca-event{margin-bottom:10px;font-size:10pt}
 .coca-event .year{font-weight:700;color:#92400e;display:inline-block;width:46px}
+body.dark-mode .spec-box{background:#1c1206;color:var(--text)}
+body.dark-mode .spec-box strong{color:#fcd34d}
+body.dark-mode .coca-event .year{color:#fbbf24}
 .disclaimer{background:#fff8e1;border-left:4px solid #f9a825;padding:10px 14px;margin:28px 0 0;border-radius:3px;font-size:9.5pt}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,24 +100,23 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 </div>
 
 <h2 id="sec-ind">INDICADORES CLAVE DEL MANDATO</h2>
-<p class="note">Promedios del mandato (2010–2018), salvo donde se indica. <a href="index.html">Ver comparativo completo →</a></p>
+<p class="note">Cambio vs. Uribe (2002–10), el gobierno anterior. Un mandato se evalúa por lo que cambió, no por el valor absoluto que dejó. <a href="index.html">Ver comparativo completo →</a></p>
 <table>
-  <thead><tr><th>Indicador</th><th>Valor (Santos)</th><th>Contexto vs. otros gobiernos</th></tr></thead>
+  <thead><tr><th>Indicador</th><th>Uribe (anterior)</th><th>Santos (este mandato)</th><th>Cambio</th></tr></thead>
   <tbody>
-    <tr><td>Homicidios prom. (/100K hab.)</td><td class="g">27.5</td><td class="g">✔ Continuó bajando desde Uribe (38.6)</td></tr>
-    <tr><td>Masacres (prom. anual)</td><td class="g">56 / año</td><td class="g">✔ El más bajo hasta ese momento</td></tr>
-    <tr><td>Secuestros (prom. anual)</td><td class="g">249 / año</td><td class="g">✔ Bajó de 818 (Uribe) a 249 (-70%)</td></tr>
-    <tr><td>Desplazamiento forzado</td><td class="y">217.000 / año</td><td class="y">Bajó, pero sigue siendo alto</td></tr>
-    <tr><td>Crecimiento PIB promedio</td><td class="g">3.6 %</td><td class="g">3.er más alto; caída al final del mandato (2016: 2.1%)</td></tr>
-    <tr><td>PIB per cápita (fin mandato, USD)</td><td class="g">$6.651</td><td class="g">Creció moderadamente</td></tr>
-    <tr><td>Inflación prom. (IPC)</td><td class="g">3.9 %</td><td class="g">✔ La más baja de los 7 gobiernos</td></tr>
-    <tr><td>Desempleo promedio</td><td class="g">9.7 %</td><td class="g">✔ 2.º más bajo (mejor solo Gaviria)</td></tr>
-    <tr><td>Deuda pública GNC (% PIB)</td><td class="r">50 %</td><td class="r">Subió de 39% (Uribe) a 50% (+11 pp)</td></tr>
-    <tr><td>Pobreza monetaria (fin mandato)</td><td class="g">27.0 %</td><td class="g">✔ La más baja: bajó de 37.2% a 27% (-10 pp)</td></tr>
-    <tr><td>Cultivos de coca (fin mandato, ha)</td><td class="r">169.000</td><td class="r">⚠ Se triplicó vs. Uribe (62K → 169K)</td></tr>
-    <tr><td>IDH (cierre mandato)</td><td class="g">0.747</td><td class="g">✔ El más alto de los 7 gobiernos</td></tr>
-    <tr><td>Reservas internacionales</td><td class="g">$48.4 B</td><td class="g">✔ Las más altas de la historia hasta ese momento</td></tr>
-    <tr><td>ECI (HS92, prom. mandato)</td><td class="y">0.27</td><td class="y">Sin mejora; complejidad económica estancada</td></tr>
+    <tr><td>Homicidios prom. (/100K hab.)</td><td>38.6</td><td class="g">27.5</td><td class="g">▼ −11.1 (−29%)</td></tr>
+    <tr><td>Masacres (prom. anual)</td><td>75</td><td class="g">56</td><td class="g">▼ −19 (−25%)</td></tr>
+    <tr><td>Secuestros (prom. anual)</td><td>818</td><td class="g">249</td><td class="g">▼ −569 (−70%)</td></tr>
+    <tr><td>Desplazamiento forzado (mil/año)</td><td>297</td><td class="g">217</td><td class="g">▼ −80 (−27%)</td></tr>
+    <tr><td>Crecimiento PIB promedio</td><td>4.6 %</td><td class="y">3.6 %</td><td class="y">▼ −1.0 pp</td></tr>
+    <tr><td>PIB per cápita (fin mandato, USD)</td><td>$6.291</td><td class="g">$6.651</td><td class="g">▲ +$360 (+6%)</td></tr>
+    <tr><td>Inflación prom. (IPC)</td><td>5.2 %</td><td class="g">3.9 %</td><td class="g">▼ −1.3 pp</td></tr>
+    <tr><td>Desempleo promedio</td><td>12.2 %</td><td class="g">9.7 %</td><td class="g">▼ −2.5 pp</td></tr>
+    <tr><td>Deuda pública GNC (% PIB)</td><td>39 %</td><td class="r">50 %</td><td class="r">▲ +11 pp</td></tr>
+    <tr><td>Pobreza monetaria (fin mandato)</td><td>37.2 %</td><td class="g">27.0 %</td><td class="g">▼ −10.2 pp</td></tr>
+    <tr><td>Cultivos de coca (fin mandato, ha)</td><td>62.000</td><td class="r">169.000</td><td class="r">▲ +107K (+173%)</td></tr>
+    <tr><td>IDH (cierre mandato)</td><td>0.689</td><td class="g">0.747</td><td class="g">▲ +0.058</td></tr>
+    <tr><td>Reservas internacionales (fin mandato)</td><td>$33.5 B</td><td class="g">$48.4 B</td><td class="g">▲ +$14.9 B (+44%)</td></tr>
   </tbody>
 </table>
 
@@ -126,7 +129,7 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 
   <li><strong>Máximo IDH histórico (0.747) y esperanza de vida (75.2 años):</strong> Colombia alcanzó bajo Santos sus mejores indicadores de desarrollo humano, impulsados por mejoras en educación (cobertura universitaria al 55%), salud (mortalidad infantil 10.7/1000) y nivel de vida. <a href="https://hdr.undp.org/data-center/country-insights" target="_blank">[PNUD — IDH Colombia]</a></li>
 
-  <li><strong>Ley de Víctimas y Restitución de Tierras (1448/2011):</strong> Reconoció a más de 8 millones de víctimas del conflicto y estableció el marco más completo de reparación integral en la historia de Colombia. La Unidad de Víctimas registró y comenzó a atender a millones de desplazados y damnificados. <a href="https://www.unidadvictimas.gov.co" target="_blank">[Unidad para las Víctimas]</a></li>
+  <li><strong>Ley de Víctimas y Restitución de Tierras (1448/2011):</strong> Reconoció a más de 9 millones de víctimas del conflicto y estableció el marco más completo de reparación integral en la historia de Colombia. La Unidad de Restitución de Tierras ha restituido 727.739 hectáreas a familias despojadas entre 2012 y 2026 —la mayor operación de devolución de tierras en el mundo con marco legal activo—, aunque el proceso aún tiene una deuda enorme con cientos de miles de familias que esperan resolución. <a href="https://www.unidadvictimas.gov.co" target="_blank">[Unidad para las Víctimas]</a></li>
 
   <li><strong>Política exterior y reintegración internacional:</strong> Santos normalizó las relaciones con Venezuela (tras tensiones de la era Uribe), suscribió la Colombia al Tratado de Libre Comercio con EE.UU. (en vigor 2012) y fue admitido como observador en la OTAN (2017). <a href="https://www.cancilleria.gov.co" target="_blank">[Cancillería de Colombia]</a></li>
 
@@ -140,9 +143,9 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 <ul>
   <li><strong>Explosión de cultivos de coca — de 62K a 169K hectáreas (+172%):</strong> El indicador más grave del mandato. Mientras se negociaba la paz, los cultivos de coca casi se triplicaron. Colombia recuperó el dudoso liderazgo mundial que había cedido brevemente a Perú. Las FARC y sus estructuras usaron los territorios en "zona gris" de las negociaciones para expandir la economía cocalera. <a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">[UNODC — Colombia Coca Survey]</a></li>
 
-  <li><strong>Plebiscito rechazado (octubre 2016) — 50.2% No:</strong> El primer Acuerdo de Paz fue rechazado en referéndum por un margen mínimo. Si bien Santos modificó el texto y obtuvo la aprobación del Congreso, el rechazo popular reveló la profunda división del país frente al proceso y las condiciones para los comandantes de las FARC. <a href="https://www.registraduria.gov.co" target="_blank">[Registraduría — Resultados plebiscito 2016]</a></li>
+  <li><strong>Plebiscito rechazado (octubre 2016) — 50.21% No, 53.894 votos de diferencia:</strong> El primer Acuerdo de Paz fue rechazado en referéndum por el margen más estrecho posible: 50.21% No vs. 49.78% Sí, con una diferencia de apenas 53.894 votos de 13 millones emitidos. La abstención fue del 62.6%. El No fue liderado por la coalición del Centro Democrático (Uribe) y sectores del Partido Conservador, que objetaban las condiciones de justicia para los comandantes de las FARC (sin cárcel efectiva, elegibilidad política). Santos modificó 50 puntos del texto y obtuvo la refrendación del Congreso en noviembre de 2016, pero la fractura política quedó expuesta. <a href="https://www.registraduria.gov.co" target="_blank">[Registraduría — Resultados plebiscito 2016]</a></li>
 
-  <li><strong>Aumento de la deuda pública — de 39% a 50% del PIB:</strong> El gasto en el proceso de paz, la Ley de Víctimas y la caída del precio del petróleo (2014-2016) elevaron la deuda 11 puntos porcentuales. La reforma tributaria estructural de 2016 (Ley 1819) intentó compensar, pero la tendencia de endeudamiento quedó establecida. <a href="https://www.banrep.gov.co/es/estadisticas/finanzas-publicas-gnc" target="_blank">[BanRep — Finanzas públicas]</a></li>
+  <li><strong>Aumento de la deuda pública y reforma tributaria (+IVA 16%→19%):</strong> El gasto en el proceso de paz, la Ley de Víctimas y la caída del petróleo (2014-2016) elevaron la deuda 11 pp. La reforma tributaria estructural de 2016 (Ley 1819) subió el IVA del 16% al 19%, el nivel más alto de la historia colombiana, para compensar el hueco fiscal. Si bien era necesaria, la carga recayó principalmente en el consumo de la clase media. <a href="https://www.banrep.gov.co/es/estadisticas/finanzas-publicas-gnc" target="_blank">[BanRep — Finanzas públicas]</a></li>
 
   <li><strong>Complejidad económica sin mejora (ECI estancado en 0.27):</strong> A pesar del crecimiento, la estructura productiva de Colombia no se diversificó. La dependencia de materias primas (petróleo, carbón) siguió dominando las exportaciones. El índice ECI HS92 se mantuvo en 0.27, el mismo valor que bajo Uribe, señalando una oportunidad perdida para la transformación productiva. <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/XTAQMC" target="_blank">[Harvard Dataverse — ECI Colombia]</a></li>
 

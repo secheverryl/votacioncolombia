@@ -8,11 +8,11 @@
 <title>César Gaviria 1990–1994 — Análisis de Gobierno</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;color:#222;background:#f4f7fd;line-height:1.6}
-.page{max-width:860px;margin:0 auto;padding:24px 20px;background:#fff;min-height:100vh}
-a{color:#1a56db}a:hover{text-decoration:underline}
-.back-btn{display:inline-block;background:#eef2ff;color:#1a56db;border:1px solid #b4c6f7;border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
-.back-btn:hover{background:#dce8ff}
+body{font-family:Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;background:var(--surface);min-height:100vh}
+a{color:var(--accent2)}a:hover{text-decoration:underline}
+.back-btn{display:inline-block;background:var(--surface);color:var(--accent2);border:1px solid var(--border);border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:var(--bg)}
 .hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px}
 .hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
 .hero .years{font-size:11pt;color:#b4c6f7;margin-bottom:6px}
@@ -20,16 +20,17 @@ a{color:#1a56db}a:hover{text-decoration:underline}
 h2{font-size:12.5pt;color:#fff;background:#0d2252;padding:7px 16px;margin:26px 0 12px;border-radius:4px;letter-spacing:.3px}
 h2.sec-logros{background:#155724}
 h2.sec-fracasos{background:#721c24}
-h3{font-size:10.5pt;color:#0d2252;border-bottom:2px solid #b4c6f7;padding-bottom:4px;margin:18px 0 8px}
-.resumen{background:#f8faff;border-left:4px solid #1a56db;padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
-.resumen strong{color:#0d2252}
-.note{font-size:8.5pt;color:#555;font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid #ccd8f0}
-.note strong{color:#333;font-style:normal}
+h3{font-size:10.5pt;color:var(--accent2);border-bottom:2px solid var(--border);padding-bottom:4px;margin:18px 0 8px}
+.resumen{background:var(--bg);border-left:4px solid var(--accent);padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:var(--text)}
+.resumen strong{color:var(--accent2)}
+.note{font-size:8.5pt;color:var(--muted);font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid var(--border)}
+.note strong{color:var(--text);font-style:normal}
 table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:10px 0 18px}
 th{background:#0d2252;color:#fff;padding:7px 10px;text-align:left;font-weight:600;font-size:9pt}
-td{padding:6px 10px;border-bottom:1px solid #e0e8f8}
-tr:nth-child(even) td{background:#f4f7fd}
-.g{color:#155724;font-weight:700}.r{color:#721c24;font-weight:700}.y{color:#7a4c00;font-weight:700}
+td{padding:6px 10px;border-bottom:1px solid var(--border);color:var(--text)}
+tr:nth-child(even) td{background:var(--bg)}
+.g{color:#4ade80;font-weight:700}.r{color:#f87171;font-weight:700}.y{color:#fbbf24;font-weight:700}
+body.light-mode .g{color:#166534}body.light-mode .r{color:#991b1b}body.light-mode .y{color:#92400e}
 ul{padding-left:20px;margin:8px 0 14px}
 ul li{margin-bottom:7px;font-size:10pt}
 .fuentes-list{font-size:9pt}
@@ -112,7 +113,7 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 <h2 id="sec-logros" class="sec-logros">LOGROS</h2>
 
 <ul>
-  <li><strong>Constitución Política de 1991:</strong> La carta magna más importante desde 1886. Consagró la acción de tutela, los derechos fundamentales explícitos, la Corte Constitucional, la Defensoría del Pueblo, la descentralización y la diversidad étnica. Transformó el Estado colombiano en un Estado Social de Derecho. <a href="https://www.corteconstitucional.gov.co/inicio/Constitucion%20politica%20de%20Colombia%20-%202015.pdf" target="_blank">[Texto oficial]</a></li>
+  <li><strong>Constitución Política de 1991:</strong> La carta magna más importante desde 1886. Sus 380 artículos consagraron 7 mecanismos de participación ciudadana (tutela, referéndum, plebiscito, iniciativa popular, consulta popular, cabildo abierto y revocatoria del mandato), la Corte Constitucional, la Defensoría del Pueblo y el principio de Estado Social de Derecho. La acción de tutela sola ha superado los 7 millones de acciones presentadas acumuladas, convirtiéndose en el mecanismo de protección de derechos más usado de América Latina. <a href="https://www.corteconstitucional.gov.co/inicio/Constitucion%20politica%20de%20Colombia%20-%202015.pdf" target="_blank">[Texto oficial]</a></li>
 
   <li><strong>Muerte de Pablo Escobar (diciembre de 1993):</strong> El operativo del Bloque de Búsqueda, con coordinación de inteligencia nacional e internacional, liquidó al jefe del Cartel de Medellín, el hombre más buscado del mundo. Marcó el inicio del fin del narcoterrorismo sistémico como política del crimen organizado. <a href="https://www.eltiempo.com/colombia/otras-ciudades/pablo-escobar-se-cumplen-30-anos-de-la-muerte-del-narcotraficante-734891" target="_blank">[El Tiempo]</a></li>
 
@@ -132,9 +133,9 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 <ul>
   <li><strong>Peor tasa de homicidios de la historia moderna:</strong> Con 77.6 homicidios por 100.000 habitantes en promedio, y años individuales superando los 80/100K, Colombia vivió bajo Gaviria el período más violento de su historia reciente. Medellín superó 380 homicidios/100K en su peor momento. El Estado no tenía capacidad de respuesta suficiente ante la guerra simultánea contra carteles, guerrilla y paramilitares. <a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">[INMLCF FORENSIS]</a></li>
 
-  <li><strong>La Catedral — El escándalo de la "cárcel de lujo" de Escobar:</strong> En 1991, el gobierno negoció la entrega de Escobar a cambio de una cárcel de lujo en Envigado, construida según sus especificaciones y controlada por sus hombres. Escobar continuó ordenando crímenes desde allí. En julio de 1992, escapó antes de ser trasladado a una cárcel regular, en uno de los mayores escándalos de impunidad de la historia colombiana. <a href="https://www.semana.com" target="_blank">[Semana]</a></li>
+  <li><strong>La Catedral — El escándalo de la "cárcel de lujo" de Escobar:</strong> En 1991, el gobierno negoció la entrega de Escobar a cambio de una cárcel de lujo en Envigado construida según sus especificaciones, controlada por sus propios hombres y con acceso libre a visitas. Escobar continuó ordenando crímenes, torturas y asesinatos desde allí. En la madrugada del 22 de julio de 1992, al conocer que sería trasladado a una cárcel regular, escapó abriendo un orificio en la pared de yeso de la celda aprovechando la niebla espesa. Permaneció prófugo 16 meses hasta su muerte en diciembre de 1993. <a href="https://www.semana.com" target="_blank">[Semana]</a></li>
 
-  <li><strong>Shock de la apertura económica:</strong> La eliminación brusca de aranceles sin períodos de transición destruyó sectores industriales (textiles, calzado, metalmecánica, electrónica de consumo) que no podían competir con importaciones asiáticas. La desindustrialización generada en este período nunca se revirtió completamente, contribuyendo a la baja complejidad económica estructural de Colombia. <a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">[BanRep — PIB sectorial]</a></li>
+  <li><strong>Shock de la apertura económica:</strong> La eliminación brusca de aranceles en dos años (1990-1992) sin períodos de transición destruyó sectores industriales que no podían competir con importaciones asiáticas: textiles del Valle y Medellín, calzado de Bucaramanga, metalmecánica, electrónica de consumo. La industria manufacturera pasó de representar el 21% del PIB en 1990 al 14% para el año 2000. La desindustrialización generada en este período nunca se revirtió completamente, y Colombia terminó con uno de los índices de complejidad económica (ECI) más bajos de la región entre sus pares. Estudios de FEDESARROLLO calcularon que más de 200.000 empleos industriales se perdieron en el período de ajuste. <a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">[BanRep — PIB sectorial]</a></li>
 
   <li><strong>Inflación de 28.1% — la más alta del período moderno:</strong> A pesar de las reformas, la inflación se mantuvo en niveles que erosionaron el poder adquisitivo de la población, especialmente de los sectores más vulnerables. El Banco de la República apenas comenzaba a ganar autonomía real. <a href="https://www.banrep.gov.co/es/estadisticas/indice-precios-consumidor-ipc" target="_blank">[BanRep — IPC]</a></li>
 

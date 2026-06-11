@@ -8,11 +8,11 @@
 <title>Álvaro Uribe 2002–2010 — Análisis de Gobierno</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;color:#222;background:#f4f7fd;line-height:1.6}
-.page{max-width:860px;margin:0 auto;padding:24px 20px;background:#fff;min-height:100vh}
-a{color:#1a56db}a:hover{text-decoration:underline}
-.back-btn{display:inline-block;background:#eef2ff;color:#1a56db;border:1px solid #b4c6f7;border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
-.back-btn:hover{background:#dce8ff}
+body{font-family:Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;background:var(--surface);min-height:100vh}
+a{color:var(--accent2)}a:hover{text-decoration:underline}
+.back-btn{display:inline-block;background:var(--surface);color:var(--accent2);border:1px solid var(--border);border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:var(--bg)}
 .hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px}
 .hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
 .hero .years{font-size:11pt;color:#b4c6f7;margin-bottom:6px}
@@ -21,15 +21,16 @@ h2{font-size:12.5pt;color:#fff;background:#0d2252;padding:7px 16px;margin:26px 0
 h2.sec-logros{background:#155724}
 h2.sec-fracasos{background:#721c24}
 h2.sec-especial{background:#4a1d96}
-h3{font-size:10.5pt;color:#0d2252;border-bottom:2px solid #b4c6f7;padding-bottom:4px;margin:18px 0 8px}
-.resumen{background:#f8faff;border-left:4px solid #1a56db;padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
-.resumen strong{color:#0d2252}
-.note{font-size:8.5pt;color:#555;font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid #ccd8f0}
+h3{font-size:10.5pt;color:var(--accent2);border-bottom:2px solid var(--border);padding-bottom:4px;margin:18px 0 8px}
+.resumen{background:var(--bg);border-left:4px solid var(--accent);padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:var(--text)}
+.resumen strong{color:var(--accent2)}
+.note{font-size:8.5pt;color:var(--muted);font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid var(--border)}
 table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:10px 0 18px}
 th{background:#0d2252;color:#fff;padding:7px 10px;text-align:left;font-weight:600;font-size:9pt}
-td{padding:6px 10px;border-bottom:1px solid #e0e8f8}
-tr:nth-child(even) td{background:#f4f7fd}
-.g{color:#155724;font-weight:700}.r{color:#721c24;font-weight:700}.y{color:#7a4c00;font-weight:700}
+td{padding:6px 10px;border-bottom:1px solid var(--border);color:var(--text)}
+tr:nth-child(even) td{background:var(--bg)}
+.g{color:#4ade80;font-weight:700}.r{color:#f87171;font-weight:700}.y{color:#fbbf24;font-weight:700}
+body.light-mode .g{color:#166534}body.light-mode .r{color:#991b1b}body.light-mode .y{color:#92400e}
 ul{padding-left:20px;margin:8px 0 14px}
 ul li{margin-bottom:7px;font-size:10pt}
 .fuentes-list{font-size:9pt}
@@ -42,6 +43,13 @@ ul li{margin-bottom:7px;font-size:10pt}
 .stat-card .lbl{font-size:8.5pt;color:#555;margin-top:3px}
 .stat-card.neg{background:#fdf2f8;border-color:#f9a8d4}
 .stat-card.neg .val{color:#9d174d}
+body.dark-mode .spec-box{background:#1e1040;color:var(--text)}
+body.dark-mode .spec-box strong{color:#c4b5fd}
+body.dark-mode .stat-card{background:#132042;border-color:#1e3462;color:var(--text)}
+body.dark-mode .stat-card .val{color:#4ade80}
+body.dark-mode .stat-card .lbl{color:var(--muted)}
+body.dark-mode .stat-card.neg{background:#1a0a14;border-color:#4a1728}
+body.dark-mode .stat-card.neg .val{color:#f472b6}
 .disclaimer{background:#fff8e1;border-left:4px solid #f9a825;padding:10px 14px;margin:28px 0 0;border-radius:3px;font-size:9.5pt}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,24 +107,23 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 </div>
 
 <h2 id="sec-ind">INDICADORES CLAVE DEL MANDATO</h2>
-<p class="note">Promedios del mandato (2002–2010), salvo donde se indica. <a href="index.html">Ver comparativo completo →</a></p>
+<p class="note">Cambio vs. Pastrana (1998–02), el gobierno anterior. Un mandato se evalúa por lo que cambió, no por el valor absoluto que dejó. <a href="index.html">Ver comparativo completo →</a></p>
 <table>
-  <thead><tr><th>Indicador</th><th>Valor (Uribe)</th><th>Contexto vs. otros gobiernos</th></tr></thead>
+  <thead><tr><th>Indicador</th><th>Pastrana (anterior)</th><th>Uribe (este mandato)</th><th>Cambio</th></tr></thead>
   <tbody>
-    <tr><td>Homicidios prom. (/100K hab.)</td><td class="g">38.6</td><td class="g">✔ 4.º — bajó de 63.5 (Pastrana) a 38.6</td></tr>
-    <tr><td>Masacres (prom. anual)</td><td class="g">75 / año</td><td class="g">✔ Bajó de 167 (Pastrana) a 75 (-55%)</td></tr>
-    <tr><td>Secuestros (prom. anual)</td><td class="g">818 / año</td><td class="g">✔ Bajó de 3.128 (Pastrana) a 818 (-74%)</td></tr>
-    <tr><td>Desplazamiento forzado</td><td class="y">297.000 / año</td><td class="y">Persistió alto; reconfiguraciones territoriales</td></tr>
-    <tr><td>Crecimiento PIB promedio</td><td class="g">4.6 %</td><td class="g">✔ El más alto de los 7 gobiernos</td></tr>
-    <tr><td>PIB per cápita (fin mandato, USD)</td><td class="g">$6.291</td><td class="g">✔ Triplicó el PIB per cápita en dólares (vs. Pastrana $2.065)</td></tr>
-    <tr><td>Inflación prom. (IPC)</td><td class="g">5.2 %</td><td class="g">✔ Una de las más bajas (3.er gobierno más bajo)</td></tr>
-    <tr><td>Desempleo promedio</td><td class="y">12.2 %</td><td class="y">Bajó de 16.5% (Pastrana) a 12.2%</td></tr>
-    <tr><td>Deuda pública GNC (% PIB)</td><td class="g">39 %</td><td class="g">Bajó de 47% (Pastrana) a 39%</td></tr>
-    <tr><td>Pobreza monetaria (fin mandato)</td><td class="g">37.2 %</td><td class="g">✔ Bajó de 52% a 37.2% (-15 puntos)</td></tr>
-    <tr><td>Cultivos de coca (fin mandato, ha)</td><td class="g">62.000</td><td class="g">✔ Bajó de 102K a 62K (-39%)</td></tr>
-    <tr><td>IDH (cierre mandato)</td><td class="g">0.689</td><td class="g">✔ Mejora de 6 puntos sobre Pastrana (0.649)</td></tr>
-    <tr><td>IED per cápita (USD)</td><td class="g">$216</td><td class="g">✔ Cuadruplicó la inversión frente a Pastrana ($99)</td></tr>
-    <tr><td>IPC Corrupción (0-100)</td><td class="y">36</td><td class="y">Mejoró desde Samper (22) y Gaviria (27)</td></tr>
+    <tr><td>Homicidios prom. (/100K hab.)</td><td>63.5</td><td class="g">38.6</td><td class="g">▼ −24.9 (−39%)</td></tr>
+    <tr><td>Masacres (prom. anual)</td><td>167</td><td class="g">75</td><td class="g">▼ −92 (−55%)</td></tr>
+    <tr><td>Secuestros (prom. anual)</td><td>3.128</td><td class="g">818</td><td class="g">▼ −2.310 (−74%)</td></tr>
+    <tr><td>Desplazamiento forzado (mil/año)</td><td>343</td><td class="g">297</td><td class="g">▼ −46 (−13%)</td></tr>
+    <tr><td>Crecimiento PIB promedio</td><td>0.7 %</td><td class="g">4.6 %</td><td class="g">▲ +3.9 pp</td></tr>
+    <tr><td>PIB per cápita (fin mandato, USD)</td><td>$2.065</td><td class="g">$6.291</td><td class="g">▲ +$4.226 (+205%)</td></tr>
+    <tr><td>Inflación prom. (IPC)</td><td>8.6 %</td><td class="g">5.2 %</td><td class="g">▼ −3.4 pp</td></tr>
+    <tr><td>Desempleo promedio</td><td>16.5 %</td><td class="g">12.2 %</td><td class="g">▼ −4.3 pp</td></tr>
+    <tr><td>Deuda pública GNC (% PIB)</td><td>47 %</td><td class="g">39 %</td><td class="g">▼ −8 pp</td></tr>
+    <tr><td>Pobreza monetaria (fin mandato)</td><td>52 %</td><td class="g">37.2 %</td><td class="g">▼ −14.8 pp</td></tr>
+    <tr><td>Cultivos de coca (fin mandato, ha)</td><td>102.000</td><td class="g">62.000</td><td class="g">▼ −40K (−39%)</td></tr>
+    <tr><td>IDH (cierre mandato)</td><td>0.649</td><td class="g">0.689</td><td class="g">▲ +0.040</td></tr>
+    <tr><td>IED (inversión extranjera directa)</td><td>$2.134 M</td><td class="g">$6.760 M</td><td class="g">▲ +$4.626 M (+217%)</td></tr>
   </tbody>
 </table>
 
@@ -125,11 +132,11 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 <ul>
   <li><strong>Política de Seguridad Democrática — La mayor reducción de violencia en la historia reciente:</strong> La estrategia combinó recuperación territorial, interdicción, incentivos a la desmovilización y fortalecimiento de la Fuerza Pública. Para 2008 las carreteras colombianas eran seguras por primera vez en décadas, el turismo interno resurgió y las FARC habían perdido más del 50% de su pie de fuerza estimado. <a href="https://www.mindefensa.gov.co" target="_blank">[Ministerio de Defensa]</a></li>
 
-  <li><strong>Desmovilización de las AUC — 31.671 combatientes:</strong> La Ley de Justicia y Paz (2005) facilitó la desmovilización de los bloques paramilitares de las Autodefensas Unidas de Colombia. Aunque el proceso tuvo graves falencias de verdad y reparación, eliminó la estructura más grande de paramilitarismo colectivo de América Latina. <a href="https://www.jep.gov.co" target="_blank">[JEP]</a></li>
+  <li><strong>Desmovilización de las AUC y grupos guerrilleros — 52.403 combatientes totales:</strong> La Ley de Justicia y Paz (2005) facilitó la desmovilización de los bloques paramilitares de las AUC: 31.671 combatientes en 37 bloques. Simultáneamente, el programa de desmovilización individual del Ministerio de Defensa procesó 20.732 guerrilleros de las FARC, el ELN y otras organizaciones entre 2002 y 2010. En total, 52.403 combatientes salieron de las estructuras armadas bajo Uribe, la mayor operación de desmovilización en la historia del conflicto colombiano. Aunque el proceso de las AUC tuvo graves falencias de verdad y reparación (muchos combatientes reincidieron formando las bacrim), eliminó la estructura paramilitar colectiva más grande de América Latina. <a href="https://www.jep.gov.co" target="_blank">[JEP]</a></li>
 
   <li><strong>Operación Jaque (2008) y rescate de rehenes emblemáticos:</strong> La Operación Jaque rescató sin un solo disparo a Íngrid Betancourt, tres contratistas estadounidenses y 11 militares secuestrados, en la operación de inteligencia militar más espectacular de la historia colombiana. <a href="https://www.eltiempo.com/colombia/otras-ciudades/operacion-jaque-el-dia-que-colombia-enganio-a-las-farc-para-rescatar-a-betancourt-y-mas-rehenes-601068" target="_blank">[El Tiempo]</a></li>
 
-  <li><strong>Recuperación económica sin precedentes:</strong> El PIB creció en promedio 4.6% anual, la confianza inversionista se disparó, la IED per cápita pasó de $99 (Pastrana) a $216, y el PIB per cápita se triplicó en dólares (de $2.065 a $6.291). Colombia fue incluida en el grupo de mercados emergentes de alto potencial. <a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">[BanRep — PIB]</a></li>
+  <li><strong>Recuperación económica sin precedentes — IED triplicada:</strong> El PIB creció en promedio 4.6% anual. La Inversión Extranjera Directa (IED) pasó de $2.134 millones USD anuales (Pastrana) a $6.760 millones USD (promedio Uribe), un incremento de +217%. El PIB per cápita en dólares pasó de $2.065 a $6.291, triplicándose. Colombia fue incluida en el grupo de mercados emergentes de alto potencial por JP Morgan y Goldman Sachs (CIVETS). El índice de riesgo país (EMBI) cayó de 800+ puntos (2002) a menos de 200 (2010), señal de que los mercados internacionales confiaban en la estabilidad colombiana. <a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">[BanRep — PIB]</a></li>
 
   <li><strong>Reducción de la pobreza — 15 puntos porcentuales:</strong> La pobreza monetaria bajó de 52% a 37.2% durante el mandato, la reducción más rápida en la historia reciente, combinando crecimiento económico, programas sociales (Familias en Acción ampliado) y recuperación del mercado laboral. <a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida" target="_blank">[DANE — Pobreza]</a></li>
 
@@ -143,7 +150,7 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 <h2 id="sec-fracasos" class="sec-fracasos">FRACASOS Y CRÍTICAS</h2>
 
 <ul>
-  <li><strong>Falsos positivos — Ejecuciones extrajudiciales (2002–2008):</strong> La JEP documentó 6.402 casos de civiles presentados fraudulentamente como guerrilleros muertos en combate ("falsos positivos"), principalmente entre 2006 y 2008, bajo presión institucional por resultados de bajas. Los casos se concentraron en la Brigada IV, la Brigada XIV y otras unidades. Jefes militares como el General Mario Montoya fueron señalados. Los falsos positivos son crímenes de lesa humanidad, innegables e inadmisibles. <a href="https://www.jep.gov.co/Sala-de-Prensa/Paginas/La-JEP-hace-p%C3%BAblica-la-estrategia-de-priorizaci%C3%B3n-dentro-del-Caso-03,-conocido-como-el-de-falsos-positivos.aspx" target="_blank">[JEP — Caso 03]</a> <a href="https://www.semana.com/nacion/articulo/atencion-la-jep-dice-que-fueron-6402-mil-falsos-positivos-en-colombia-y-no-2248-como-se-reporto/202106/" target="_blank">[Semana — JEP: 6.402 casos]</a></li>
+  <li><strong>Falsos positivos — Ejecuciones extrajudiciales (2002–2008):</strong> La JEP documentó, en su actualización más reciente (2025-2026), <strong>7.837 casos</strong> de civiles presentados fraudulentamente como guerrilleros muertos en combate ("falsos positivos"), principalmente entre 2006 y 2008, bajo presión institucional por resultados de bajas. Los casos involucraron a 78 unidades militares; los de mayor concentración fueron las Brigadas IV (Medellín), XIV (Meta) y XVI (Córdoba). El General Mario Montoya renunció en 2008 bajo señalamientos directos. Los falsos positivos son crímenes de lesa humanidad, innegables e inadmisibles. <a href="https://www.jep.gov.co/Sala-de-Prensa/Paginas/La-JEP-hace-p%C3%BAblica-la-estrategia-de-priorizaci%C3%B3n-dentro-del-Caso-03,-conocido-como-el-de-falsos-positivos.aspx" target="_blank">[JEP — Caso 03]</a></li>
 
   <li><strong>Parapolítica — 62 congresistas condenados:</strong> Investigaciones de la Corte Suprema de Justicia revelaron que decenas de congresistas electos con el apoyo político de Uribe habían firmado pactos con jefes paramilitares. 62 congresistas fueron condenados, en el mayor escándalo de corrupción política en la historia colombiana moderna. <a href="https://www.semana.com" target="_blank">[Semana — Parapolítica]</a></li>
 

@@ -8,11 +8,11 @@
 <title>Ernesto Samper 1994–1998 — Análisis de Gobierno</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;color:#222;background:#f4f7fd;line-height:1.6}
-.page{max-width:860px;margin:0 auto;padding:24px 20px;background:#fff;min-height:100vh}
-a{color:#1a56db}a:hover{text-decoration:underline}
-.back-btn{display:inline-block;background:#eef2ff;color:#1a56db;border:1px solid #b4c6f7;border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
-.back-btn:hover{background:#dce8ff}
+body{font-family:Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;background:var(--surface);min-height:100vh}
+a{color:var(--accent2)}a:hover{text-decoration:underline}
+.back-btn{display:inline-block;background:var(--surface);color:var(--accent2);border:1px solid var(--border);border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:var(--bg)}
 .hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px}
 .hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
 .hero .years{font-size:11pt;color:#b4c6f7;margin-bottom:6px}
@@ -20,16 +20,17 @@ a{color:#1a56db}a:hover{text-decoration:underline}
 h2{font-size:12.5pt;color:#fff;background:#0d2252;padding:7px 16px;margin:26px 0 12px;border-radius:4px;letter-spacing:.3px}
 h2.sec-logros{background:#155724}
 h2.sec-fracasos{background:#721c24}
-h3{font-size:10.5pt;color:#0d2252;border-bottom:2px solid #b4c6f7;padding-bottom:4px;margin:18px 0 8px}
-.resumen{background:#f8faff;border-left:4px solid #1a56db;padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
-.resumen strong{color:#0d2252}
-.note{font-size:8.5pt;color:#555;font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid #ccd8f0}
-.note strong{color:#333;font-style:normal}
+h3{font-size:10.5pt;color:var(--accent2);border-bottom:2px solid var(--border);padding-bottom:4px;margin:18px 0 8px}
+.resumen{background:var(--bg);border-left:4px solid var(--accent);padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:var(--text)}
+.resumen strong{color:var(--accent2)}
+.note{font-size:8.5pt;color:var(--muted);font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid var(--border)}
+.note strong{color:var(--text);font-style:normal}
 table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:10px 0 18px}
 th{background:#0d2252;color:#fff;padding:7px 10px;text-align:left;font-weight:600;font-size:9pt}
-td{padding:6px 10px;border-bottom:1px solid #e0e8f8}
-tr:nth-child(even) td{background:#f4f7fd}
-.g{color:#155724;font-weight:700}.r{color:#721c24;font-weight:700}.y{color:#7a4c00;font-weight:700}
+td{padding:6px 10px;border-bottom:1px solid var(--border);color:var(--text)}
+tr:nth-child(even) td{background:var(--bg)}
+.g{color:#4ade80;font-weight:700}.r{color:#f87171;font-weight:700}.y{color:#fbbf24;font-weight:700}
+body.light-mode .g{color:#166534}body.light-mode .r{color:#991b1b}body.light-mode .y{color:#92400e}
 ul{padding-left:20px;margin:8px 0 14px}
 ul li{margin-bottom:7px;font-size:10pt}
 .fuentes-list{font-size:9pt}
@@ -90,22 +91,22 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 </div>
 
 <h2 id="sec-ind">INDICADORES CLAVE DEL MANDATO</h2>
-<p class="note">Promedios del mandato, salvo donde se indica. <a href="index.html">Ver comparativo completo →</a></p>
+<p class="note">Cambio vs. Gaviria (1990–94), el gobierno anterior. Un mandato se evalúa por lo que cambió, no por el valor absoluto que dejó. <a href="index.html">Ver comparativo completo →</a></p>
 <table>
-  <thead><tr><th>Indicador</th><th>Valor (Samper)</th><th>Contexto vs. otros gobiernos</th></tr></thead>
+  <thead><tr><th>Indicador</th><th>Gaviria (anterior)</th><th>Samper (este mandato)</th><th>Cambio</th></tr></thead>
   <tbody>
-    <tr><td>Homicidios prom. (/100K hab.)</td><td class="y">62.1</td><td class="y">2.º más alto; mejoró frente a Gaviria</td></tr>
-    <tr><td>Masacres (prom. anual)</td><td class="y">220 / año</td><td class="y">2.º más alto; bajó frente a Gaviria</td></tr>
-    <tr><td>Secuestros (prom. anual)</td><td class="r">2.060 / año</td><td class="r">2.º más alto; empeoró gravemente</td></tr>
-    <tr><td>Desplazamiento forzado</td><td class="r">279.000 / año</td><td class="r">3.º más alto (aceleración)</td></tr>
-    <tr><td>Crecimiento PIB promedio</td><td class="y">2.8 %</td><td>El 2.º más bajo después de Pastrana</td></tr>
-    <tr><td>PIB per cápita (fin mandato, USD)</td><td class="y">$2.583</td><td>Creció en dólares pero economía en crisis al final</td></tr>
-    <tr><td>Inflación prom. (IPC)</td><td class="y">19.2 %</td><td class="y">Alta, pero mejoró frente a Gaviria (28.1%)</td></tr>
-    <tr><td>Desempleo promedio</td><td class="y">10.8 %</td><td>Subió frente a Gaviria; crisis UPAC al final</td></tr>
-    <tr><td>Deuda pública GNC (% PIB)</td><td class="r">30 %</td><td class="r">Subió de 23% a 30% (comienza escalada)</td></tr>
-    <tr><td>Pobreza monetaria (fin mandato)</td><td class="r">55 %</td><td class="r">⚠ La más alta de los 7 gobiernos</td></tr>
-    <tr><td>Cultivos de coca (fin mandato, ha)</td><td class="r">102.000</td><td class="r">Se duplicó vs. Gaviria (51K → 102K)</td></tr>
-    <tr><td>IDH (cierre mandato)</td><td class="y">0.640</td><td>Mejoró, pero ritmo de mejora menor</td></tr>
+    <tr><td>Homicidios prom. (/100K hab.)</td><td>77.6</td><td class="g">62.1</td><td class="g">▼ −15.5 (−20%)</td></tr>
+    <tr><td>Masacres (prom. anual)</td><td>308</td><td class="g">220</td><td class="g">▼ −88 (−29%)</td></tr>
+    <tr><td>Secuestros (prom. anual)</td><td>1.333</td><td class="r">2.060</td><td class="r">▲ +727 (+55%)</td></tr>
+    <tr><td>Desplazamiento forzado (mil/año)</td><td>95</td><td class="r">279</td><td class="r">▲ +184 (+194%)</td></tr>
+    <tr><td>Crecimiento PIB promedio</td><td>4.0 %</td><td class="r">2.8 %</td><td class="r">▼ −1.2 pp</td></tr>
+    <tr><td>PIB per cápita (fin mandato, USD)</td><td>$1.721</td><td class="g">$2.583</td><td class="g">▲ +$862 (+50%)</td></tr>
+    <tr><td>Inflación prom. (IPC)</td><td>28.1 %</td><td class="g">19.2 %</td><td class="g">▼ −8.9 pp</td></tr>
+    <tr><td>Desempleo promedio</td><td>9.6 %</td><td class="r">10.8 %</td><td class="r">▲ +1.2 pp</td></tr>
+    <tr><td>Deuda pública GNC (% PIB)</td><td>23 %</td><td class="r">30 %</td><td class="r">▲ +7 pp</td></tr>
+    <tr><td>Pobreza monetaria (fin mandato)</td><td>51 %</td><td class="r">55 %</td><td class="r">▲ +4 pp</td></tr>
+    <tr><td>Cultivos de coca (fin mandato, ha)</td><td>51.000</td><td class="r">102.000</td><td class="r">▲ +51K (+100%)</td></tr>
+    <tr><td>IDH (cierre mandato)</td><td>0.597</td><td class="g">0.640</td><td class="g">▲ +0.043</td></tr>
   </tbody>
 </table>
 
@@ -118,6 +119,8 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 
   <li><strong>Reducción de la inflación:</strong> La inflación bajó de 28.1% (Gaviria) a 19.2% en promedio bajo Samper, en parte gracias a la mayor autonomía del Banco de la República, establecida formalmente en la Constitución de 1991. <a href="https://www.banrep.gov.co/es/estadisticas/indice-precios-consumidor-ipc" target="_blank">[BanRep — IPC]</a></li>
 
+  <li><strong>Creación del SISBEN (Sistema de Identificación de Potenciales Beneficiarios):</strong> El SISBEN fue creado bajo el gobierno Samper como instrumento para focalizar el gasto social hacia los más pobres, reemplazando criterios subjetivos de asignación. A pesar de sus imperfecciones iniciales, se convirtió en la base del sistema de subsidios y transferencias condicionadas de Colombia, utilizado hasta hoy por todos los gobiernos. <a href="https://www.dnp.gov.co/programas/desarrollo-social/Páginas/SISBEN.aspx" target="_blank">[DNP — SISBEN]</a></li>
+
   <li><strong>Plan Nacional de Desarrollo — El Salto Social:</strong> Propuso incrementar la inversión social en educación, salud y vivienda, con algunas realizaciones concretas en cobertura educativa básica, a pesar de que la crisis política limitó su implementación. <a href="https://colaboracion.dnp.gov.co" target="_blank">[DNP — Planes de Desarrollo]</a></li>
 
   <li><strong>Ampliación de la red vial:</strong> Se avanzó en la concesión de vías de cuarta generación y la ampliación de la red pavimentada, de 11.400 km al final del mandato. <a href="https://www.invias.gov.co" target="_blank">[INVIAS]</a></li>
@@ -126,13 +129,13 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 <h2 id="sec-fracasos" class="sec-fracasos">FRACASOS Y CRÍTICAS</h2>
 
 <ul>
-  <li><strong>Proceso 8000 — Narcofinanciación de la campaña presidencial:</strong> Grabaciones del Cartel de Cali entregadas a la Fiscalía demostraron que aproximadamente el 40% del presupuesto de la campaña de Samper fue aportado por el cartel. El Fiscal Alfonso Valdivieso abrió investigaciones que llegaron hasta ministros y el propio presidente. El Congreso absolvió a Samper en junio de 1996 en un fallo que generó críticas internacionales. Este escándalo paralizó la agenda gubernamental durante tres de los cuatro años del mandato. <a href="https://www.semana.com" target="_blank">[Semana — Proceso 8000]</a></li>
+  <li><strong>Proceso 8000 — Narcofinanciación de la campaña presidencial:</strong> Grabaciones telefónicas del Cartel de Cali entregadas a la Fiscalía demostraron que los hermanos Rodríguez Orejuela aportaron aproximadamente 6.000 millones de pesos (cerca de 6 millones de dólares de 1994), equivalentes al 40% del presupuesto total de la campaña de Samper. El Fiscal Alfonso Valdivieso abrió 8.000 cuadernos de investigación —de donde tomó su nombre el proceso— que llegaron hasta el ministro de Defensa Fernando Botero Zea (quien confesó) y el propio presidente. El Congreso absolvió a Samper en junio de 1996 por 111 votos a favor y 43 en contra, en un fallo ampliamente cuestionado internacionalmente. El escándalo paralizó la agenda gubernamental durante tres de los cuatro años del mandato. <a href="https://www.semana.com" target="_blank">[Semana — Proceso 8000]</a></li>
 
   <li><strong>Aislamiento diplomático y descertificación de EE.UU.:</strong> En 1996 y 1997, Estados Unidos descertificó a Colombia en la lucha contra las drogas, canceló la visa a Samper, y la OEA y otros organismos internacionales redujeron su cooperación. El aislamiento limitó severamente el acceso a recursos y la cooperación en seguridad. <a href="https://www.eltiempo.com" target="_blank">[El Tiempo — Descertificación 1996]</a></li>
 
   <li><strong>Explosión de secuestros: el doble del gobierno anterior:</strong> Con 2.060 secuestros anuales en promedio —frente a 1.333 bajo Gaviria— el gobierno Samper no logró contener la expansión del negocio del secuestro de guerrillas y grupos delincuenciales. La FARC y el ELN usaron el aislamiento político del gobierno para expandir territorios. <a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">[INMLCF]</a></li>
 
-  <li><strong>Crisis del sistema UPAC (1997-1998):</strong> El modelo de unidad de poder adquisitivo constante (UPAC) para créditos hipotecarios generó una burbuja que estalló al final del mandato, dejando a miles de familias en cesantía hipotecaria. La crisis del sector de la construcción se trasladó de lleno al gobierno de Pastrana. <a href="https://www.banrep.gov.co" target="_blank">[BanRep — Crisis financiera 1998]</a></li>
+  <li><strong>Crisis del sistema UPAC (1997-1998):</strong> El modelo de unidad de poder adquisitivo constante (UPAC) para créditos hipotecarios estaba indexado a la DTF (tasa de depósito), que subió abruptamente con la crisis económica. Más de 1 millón de familias colombianas vieron el saldo de sus deudas crecer en términos reales hasta superar el valor de sus viviendas. Miles perdieron sus inmuebles en remates masivos. La Corte Constitucional declaró el UPAC inconstitucional en 1999 (Sentencia C-700), pero para entonces el daño ya estaba hecho: el sector de la construcción colapsó y arrastró el sistema financiero hacia la peor crisis desde los años 30. <a href="https://www.banrep.gov.co" target="_blank">[BanRep — Crisis financiera 1998]</a></li>
 
   <li><strong>Expansión de los paramilitares y masacres masivas:</strong> Con 220 masacres anuales en promedio, el gobierno no tomó medidas efectivas contra las Autodefensas Campesinas de Córdoba y Urabá (ACCU) ni contra otros bloques paramilitares que se expandían sistemáticamente. Human Rights Watch documentó vínculos entre militares activos y grupos paramilitares durante este período. <a href="https://www.hrw.org/americas/colombia" target="_blank">[HRW Colombia]</a></li>
 

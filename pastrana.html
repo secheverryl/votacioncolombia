@@ -8,11 +8,11 @@
 <title>Andrés Pastrana 1998–2002 — Análisis de Gobierno</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;color:#222;background:#f4f7fd;line-height:1.6}
-.page{max-width:860px;margin:0 auto;padding:24px 20px;background:#fff;min-height:100vh}
-a{color:#1a56db}a:hover{text-decoration:underline}
-.back-btn{display:inline-block;background:#eef2ff;color:#1a56db;border:1px solid #b4c6f7;border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
-.back-btn:hover{background:#dce8ff}
+body{font-family:Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;background:var(--surface);min-height:100vh}
+a{color:var(--accent2)}a:hover{text-decoration:underline}
+.back-btn{display:inline-block;background:var(--surface);color:var(--accent2);border:1px solid var(--border);border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:var(--bg)}
 .hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px}
 .hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
 .hero .years{font-size:11pt;color:#b4c6f7;margin-bottom:6px}
@@ -20,16 +20,17 @@ a{color:#1a56db}a:hover{text-decoration:underline}
 h2{font-size:12.5pt;color:#fff;background:#0d2252;padding:7px 16px;margin:26px 0 12px;border-radius:4px;letter-spacing:.3px}
 h2.sec-logros{background:#155724}
 h2.sec-fracasos{background:#721c24}
-h3{font-size:10.5pt;color:#0d2252;border-bottom:2px solid #b4c6f7;padding-bottom:4px;margin:18px 0 8px}
-.resumen{background:#f8faff;border-left:4px solid #1a56db;padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
-.resumen strong{color:#0d2252}
-.note{font-size:8.5pt;color:#555;font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid #ccd8f0}
-.note strong{color:#333;font-style:normal}
+h3{font-size:10.5pt;color:var(--accent2);border-bottom:2px solid var(--border);padding-bottom:4px;margin:18px 0 8px}
+.resumen{background:var(--bg);border-left:4px solid var(--accent);padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:var(--text)}
+.resumen strong{color:var(--accent2)}
+.note{font-size:8.5pt;color:var(--muted);font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid var(--border)}
+.note strong{color:var(--text);font-style:normal}
 table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:10px 0 18px}
 th{background:#0d2252;color:#fff;padding:7px 10px;text-align:left;font-weight:600;font-size:9pt}
-td{padding:6px 10px;border-bottom:1px solid #e0e8f8}
-tr:nth-child(even) td{background:#f4f7fd}
-.g{color:#155724;font-weight:700}.r{color:#721c24;font-weight:700}.y{color:#7a4c00;font-weight:700}
+td{padding:6px 10px;border-bottom:1px solid var(--border);color:var(--text)}
+tr:nth-child(even) td{background:var(--bg)}
+.g{color:#4ade80;font-weight:700}.r{color:#f87171;font-weight:700}.y{color:#fbbf24;font-weight:700}
+body.light-mode .g{color:#166534}body.light-mode .r{color:#991b1b}body.light-mode .y{color:#92400e}
 ul{padding-left:20px;margin:8px 0 14px}
 ul li{margin-bottom:7px;font-size:10pt}
 .fuentes-list{font-size:9pt}
@@ -90,28 +91,29 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 </div>
 
 <h2 id="sec-ind">INDICADORES CLAVE DEL MANDATO</h2>
-<p class="note">Promedios del mandato, salvo donde se indica. <a href="index.html">Ver comparativo completo →</a></p>
+<p class="note">Cambio vs. Samper (1994–98), el gobierno anterior. Un mandato se evalúa por lo que cambió, no por el valor absoluto que dejó. <a href="index.html">Ver comparativo completo →</a></p>
 <table>
-  <thead><tr><th>Indicador</th><th>Valor (Pastrana)</th><th>Contexto vs. otros gobiernos</th></tr></thead>
+  <thead><tr><th>Indicador</th><th>Samper (anterior)</th><th>Pastrana (este mandato)</th><th>Cambio</th></tr></thead>
   <tbody>
-    <tr><td>Homicidios prom. (/100K hab.)</td><td class="r">63.5</td><td class="r">3.º más alto; muy elevado</td></tr>
-    <tr><td>Masacres (prom. anual)</td><td class="y">167 / año</td><td class="y">3.º más alto; bajó frente a Samper</td></tr>
-    <tr><td>Secuestros (prom. anual)</td><td class="r">3.128 / año</td><td class="r">⚠ El más alto de todos los gobiernos</td></tr>
-    <tr><td>Desplazamiento forzado</td><td class="r">343.000 / año</td><td class="r">⚠ El más alto de todos los gobiernos</td></tr>
-    <tr><td>Crecimiento PIB promedio</td><td class="r">0.7 %</td><td class="r">⚠ El más bajo de los 7 gobiernos</td></tr>
-    <tr><td>Inflación prom. (IPC)</td><td class="g">8.6 %</td><td class="g">✔ Una de las más bajas (3.º mejor)</td></tr>
-    <tr><td>Desempleo promedio</td><td class="r">16.5 %</td><td class="r">⚠ El más alto de los 7 gobiernos</td></tr>
-    <tr><td>Deuda pública GNC (% PIB)</td><td class="r">47 %</td><td class="r">⚠ Subió de 30% a 47% (escalada fiscal)</td></tr>
-    <tr><td>PIB per cápita (fin mandato, USD)</td><td class="r">$2.065</td><td class="r">Cayó en dólares frente a Samper ($2.583)</td></tr>
-    <tr><td>Cultivos de coca (fin mandato, ha)</td><td class="r">102.000</td><td class="r">Se mantuvo en niveles elevados</td></tr>
-    <tr><td>IDH (cierre mandato)</td><td class="y">0.649</td><td>Siguió mejorando levemente</td></tr>
+    <tr><td>Homicidios prom. (/100K hab.)</td><td>62.1</td><td class="r">63.5</td><td class="r">▲ +1.4 (+2%)</td></tr>
+    <tr><td>Masacres (prom. anual)</td><td>220</td><td class="g">167</td><td class="g">▼ −53 (−24%)</td></tr>
+    <tr><td>Secuestros (prom. anual)</td><td>2.060</td><td class="r">3.128</td><td class="r">▲ +1.068 (+52%)</td></tr>
+    <tr><td>Desplazamiento forzado (mil/año)</td><td>279</td><td class="r">343</td><td class="r">▲ +64 (+23%)</td></tr>
+    <tr><td>Crecimiento PIB promedio</td><td>2.8 %</td><td class="r">0.7 %</td><td class="r">▼ −2.1 pp</td></tr>
+    <tr><td>PIB per cápita (fin mandato, USD)</td><td>$2.583</td><td class="r">$2.065</td><td class="r">▼ −$518 (−20%)</td></tr>
+    <tr><td>Inflación prom. (IPC)</td><td>19.2 %</td><td class="g">8.6 %</td><td class="g">▼ −10.6 pp</td></tr>
+    <tr><td>Desempleo promedio</td><td>10.8 %</td><td class="r">16.5 %</td><td class="r">▲ +5.7 pp</td></tr>
+    <tr><td>Deuda pública GNC (% PIB)</td><td>30 %</td><td class="r">47 %</td><td class="r">▲ +17 pp</td></tr>
+    <tr><td>Pobreza monetaria (fin mandato)</td><td>55 %</td><td class="g">52 %</td><td class="g">▼ −3 pp</td></tr>
+    <tr><td>Cultivos de coca (fin mandato, ha)</td><td>102.000</td><td class="y">102.000</td><td class="y">→ Sin cambio</td></tr>
+    <tr><td>IDH (cierre mandato)</td><td>0.640</td><td class="g">0.649</td><td class="g">▲ +0.009</td></tr>
   </tbody>
 </table>
 
 <h2 id="sec-logros" class="sec-logros">LOGROS</h2>
 
 <ul>
-  <li><strong>Plan Colombia — La mayor inversión en seguridad y desarrollo de la historia:</strong> Pastrana negoció con el presidente Clinton el Plan Colombia (1999), que comprometió inicialmente 1.300 millones de dólares estadounidenses (y eventualmente más de 10.000 millones hasta su conclusión en 2015) en modernización de las FFMM, lucha antinarcóticos, fumigaciones y desarrollo alternativo. Los resultados se materializaron en el gobierno Uribe, pero el diseño y la financiación fueron obra de Pastrana. <a href="https://2001-2009.state.gov/p/wha/rls/fs/2001/1042.htm" target="_blank">[Dept. of State — Plan Colombia Fact Sheet]</a></li>
+  <li><strong>Plan Colombia — La mayor inversión en seguridad y desarrollo de la historia:</strong> Pastrana negoció con el presidente Clinton el Plan Colombia (1999), que comprometió inicialmente 1.300 millones de dólares y eventualmente más de 7.500 millones hasta 2015 en modernización de las FFMM, lucha antinarcóticos, fumigaciones y desarrollo alternativo. EE.UU. aportó el 75% del financiamiento militar (helicópteros Blackhawk, equipos de inteligencia, entrenamiento de unidades especiales), mientras Colombia financió el componente social. Los resultados operativos se materializaron bajo Uribe, pero el diseño estratégico, el cabildeo en el Congreso estadounidense y la financiación fueron obra de Pastrana. <a href="https://2001-2009.state.gov/p/wha/rls/fs/2001/1042.htm" target="_blank">[Dept. of State — Plan Colombia Fact Sheet]</a></li>
 
   <li><strong>Modernización y profesionalización de las Fuerzas Militares:</strong> Con los recursos iniciales del Plan Colombia, se inició la transformación de la inteligencia militar, la movilidad aérea (helicópteros Blackhawk y Huey II) y las capacidades logísticas del Ejército y la Policía. Esta base permitió la efectividad de la Política de Seguridad Democrática de Uribe. <a href="https://www.mindefensa.gov.co" target="_blank">[Ministerio de Defensa]</a></li>
 
@@ -125,11 +127,11 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 <h2 id="sec-fracasos" class="sec-fracasos">FRACASOS Y CRÍTICAS</h2>
 
 <ul>
-  <li><strong>Zona de Distensión del Caguán — El mayor error estratégico del conflicto:</strong> Pastrana otorgó a las FARC una zona de despeje de 42.000 km² (el tamaño de Suiza) durante 3 años. En ese territorio libre de Fuerza Pública, las FARC entrenaron tropas, almacenaron armas, procesaron coca y ejecutaron secuestros. El investigador Alfredo Rangel documentó que las FARC usaron el Caguán para consolidar una economía de guerra que les permitiría sostener el conflicto por décadas. El proceso terminó en ruptura en febrero de 2002. <a href="https://insightcrime.org/colombia/" target="_blank">[InSight Crime]</a></li>
+  <li><strong>Zona de Distensión del Caguán — El mayor error estratégico del conflicto:</strong> Pastrana otorgó a las FARC una zona de despeje de 42.000 km² —el tamaño combinado de Bélgica y Holanda— en los municipios de Mesetas, La Uribe, La Macarena, Vistahermosa y San Vicente del Caguán. Durante 3 años (noviembre 1998 – febrero 2002), esta zona estuvo libre de Fuerza Pública. En ese territorio, las FARC entrenaron tropas, almacenaron armas, procesaron coca, ejecutaron juicios populares y secuestros, y trasladaron a los rehenes de mayor valor simbólico. El investigador Alfredo Rangel documentó que la zona fue usada para consolidar una economía de guerra que financiaría el conflicto por décadas. El proceso terminó en ruptura el 20 de febrero de 2002, cuando las FARC secuestraron al senador Jorge Eduardo Gechem. <a href="https://insightcrime.org/colombia/" target="_blank">[InSight Crime]</a></li>
 
-  <li><strong>Récord absoluto de secuestros: 3.128 por año:</strong> Bajo Pastrana se registró el mayor número de secuestros de la historia colombiana, con un promedio de 3.128 casos anuales. El ELN y las FARC secuestraron aviones, iglesias, asambleas departamentales y miles de civiles en las carreteras del país. El negocio del secuestro financió masivamente la expansión guerrillera. <a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">[INMLCF]</a></li>
+  <li><strong>Récord absoluto de secuestros: 3.572 en el año 2000 solamente:</strong> Bajo Pastrana se registró el mayor número de secuestros de la historia colombiana. El año 2000 fue el pico con 3.572 casos registrados. El promedio del mandato fue de 3.128/año. El ELN y las FARC secuestraron aviones (vuelo Aires EC-404, 1999), iglesias (Cali, mayo 1999: 160 feligreses), asambleas departamentales (Chocó, 2000: 12 diputados) y miles de civiles en carreteras. El negocio del secuestro generó ingresos estimados de $200 millones de dólares anuales para las guerrillas. <a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">[INMLCF]</a></li>
 
-  <li><strong>La peor crisis económica desde 1929:</strong> La economía colombiana cayó −4.2% en 1999, el peor año desde la Gran Depresión. La crisis del UPAC heredada de Samper, combinada con el choque del precio del petróleo y la incertidumbre por el conflicto, generó el cierre de decenas de miles de empresas y el desempleo más alto de la historia moderna (16.5%). <a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">[BanRep — PIB histórico]</a></li>
+  <li><strong>La peor crisis económica desde 1929:</strong> La economía colombiana cayó −4.2% en 1999, el peor año desde la Gran Depresión. Fue la única contracción del siglo XX en Colombia fuera del contexto de guerra mundial. La crisis del UPAC heredada de Samper (que destruyó el sector de la construcción), combinada con el choque del precio del petróleo y la huida de inversión por la incertidumbre del Caguán, generó el cierre de más de 100.000 empresas, una quiebra bancaria masiva y el desempleo más alto de la historia moderna (16.5%). El Fondo de Garantías de Instituciones Financieras (FOGAFIN) tuvo que intervenir 18 entidades financieras. <a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">[BanRep — PIB histórico]</a></li>
 
   <li><strong>Explosión de la deuda pública — de 30% a 47% del PIB:</strong> Para financiar el gasto social durante la recesión y el esfuerzo bélico inicial, la deuda pública saltó 17 puntos porcentuales del PIB en solo 4 años, sentando las bases de la presión fiscal que todos los gobiernos posteriores heredaron. <a href="https://www.banrep.gov.co/es/estadisticas/finanzas-publicas-gnc" target="_blank">[BanRep — Finanzas públicas]</a></li>
 

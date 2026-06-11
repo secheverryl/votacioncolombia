@@ -8,11 +8,11 @@
 <title>Iván Duque 2018–2022 — Análisis de Gobierno</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;color:#222;background:#f4f7fd;line-height:1.6}
-.page{max-width:860px;margin:0 auto;padding:24px 20px;background:#fff;min-height:100vh}
-a{color:#1a56db}a:hover{text-decoration:underline}
-.back-btn{display:inline-block;background:#eef2ff;color:#1a56db;border:1px solid #b4c6f7;border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
-.back-btn:hover{background:#dce8ff}
+body{font-family:Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;background:var(--surface);min-height:100vh}
+a{color:var(--accent2)}a:hover{text-decoration:underline}
+.back-btn{display:inline-block;background:var(--surface);color:var(--accent2);border:1px solid var(--border);border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:var(--bg)}
 .hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px}
 .hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
 .hero .years{font-size:11pt;color:#b4c6f7;margin-bottom:6px}
@@ -22,15 +22,16 @@ h2.sec-logros{background:#155724}
 h2.sec-fracasos{background:#721c24}
 h2.sec-pand{background:#b45309}
 h2.sec-especial{background:#1e3a5f}
-h3{font-size:10.5pt;color:#0d2252;border-bottom:2px solid #b4c6f7;padding-bottom:4px;margin:18px 0 8px}
-.resumen{background:#f8faff;border-left:4px solid #1a56db;padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
-.resumen strong{color:#0d2252}
-.note{font-size:8.5pt;color:#555;font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid #ccd8f0}
+h3{font-size:10.5pt;color:var(--accent2);border-bottom:2px solid var(--border);padding-bottom:4px;margin:18px 0 8px}
+.resumen{background:var(--bg);border-left:4px solid var(--accent);padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:var(--text)}
+.resumen strong{color:var(--accent2)}
+.note{font-size:8.5pt;color:var(--muted);font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid var(--border)}
 table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:10px 0 18px}
 th{background:#0d2252;color:#fff;padding:7px 10px;text-align:left;font-weight:600;font-size:9pt}
-td{padding:6px 10px;border-bottom:1px solid #e0e8f8}
-tr:nth-child(even) td{background:#f4f7fd}
-.g{color:#155724;font-weight:700}.r{color:#721c24;font-weight:700}.y{color:#7a4c00;font-weight:700}
+td{padding:6px 10px;border-bottom:1px solid var(--border);color:var(--text)}
+tr:nth-child(even) td{background:var(--bg)}
+.g{color:#4ade80;font-weight:700}.r{color:#f87171;font-weight:700}.y{color:#fbbf24;font-weight:700}
+body.light-mode .g{color:#166534}body.light-mode .r{color:#991b1b}body.light-mode .y{color:#92400e}
 ul{padding-left:20px;margin:8px 0 14px}
 ul li{margin-bottom:7px;font-size:10pt}
 .fuentes-list{font-size:9pt}
@@ -47,6 +48,13 @@ ul li{margin-bottom:7px;font-size:10pt}
 .cov-col .cov-hd.post{background:#1e3a5f}
 .cov-col .cov-row{padding:5px 10px;font-size:9pt;border-bottom:1px solid #f0f4ff}
 .cov-col .cov-row .lbl{color:#555;font-size:8.5pt}
+body.dark-mode .pand-box{background:#1c1206;color:var(--text)}
+body.dark-mode .pand-box strong{color:#fcd34d}
+body.dark-mode .spec-box{background:#0a1628;color:var(--text)}
+body.dark-mode .spec-box strong{color:#93c5fd}
+body.dark-mode .cov-col{border-color:var(--border)}
+body.dark-mode .cov-col .cov-row{border-bottom-color:var(--border);color:var(--text)}
+body.dark-mode .cov-col .cov-row .lbl{color:var(--muted)}
 .disclaimer{background:#fff8e1;border-left:4px solid #f9a825;padding:10px 14px;margin:28px 0 0;border-radius:3px;font-size:9.5pt}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,24 +113,24 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 </div>
 
 <h2 id="sec-ind">INDICADORES CLAVE DEL MANDATO</h2>
-<p class="note">Promedios del mandato (2018–2022), salvo donde se indica. <a href="index.html">Ver comparativo completo →</a></p>
+<p class="note">Cambio vs. Santos (2010–18), el gobierno anterior. Nota: COVID-19 (2020) distorsiona indicadores económicos — ver sección especial. <a href="index.html">Ver comparativo completo →</a></p>
 <table>
-  <thead><tr><th>Indicador</th><th>Valor (Duque)</th><th>Contexto vs. otros gobiernos</th></tr></thead>
+  <thead><tr><th>Indicador</th><th>Santos (anterior)</th><th>Duque (este mandato)</th><th>Cambio</th></tr></thead>
   <tbody>
-    <tr><td>Homicidios prom. (/100K hab.)</td><td class="g">26.4</td><td class="g">✔ El más bajo de los 7 gobiernos (mínimo histórico)</td></tr>
-    <tr><td>Masacres (prom. anual)</td><td class="y">75 / año</td><td class="y">Empeoró vs. Santos (56); ELN y disidencias FARC</td></tr>
-    <tr><td>Secuestros (prom. anual)</td><td class="g">204 / año</td><td class="g">Siguió bajando (249 bajo Santos)</td></tr>
-    <tr><td>Desplazamiento forzado</td><td class="r">335.000 / año</td><td class="r">Aumentó significativamente vs. Santos (217K)</td></tr>
-    <tr><td>Crecimiento PIB promedio</td><td class="y">3.6 %</td><td class="y">Igual a Santos en prom.; pero −6.8% en 2020</td></tr>
-    <tr><td>PIB per cápita (fin mandato, USD)</td><td class="g">$6.663</td><td>Casi igual a Santos (COVID distorsionó)</td></tr>
-    <tr><td>Inflación prom. (IPC)</td><td class="y">4.7 %</td><td>Moderada, pero aceleró al final (2022: 13.1%)</td></tr>
-    <tr><td>Desempleo promedio</td><td class="r">12.8 %</td><td class="r">Subió vs. Santos (9.7%); COVID en 2020: 15.9%</td></tr>
-    <tr><td>Deuda pública GNC (% PIB)</td><td class="r">60 %</td><td class="r">Subió de 50% a 60%; COVID forzó gasto masivo</td></tr>
-    <tr><td>Pobreza monetaria (fin mandato)</td><td class="y">36.6 %</td><td class="y">Rebotó de 27% por COVID; 36.6% al cierre</td></tr>
-    <tr><td>Cultivos de coca (fin mandato, ha)</td><td class="r">204.000</td><td class="r">Nuevo récord (169K Santos → 204K Duque)</td></tr>
-    <tr><td>Reservas internacionales</td><td class="g">$56.7 B</td><td class="g">✔ Récord histórico hasta ese momento</td></tr>
-    <tr><td>Deforestación (prom. anual, ha)</td><td class="g">158.000</td><td class="g">✔ La más baja — tendencia continúa</td></tr>
-    <tr><td>ECI HS92 (prom. mandato)</td><td class="r">0.15</td><td class="r">⚠ Mínimo histórico: COVID y restricciones comerciales</td></tr>
+    <tr><td>Homicidios prom. (/100K hab.)</td><td>27.5</td><td class="g">26.4</td><td class="g">▼ −1.1 (−4%)</td></tr>
+    <tr><td>Masacres (prom. anual)</td><td>56</td><td class="r">75</td><td class="r">▲ +19 (+34%)</td></tr>
+    <tr><td>Secuestros (prom. anual)</td><td>249</td><td class="g">204</td><td class="g">▼ −45 (−18%)</td></tr>
+    <tr><td>Desplazamiento forzado (mil/año)</td><td>217</td><td class="r">335</td><td class="r">▲ +118 (+54%)</td></tr>
+    <tr><td>Crecimiento PIB promedio</td><td>3.6 %</td><td class="y">3.6 %</td><td class="y">→ Igual (COVID: −6.8% en 2020)</td></tr>
+    <tr><td>PIB per cápita (fin mandato, USD)</td><td>$6.651</td><td class="y">$6.663</td><td class="y">▲ +$12 (+0.2%) — casi igual</td></tr>
+    <tr><td>Inflación prom. (IPC)</td><td>3.9 %</td><td class="r">4.7 %</td><td class="r">▲ +0.8 pp</td></tr>
+    <tr><td>Desempleo promedio</td><td>9.7 %</td><td class="r">12.8 %</td><td class="r">▲ +3.1 pp (COVID: 15.9% en 2020)</td></tr>
+    <tr><td>Deuda pública GNC (% PIB)</td><td>50 %</td><td class="r">60 %</td><td class="r">▲ +10 pp (COVID forzó gasto)</td></tr>
+    <tr><td>Pobreza monetaria (fin mandato)</td><td>27.0 %</td><td class="r">36.6 %</td><td class="r">▲ +9.6 pp (COVID: 42.5% en 2020)</td></tr>
+    <tr><td>Cultivos de coca (fin mandato, ha)</td><td>169.000</td><td class="r">204.000</td><td class="r">▲ +35K (+21%)</td></tr>
+    <tr><td>IDH (cierre mandato)</td><td>0.747</td><td class="y">0.752</td><td class="y">▲ +0.005</td></tr>
+    <tr><td>Deforestación (prom. anual, ha)</td><td>200.000</td><td class="g">158.000</td><td class="g">▼ −42K (−21%)</td></tr>
+    <tr><td>Reservas internacionales (fin mandato)</td><td>$48.4 B</td><td class="g">$56.7 B</td><td class="g">▲ +$8.3 B (+17%)</td></tr>
   </tbody>
 </table>
 
@@ -131,7 +139,7 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 <ul>
   <li><strong>Tasa de homicidios más baja de la historia moderna (26.4/100K):</strong> Duque entregó el país con la menor tasa de homicidios registrada en las últimas cinco décadas, continuando la tendencia de reducción iniciada por Uribe y continuada por Santos. <a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">[INMLCF FORENSIS]</a></li>
 
-  <li><strong>Gestión de la pandemia — Ingreso Solidario y apoyos económicos:</strong> El gobierno implementó transferencias de emergencia (Ingreso Solidario, $160.000 mensuales a 3 millones de hogares), subsidios de nómina (PAEF, que protegió 2.5 millones de empleos), créditos garantizados por el Estado (Colombia Responde) y vacunación masiva. Sin esta respuesta, la caída económica habría sido aún peor. <a href="https://www.dnp.gov.co" target="_blank">[DNP — Programas COVID]</a></li>
+  <li><strong>Gestión de la pandemia — 61.700+ muertes COVID, vacunación masiva:</strong> Colombia registró más de 61.700 muertes oficiales por COVID-19 (2020-2022), aunque el exceso de mortalidad sugiere la cifra real es mayor. El gobierno implementó el Ingreso Solidario ($160.000 mensuales a 3 millones de hogares), el PAEF (subsidio de nómina que protegió 2,5 millones de empleos formales), Colombia Responde (créditos garantizados) y una campaña de vacunación que alcanzó 36 millones de dosis aplicadas. La gestión de la respuesta económica fue reconocida por el FMI como una de las más rápidas de América Latina. Sin estos programas, la recuperación de 2021-2022 habría sido imposible. <a href="https://www.dnp.gov.co" target="_blank">[DNP — Programas COVID]</a></li>
 
   <li><strong>Récord de reservas internacionales ($56.7 B):</strong> Las reservas crecieron a niveles nunca vistos en la historia de Colombia, proporcionando un colchón macroeconómico que amortigó los efectos de la pandemia y mantuvo la estabilidad del peso. <a href="https://www.banrep.gov.co/es/estadisticas/reservas-internacionales" target="_blank">[BanRep — Reservas]</a></li>
 
@@ -147,7 +155,9 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 <ul>
   <li><strong>Explosión de la coca — nuevo récord (204.000 ha):</strong> A pesar de erradicaciones récord (130.000 ha en 2021 según UNODC), los cultivos siguieron creciendo por la resurgencia de siembras en otras zonas. La decisión de Santos de suspender fumigaciones con glifosato (nunca revertida) limitó severamente las herramientas disponibles. <a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">[UNODC]</a></li>
 
-  <li><strong>Paro Nacional 2021 — 62 días de bloqueos:</strong> Entre abril y junio de 2021, protestas contra la reforma tributaria y la reforma a la salud evolucionaron en bloqueos de vías y violencia. La brutalidad policial en algunos casos fue documentada por la CIDH; también se documentaron infiltraciones de grupos armados en las protestas. El costo económico del paro superó $2 billones de pesos. <a href="https://www.eltiempo.com" target="_blank">[El Tiempo — Paro 2021]</a></li>
+  <li><strong>Paro Nacional 2021 — 83 muertos, 2.110 casos de violencia documentados:</strong> Entre el 28 de abril y junio de 2021, protestas contra la reforma tributaria (luego retirada) y la reforma a la salud evolucionaron en bloqueos de vías durante más de 60 días. La CIDH documentó 83 muertes en el contexto del paro, 44 de ellas atribuidas directamente a la fuerza pública (principalmente ESMAD y policía), y 2.110 casos de violencia entre detenciones arbitrarias, agresiones y agresiones sexuales. El gobierno también documentó infiltraciones del ELN y disidencias de las FARC en los bloqueos, que usaron la protesta como cubierta para sus operaciones. El costo económico del paro superó $2,5 billones de pesos en pérdidas del sector privado. <a href="https://www.eltiempo.com" target="_blank">[El Tiempo — Paro 2021]</a></li>
+
+  <li><strong>313 masacres / 1.192 víctimas en 4 años — deterioro en seguridad rural:</strong> El gobierno Duque registró un promedio de 75 masacres anuales, el nivel más alto desde Santos. En total, 313 masacres con 1.192 víctimas durante el cuatrienio, según el INMLCF. Las masacres se concentraron en el posconflicto: territorios del Cauca, Nariño, Chocó y Norte de Santander disputados por el ELN, el EMC y el Clan del Golfo. <a href="https://www.medicinalegal.gov.co/cifras-estadisticas/forensis" target="_blank">[INMLCF FORENSIS 2018-2022]</a></li>
 
   <li><strong>Desplazamiento forzado en aumento — 335.000/año:</strong> El incremento del desplazamiento refleja la activación del ELN y las disidencias de las FARC en territorios donde el Acuerdo de Paz creó vacíos de poder. Nariño, Cauca, Chocó y Norte de Santander concentraron la mayoría de los eventos. <a href="https://www.acnur.org/colombia.html" target="_blank">[ACNUR Colombia]</a></li>
 

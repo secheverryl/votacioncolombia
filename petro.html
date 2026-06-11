@@ -8,11 +8,11 @@
 <title>Gustavo Petro 2022–presente — Análisis de Gobierno</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;color:#222;background:#f4f7fd;line-height:1.6}
-.page{max-width:860px;margin:0 auto;padding:24px 20px;background:#fff;min-height:100vh}
-a{color:#1a56db}a:hover{text-decoration:underline}
-.back-btn{display:inline-block;background:#eef2ff;color:#1a56db;border:1px solid #b4c6f7;border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
-.back-btn:hover{background:#dce8ff}
+body{font-family:Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;background:var(--surface);min-height:100vh}
+a{color:var(--accent2)}a:hover{text-decoration:underline}
+.back-btn{display:inline-block;background:var(--surface);color:var(--accent2);border:1px solid var(--border);border-radius:20px;padding:6px 18px;font-size:9.5pt;font-weight:700;text-decoration:none;margin-bottom:22px}
+.back-btn:hover{background:var(--bg)}
 .hero{background:#0d2252;color:#fff;padding:22px 26px;border-radius:8px;margin-bottom:22px}
 .hero h1{font-size:20pt;font-weight:700;margin-bottom:4px}
 .hero .years{font-size:11pt;color:#b4c6f7;margin-bottom:6px}
@@ -21,15 +21,16 @@ h2{font-size:12.5pt;color:#fff;background:#0d2252;padding:7px 16px;margin:26px 0
 h2.sec-logros{background:#155724}
 h2.sec-fracasos{background:#721c24}
 h2.sec-especial{background:#7c2d12}
-h3{font-size:10.5pt;color:#0d2252;border-bottom:2px solid #b4c6f7;padding-bottom:4px;margin:18px 0 8px}
-.resumen{background:#f8faff;border-left:4px solid #1a56db;padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
-.resumen strong{color:#0d2252}
-.note{font-size:8.5pt;color:#555;font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid #ccd8f0}
+h3{font-size:10.5pt;color:var(--accent2);border-bottom:2px solid var(--border);padding-bottom:4px;margin:18px 0 8px}
+.resumen{background:var(--bg);border-left:4px solid var(--accent);padding:14px 18px;margin-bottom:22px;border-radius:0 6px 6px 0;font-size:10pt;color:var(--text)}
+.resumen strong{color:var(--accent2)}
+.note{font-size:8.5pt;color:var(--muted);font-style:italic;margin:6px 0 14px;padding-left:10px;border-left:3px solid var(--border)}
 table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:10px 0 18px}
 th{background:#0d2252;color:#fff;padding:7px 10px;text-align:left;font-weight:600;font-size:9pt}
-td{padding:6px 10px;border-bottom:1px solid #e0e8f8}
-tr:nth-child(even) td{background:#f4f7fd}
-.g{color:#155724;font-weight:700}.r{color:#721c24;font-weight:700}.y{color:#7a4c00;font-weight:700}
+td{padding:6px 10px;border-bottom:1px solid var(--border);color:var(--text)}
+tr:nth-child(even) td{background:var(--bg)}
+.g{color:#4ade80;font-weight:700}.r{color:#f87171;font-weight:700}.y{color:#fbbf24;font-weight:700}
+body.light-mode .g{color:#166534}body.light-mode .r{color:#991b1b}body.light-mode .y{color:#92400e}
 ul{padding-left:20px;margin:8px 0 14px}
 ul li{margin-bottom:7px;font-size:10pt}
 .fuentes-list{font-size:9pt}
@@ -38,6 +39,10 @@ ul li{margin-bottom:7px;font-size:10pt}
 .spec-box strong{color:#7c2d12}
 .balance-box{background:#f0fdf4;border-left:4px solid #16a34a;padding:14px 18px;margin:16px 0 20px;border-radius:0 6px 6px 0;font-size:10pt;color:#333}
 .balance-box strong{color:#15803d}
+body.dark-mode .spec-box{background:#1a0a02;color:var(--text)}
+body.dark-mode .spec-box strong{color:#fb923c}
+body.dark-mode .balance-box{background:#021a0a;color:var(--text)}
+body.dark-mode .balance-box strong{color:#4ade80}
 .disclaimer{background:#fff8e1;border-left:4px solid #f9a825;padding:10px 14px;margin:28px 0 0;border-radius:3px;font-size:9.5pt}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,25 +100,25 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 </div>
 
 <h2 id="sec-ind">INDICADORES CLAVE DEL MANDATO</h2>
-<p class="note">Datos disponibles 2022–2025. Mandato en curso — algunos valores son parciales. <a href="index.html">Ver comparativo completo →</a></p>
+<p class="note">Cambio vs. Duque (2018–22), el gobierno anterior. Datos disponibles 2022–2025 — mandato en curso. <a href="index.html">Ver comparativo completo →</a></p>
 <table>
-  <thead><tr><th>Indicador</th><th>Valor (Petro)</th><th>Contexto vs. otros gobiernos</th></tr></thead>
+  <thead><tr><th>Indicador</th><th>Duque (anterior)</th><th>Petro (este mandato)</th><th>Cambio</th></tr></thead>
   <tbody>
-    <tr><td>Homicidios prom. (/100K hab.)</td><td class="y">27.5</td><td class="y">Leve alza vs. Duque (26.4) — tendencia baja se detuvo</td></tr>
-    <tr><td>Masacres (prom. anual)</td><td class="r">90 / año</td><td class="r">Aumentaron vs. Duque (75) y Santos (56)</td></tr>
-    <tr><td>Secuestros (prom. anual)</td><td class="y">238 / año</td><td class="y">Leve aumento vs. Duque (204)</td></tr>
-    <tr><td>Desplazamiento forzado</td><td class="r">347.000 / año</td><td class="r">⚠ El más alto de los 7 gobiernos</td></tr>
-    <tr><td>Crecimiento PIB promedio</td><td class="r">1.2 %</td><td class="r">⚠ El más bajo de los 7 gobiernos</td></tr>
-    <tr><td>PIB per cápita (disponible)</td><td class="y">$6.946</td><td>Crecimiento marginal</td></tr>
-    <tr><td>Inflación prom. (IPC)</td><td class="r">8.5 %</td><td class="r">La más alta desde Pastrana (8.6% en prom.); heredada en parte</td></tr>
-    <tr><td>Desempleo promedio</td><td class="y">10.8 %</td><td class="y">Igual a Samper; recuperación parcial post-COVID</td></tr>
-    <tr><td>Deuda pública GNC (% PIB)</td><td class="r">60 %</td><td class="r">Se mantiene en el máximo histórico</td></tr>
-    <tr><td>Pobreza monetaria (disponible)</td><td class="g">32.5 %</td><td class="g">Bajó de 36.6% (Duque) — tendencia continúa</td></tr>
-    <tr><td>Cultivos de coca (ha)</td><td class="r">230.000</td><td class="r">⚠ El más alto de todos los gobiernos — máximo absoluto</td></tr>
-    <tr><td>Reservas internacionales</td><td class="g">$61.9 B</td><td class="g">✔ Récord histórico</td></tr>
-    <tr><td>Deforestación (ha/año)</td><td class="g">140.000</td><td class="g">✔ La más baja de los 7 gobiernos</td></tr>
-    <tr><td>ECI HS92 (disponible)</td><td class="y">0.18</td><td class="y">Leve mejora vs. Duque (0.15)</td></tr>
-    <tr><td>Vivienda VIS/VIP (miles/año)</td><td class="r">38</td><td class="r">Cayó de 61K (Duque) a 38K — mínimo desde Samper</td></tr>
+    <tr><td>Homicidios prom. (/100K hab.)</td><td>26.4</td><td class="r">27.5</td><td class="r">▲ +1.1 (+4%)</td></tr>
+    <tr><td>Masacres (prom. anual)</td><td>75</td><td class="r">90</td><td class="r">▲ +15 (+20%)</td></tr>
+    <tr><td>Secuestros (prom. anual)</td><td>204</td><td class="r">238</td><td class="r">▲ +34 (+17%)</td></tr>
+    <tr><td>Desplazamiento forzado (mil/año)</td><td>335</td><td class="r">347</td><td class="r">▲ +12 (+4%)</td></tr>
+    <tr><td>Crecimiento PIB promedio</td><td>3.6 %</td><td class="r">1.2 %</td><td class="r">▼ −2.4 pp</td></tr>
+    <tr><td>PIB per cápita (fin mandato, USD)</td><td>$6.663</td><td class="g">$6.946</td><td class="g">▲ +$283 (+4%)</td></tr>
+    <tr><td>Inflación prom. (IPC)</td><td>4.7 %</td><td class="r">8.5 %</td><td class="r">▲ +3.8 pp</td></tr>
+    <tr><td>Desempleo promedio</td><td>12.8 %</td><td class="g">10.8 %</td><td class="g">▼ −2.0 pp</td></tr>
+    <tr><td>Deuda pública GNC (% PIB)</td><td>60 %</td><td class="y">60 %</td><td class="y">→ Sin cambio</td></tr>
+    <tr><td>Pobreza monetaria (disponible)</td><td>36.6 %</td><td class="g">32.5 %</td><td class="g">▼ −4.1 pp</td></tr>
+    <tr><td>Cultivos de coca (ha)</td><td>204.000</td><td class="r">230.000</td><td class="r">▲ +26K (+13%)</td></tr>
+    <tr><td>IDH (disponible)</td><td>0.752</td><td class="y">0.752</td><td class="y">→ Sin cambio</td></tr>
+    <tr><td>Deforestación (ha/año)</td><td>158.000</td><td class="g">140.000</td><td class="g">▼ −18K (−11%) — mínimo histórico 2023: 79K</td></tr>
+    <tr><td>Reservas internacionales (disponible)</td><td>$56.7 B</td><td class="g">$61.9 B</td><td class="g">▲ +$5.2 B (+9%)</td></tr>
+    <tr><td>Vivienda VIS/VIP (miles/año)</td><td>61</td><td class="r">38</td><td class="r">▼ −23K (−38%)</td></tr>
   </tbody>
 </table>
 
@@ -122,7 +127,7 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 <ul>
   <li><strong>Récord histórico de reservas internacionales ($61.9 B):</strong> Colombia superó todos los registros previos en reservas internacionales, proporcionando una base sólida para afrontar choques externos. Esto se da en un contexto de bajo crecimiento, lo que sugiere que los flujos de divisas (principalmente remesas y exportaciones de materias primas) han sido favorables. <a href="https://www.banrep.gov.co/es/estadisticas/reservas-internacionales" target="_blank">[BanRep — Reservas]</a></li>
 
-  <li><strong>Reducción continua de la deforestación — 140.000 ha/año:</strong> La tendencia de reducción de deforestación iniciada bajo Duque continuó, llegando a los niveles más bajos del período estudiado. El enfoque ambiental del gobierno ha tenido resultados concretos en este indicador. <a href="https://www.ideam.gov.co" target="_blank">[IDEAM]</a></li>
+  <li><strong>Deforestación en mínimo histórico — 79.256 ha en 2023 (mínimo desde el año 2000):</strong> El año 2023 marcó un hito ambiental: Colombia deforestó solo 79.256 hectáreas, una reducción del 36% respecto al año anterior y el nivel más bajo registrado desde que el IDEAM comenzó a medirlo sistemáticamente. Es el único indicador del gobierno Petro que puede catalogarse como un logro histórico inequívoco. El promedio del mandato se ubica en 140.000 ha/año por el rebote de 2024. <a href="https://www.ideam.gov.co" target="_blank">[IDEAM — Deforestación 2023]</a></li>
 
   <li><strong>Continuación de la tendencia de reducción de pobreza:</strong> La pobreza monetaria bajó de 36.6% (Duque) a 32.5% en los datos disponibles, continuando la tendencia histórica. Las transferencias sociales y el crecimiento del consumo interno han sostenido este resultado. <a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida" target="_blank">[DANE — Pobreza]</a></li>
 
@@ -134,11 +139,11 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 <h2 id="sec-fracasos" class="sec-fracasos">FRACASOS Y CRÍTICAS</h2>
 
 <ul>
-  <li><strong>Máximo histórico de coca — 230.000 hectáreas:</strong> El gobierno Petro declaró el fin de la "guerra contra las drogas" y apostó por la sustitución voluntaria. El resultado ha sido el récord absoluto de cultivos ilícitos: 230.000 ha, superior a todos los gobiernos anteriores y 36% más que el máximo previo de Duque (204.000 ha). La política de paz total con grupos armados, que incluye a las disidencias de las FARC y el ELN, ha coincidido con la expansión del control territorial cocalero de esos grupos. <a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">[UNODC — Colombia Coca Survey 2023]</a></li>
+  <li><strong>Máximo histórico de coca — 230.000 ha: el objetivo era reducir 90.000 ha y el resultado fue +26.000:</strong> El gobierno Petro se planteó como meta reducir los cultivos de coca en 90.000 ha para 2026 mediante sustitución voluntaria como parte de la "paz total". El resultado ha sido el opuesto: 230.000 ha registradas en 2023, el récord absoluto de todos los gobiernos, superior en un 13% al máximo previo de Duque y en un 351% al mínimo logrado por Uribe (62.000 ha). La declaración del "fin de la guerra contra las drogas" coincidió con la expansión del control territorial cocalero de los grupos que el gobierno negocia simultáneamente. <a href="https://www.unodc.org/unodc/en/crop-monitoring/?tag=Colombia" target="_blank">[UNODC — Colombia Coca Survey 2023]</a></li>
 
   <li><strong>Desplazamiento forzado en máximo del período — 347.000/año:</strong> El desplazamiento es el más alto de todos los gobiernos estudiados, superando incluso a Pastrana. La "paz total" no ha reducido la violencia en territorios controlados por el ELN y el EMC de las FARC. <a href="https://www.acnur.org/colombia.html" target="_blank">[ACNUR]</a></li>
 
-  <li><strong>Crecimiento del PIB más bajo en 30 años — 1.2%:</strong> El crecimiento económico ha caído al nivel más bajo desde la crisis de 1999 (gobierno Pastrana), excluyendo el año COVID de 2020. La incertidumbre sobre las reformas estructurales (salud, pensiones, laboral) ha reducido la inversión privada y la creación de empleo formal. <a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">[BanRep — PIB]</a></li>
+  <li><strong>Crecimiento del PIB más bajo en 30 años e IED cayó 17.6% en 2024:</strong> El crecimiento económico cayó al 1.2%, el más bajo desde la crisis de 1999, excluyendo el año COVID. La Inversión Extranjera Directa (IED) cayó 17.6% en 2024 respecto al año anterior, según el Banco de la República, reflejando la pérdida de confianza inversionista. La incertidumbre sobre las reformas estructurales (salud, pensiones, laboral) y los cambios en la política energética (restricción a exploración de hidrocarburos) han reducido la inversión privada y la creación de empleo formal. <a href="https://www.banrep.gov.co/es/estadisticas/producto-interno-bruto-pib" target="_blank">[BanRep — PIB]</a></li>
 
   <li><strong>Vivienda VIS/VIP en mínimo histórico — 38.000/año:</strong> La construcción de vivienda social cayó de 61.000 unidades/año (Duque) a 38.000, el nivel más bajo desde Samper. La incertidumbre regulatoria y los cambios en política sectorial frenaron la inversión en construcción. <a href="https://www.minvivienda.gov.co" target="_blank">[Ministerio de Vivienda]</a></li>
 
@@ -146,7 +151,9 @@ window.setTheme=function(m){var d=m==='dark';document.body.classList.toggle('dar
 
   <li><strong>Escándalos de corrupción en el entorno cercano:</strong> El caso "Nicolás Petro" (hijo del presidente, condenado por enriquecimiento ilícito y tráfico de estupefacientes) y las investigaciones sobre la campaña 2022 han afectado la credibilidad del gobierno en materia anticorrupción. <a href="https://www.fiscalia.gov.co" target="_blank">[Fiscalía General de la Nación]</a></li>
 
-  <li><strong>Reforma a la salud — fragmentación del debate:</strong> La reforma al sistema de salud fue objetada por la Corte Constitucional en aspectos clave y generó divisiones en la coalición de gobierno. El SGSSS sigue siendo uno de los sistemas de salud más complejos de América Latina. <a href="https://www.minsalud.gov.co" target="_blank">[Ministerio de Salud]</a></li>
+  <li><strong>Reforma a la salud — objetada por la Corte Constitucional:</strong> La reforma al sistema de salud fue objetada por la Corte Constitucional en aspectos clave y generó divisiones en la coalición de gobierno. El SGSSS sigue siendo uno de los sistemas de salud más complejos de América Latina. <a href="https://www.minsalud.gov.co" target="_blank">[Ministerio de Salud]</a></li>
+
+  <li><strong>Negociaciones con el ELN — 6 rondas, suspendidas en mayo 2025:</strong> El gobierno Petro adelantó 6 rondas de negociación con el ELN entre 2022 y 2025 en Cuba y Venezuela. El proceso fue interrumpido en mayo de 2025 tras una serie de ataques del ELN a infraestructura y comunidades en Chocó, Arauca y Norte de Santander que el gobierno no pudo ignorar políticamente. La "paz total" con el ELN, la apuesta más ambiciosa del mandato en materia de paz, quedó inconclusa. Las disidencias de las FARC (EMC) también rompieron el cese al fuego bilateral en 2024. <a href="https://www.cancilleria.gov.co" target="_blank">[Cancillería — Paz Total]</a></li>
 </ul>
 
 <h2 id="sec-especial" class="sec-especial">FINANCIAMIENTO ILEGAL E INFLUENCIA ARMADA EN LA CAMPAÑA 2022</h2>
