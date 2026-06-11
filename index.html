@@ -63,25 +63,21 @@
       background: #fff;
       color: #0d2252;
       border: 2px solid #0d2252;
-      padding: 7px 16px 7px 12px;
-      font-size: 12px;
+      padding: 10px 22px;
+      font-size: 13px;
       font-family: sans-serif;
       border-radius: 6px;
       cursor: pointer;
       box-shadow: 0 3px 10px rgba(0,0,0,.18);
       transition: background .15s, color .15s;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       text-decoration: none;
       font-weight: 700;
       letter-spacing: .2px;
     }
     .ranking-btn:hover { background: #0d2252; color: #fff; }
-    .ranking-btn:hover .escudo-ring { stroke: #fff; }
-    .ranking-btn:hover .escudo-stripe-y { fill: #fcd116; }
-    .ranking-btn:hover .escudo-stripe-b { fill: #003087; }
-    .ranking-btn:hover .escudo-stripe-r { fill: #ce1126; }
 
     /* ── COVER ── */
     .cover {
@@ -941,7 +937,7 @@ window.setTheme = function(mode) {
 <!-- ══ /SIDEBAR ══ -->
 
 <button class="print-btn no-print" onclick="window.print()">⬇ Guardar como PDF</button>
-
+<a class="ranking-btn no-print" href="#ranking-section">🏆 Ranking presidencial</a>
 
 <!-- ══════════════════════════════ PORTADA ══════════════════════════════ -->
 <div class="cover">
