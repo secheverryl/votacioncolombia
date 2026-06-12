@@ -945,6 +945,50 @@
     .met-acl strong { color:#0d2252; display:block; margin-bottom:3px; font-size:10pt; }
     body.dark-mode .met-acl strong { color:#bfdbfe; }
     @media(max-width:580px) { .met-aclarations { grid-template-columns:1fr; } }
+
+    /* ══ INFOGRAFÍA METODOLOGÍA VISUAL ══ */
+    .mrank-section { margin:0 0 28px; background:var(--surface); border-radius:16px;
+      border:1px solid var(--border); padding:28px 28px 22px; }
+    .mrank-title { font-size:15pt; font-weight:900; color:#0d2252; margin:0 0 6px;
+      display:flex; align-items:center; gap:10px; }
+    body.dark-mode .mrank-title { color:var(--text); }
+    .mrank-intro { font-size:10.5pt; color:var(--muted); margin:0 0 22px; }
+    .mrank-flow { display:grid;
+      grid-template-columns:1fr 44px 1fr 44px 1fr 44px 1fr;
+      align-items:center; gap:0; margin-bottom:20px; }
+    .mrank-card { background:var(--bg); border-radius:14px; padding:18px 16px 16px;
+      border:1px solid var(--border); position:relative; overflow:hidden;
+      display:flex; flex-direction:column; }
+    .mrank-card::before { content:''; position:absolute; top:0; left:0; right:0;
+      height:4px; border-radius:14px 14px 0 0; }
+    .mrank-c1::before { background:linear-gradient(90deg,#ef4444,#f97316); }
+    .mrank-c2::before { background:linear-gradient(90deg,#3b82f6,#6366f1); }
+    .mrank-c3::before { background:linear-gradient(90deg,#a855f7,#ec4899); }
+    .mrank-c4::before { background:linear-gradient(90deg,#22c55e,#16a34a); }
+    .mrank-badge { font-size:8.5pt; font-weight:900; letter-spacing:3px;
+      opacity:.4; color:var(--text); margin-bottom:6px; }
+    .mrank-card-title { font-size:11pt; font-weight:800; color:var(--text);
+      margin-bottom:12px; line-height:1.25; }
+    .mrank-svg { width:100%; max-width:260px; height:150px; display:block;
+      margin:0 auto 12px; flex-shrink:0; }
+    .mrank-card-text { font-size:9pt; color:var(--muted); line-height:1.55;
+      margin:0; flex:1; }
+    .mrank-card-text strong { color:var(--text); }
+    .mrank-arrow { display:flex; align-items:center; justify-content:center;
+      color:var(--muted); }
+    .mrank-arrow svg { transform:rotate(-90deg); }
+    .mrank-nota { background:var(--bg); border-left:4px solid var(--accent);
+      border-radius:0 8px 8px 0; padding:12px 16px; font-size:9.5pt;
+      color:var(--muted); line-height:1.5; margin-top:4px; }
+    .mrank-nota strong { color:var(--text); }
+    @media(max-width:960px) {
+      .mrank-flow { grid-template-columns:1fr 1fr; gap:16px; }
+      .mrank-arrow { display:none; }
+    }
+    @media(max-width:580px) {
+      .mrank-flow { grid-template-columns:1fr; gap:12px; }
+      .mrank-section { padding:18px 14px 16px; }
+    }
   </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6272957192947399" crossorigin="anonymous"></script>
 </head>
@@ -1188,6 +1232,202 @@ window.setTheme = function(mode) {
     </div>
   </div>
 </div>
+
+<!-- ══ INFOGRAFÍA METODOLOGÍA RANKING ══ -->
+<section id="metodologia-infografia" class="mrank-section no-print">
+  <h2 class="mrank-title">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1a56db" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    ¿Cómo se calcula el ranking presidencial?
+  </h2>
+  <p class="mrank-intro">Un proceso matemático transparente, aplicado exactamente igual a todos los presidentes. Sin opiniones, sin pesos subjetivos — solo datos oficiales.</p>
+
+  <div class="mrank-flow">
+
+    <!-- ╔═ PASO 1: RECOLECCIÓN ═════════════════ -->
+    <div class="mrank-card mrank-c1">
+      <div class="mrank-badge">PASO 01</div>
+      <div class="mrank-card-title">Recolección de indicadores</div>
+      <svg class="mrank-svg" viewBox="0 0 260 155" xmlns="http://www.w3.org/2000/svg"
+           style="height:155px" role="img" aria-label="Hub central conectado a 5 categorías de indicadores">
+        <!-- Hub central -->
+        <circle cx="130" cy="77" r="28" fill="#1a56db" opacity="0.09"/>
+        <circle cx="130" cy="77" r="20" fill="#1a56db" opacity="0.2"/>
+        <text x="130" y="72" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="18" fill="#1a56db">30+</text>
+        <text x="130" y="86" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" style="fill:var(--muted)">datos</text>
+        <!-- Líneas conectoras hub→categorías -->
+        <line x1="113" y1="64" x2="69" y2="37" stroke="#1a56db" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.3"/>
+        <line x1="147" y1="64" x2="191" y2="37" stroke="#1a56db" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.3"/>
+        <line x1="110" y1="77" x2="50" y2="77" stroke="#1a56db" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.3"/>
+        <line x1="150" y1="77" x2="210" y2="77" stroke="#1a56db" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.3"/>
+        <line x1="130" y1="97" x2="130" y2="106" stroke="#1a56db" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.3"/>
+        <!-- Seguridad (arriba-izq) — cx=46,cy=25,r=24 → top=1 left=22 right=70 -->
+        <circle cx="46" cy="25" r="24" fill="#fef2f2"/>
+        <circle cx="46" cy="25" r="24" fill="#ef4444" opacity="0.15"/>
+        <text x="46" y="18" text-anchor="middle" font-size="14" font-family="Arial">🛡️</text>
+        <text x="46" y="31" text-anchor="middle" font-family="Arial" font-weight="700" font-size="8" fill="#ef4444">SEGURIDAD</text>
+        <!-- Economía (arriba-der) — cx=214,cy=25,r=24 → top=1 left=190 right=238 -->
+        <circle cx="214" cy="25" r="24" fill="#eff6ff"/>
+        <circle cx="214" cy="25" r="24" fill="#3b82f6" opacity="0.15"/>
+        <text x="214" y="18" text-anchor="middle" font-size="14" font-family="Arial">📈</text>
+        <text x="214" y="31" text-anchor="middle" font-family="Arial" font-weight="700" font-size="8" fill="#3b82f6">ECONOMÍA</text>
+        <!-- Social (izq) — cx=26,cy=77,r=22 → left=4 top=55 bottom=99 -->
+        <circle cx="26" cy="77" r="22" fill="#f0fdf4"/>
+        <circle cx="26" cy="77" r="22" fill="#22c55e" opacity="0.15"/>
+        <text x="26" y="71" text-anchor="middle" font-size="14" font-family="Arial">🏥</text>
+        <text x="26" y="84" text-anchor="middle" font-family="Arial" font-weight="700" font-size="8" fill="#22c55e">SOCIAL</text>
+        <!-- Gobernabilidad (der) — cx=234,cy=77,r=22 → right=256 top=55 bottom=99 -->
+        <circle cx="234" cy="77" r="22" fill="#faf5ff"/>
+        <circle cx="234" cy="77" r="22" fill="#a855f7" opacity="0.15"/>
+        <text x="234" y="71" text-anchor="middle" font-size="14" font-family="Arial">⚖️</text>
+        <text x="234" y="84" text-anchor="middle" font-family="Arial" font-weight="700" font-size="8" fill="#a855f7">GOBERN.</text>
+        <!-- Ambiente (abajo) — cx=130,cy=128,r=22 → bottom=150 top=106 -->
+        <circle cx="130" cy="128" r="22" fill="#fff7ed"/>
+        <circle cx="130" cy="128" r="22" fill="#f97316" opacity="0.15"/>
+        <text x="130" y="121" text-anchor="middle" font-size="14" font-family="Arial">🌿</text>
+        <text x="130" y="135" text-anchor="middle" font-family="Arial" font-weight="700" font-size="8" fill="#f97316">AMBIENTE</text>
+      </svg>
+      <p class="mrank-card-text">Para cada presidente recogemos <strong>30+ indicadores verificados</strong> en 5 categorías. Cada dato proviene de fuentes como <strong>DANE, BanRep, INMLCF y UNODC</strong>, cruzado con mínimo 3 fuentes independientes.</p>
+    </div>
+
+    <!-- Flecha 1→2 -->
+    <div class="mrank-arrow" aria-hidden="true">
+      <svg viewBox="0 0 24 44" width="24" height="44"><path d="M12 4 L12 36 M6 28 L12 38 L18 28" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+
+    <!-- ╔═ PASO 2: DELTA ════════════════════════ -->
+    <div class="mrank-card mrank-c2">
+      <div class="mrank-badge">PASO 02</div>
+      <div class="mrank-card-title">Calculamos el cambio real</div>
+      <svg class="mrank-svg" viewBox="0 0 260 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Comparación antes y después: barra roja 63.5 al inicio, barra verde 38.6 al final, delta menos 24.9">
+        <defs>
+          <linearGradient id="mrk2-r" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#b91c1c"/>
+          </linearGradient>
+          <linearGradient id="mrk2-g" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4ade80"/><stop offset="100%" stop-color="#15803d"/>
+          </linearGradient>
+        </defs>
+        <!-- Etiquetas superiores -->
+        <text x="68" y="11" text-anchor="middle" font-family="Arial" font-size="7.5" style="fill:var(--muted)">Al inicio del mandato</text>
+        <text x="192" y="11" text-anchor="middle" font-family="Arial" font-size="7.5" style="fill:var(--muted)">Al final del mandato</text>
+        <!-- Barra roja (alta) - valor inicial Uribe: 63.5 -->
+        <rect x="28" y="16" width="80" height="112" rx="7" fill="url(#mrk2-r)"/>
+        <text x="68" y="64" text-anchor="middle" font-family="Arial" font-weight="900" font-size="23" fill="white">63.5</text>
+        <text x="68" y="79" text-anchor="middle" font-family="Arial" font-size="7" fill="rgba(255,255,255,.85)">homicidios</text>
+        <text x="68" y="89" text-anchor="middle" font-family="Arial" font-size="7" fill="rgba(255,255,255,.7)">por 100K hab.</text>
+        <text x="68" y="139" text-anchor="middle" font-family="Arial" font-size="7" fill="#ef4444" font-weight="600">← heredó de Pastrana</text>
+        <!-- Barra verde (baja) - valor final Uribe: 38.6 -->
+        <rect x="152" y="82" width="80" height="46" rx="7" fill="url(#mrk2-g)"/>
+        <text x="192" y="108" text-anchor="middle" font-family="Arial" font-weight="900" font-size="23" fill="white">38.6</text>
+        <text x="192" y="120" text-anchor="middle" font-family="Arial" font-size="7" fill="rgba(255,255,255,.8)">por 100K hab.</text>
+        <text x="192" y="139" text-anchor="middle" font-family="Arial" font-size="7" fill="#22c55e" font-weight="600">entregó a Santos →</text>
+        <!-- Badge delta central -->
+        <rect x="101" y="54" width="58" height="30" rx="9" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+        <text x="130" y="66" text-anchor="middle" font-family="Arial" font-weight="700" font-size="8" fill="#166534">DELTA</text>
+        <text x="130" y="79" text-anchor="middle" font-family="Arial" font-weight="900" font-size="11" fill="#166534">−24.9 ✓</text>
+      </svg>
+      <p class="mrank-card-text">No miramos el valor absoluto — medimos <strong>cuánto cambió</strong> durante el mandato. Esto pone en igualdad de condiciones a quien recibió un país en crisis y a quien lo recibió estable.</p>
+    </div>
+
+    <!-- Flecha 2→3 -->
+    <div class="mrank-arrow" aria-hidden="true">
+      <svg viewBox="0 0 24 44" width="24" height="44"><path d="M12 4 L12 36 M6 28 L12 38 L18 28" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+
+    <!-- ╔═ PASO 3: NORMALIZACIÓN ════════════════ -->
+    <div class="mrank-card mrank-c3">
+      <div class="mrank-badge">PASO 03</div>
+      <div class="mrank-card-title">Normalizamos a escala 0–100</div>
+      <svg class="mrank-svg" viewBox="0 0 260 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Barra de escala del 0 al 100 con puntos de presidentes en diferentes posiciones">
+        <defs>
+          <linearGradient id="mrk3-sc" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#ef4444"/>
+            <stop offset="38%" stop-color="#f97316"/>
+            <stop offset="65%" stop-color="#eab308"/>
+            <stop offset="100%" stop-color="#22c55e"/>
+          </linearGradient>
+        </defs>
+        <!-- Barra de escala -->
+        <rect x="18" y="60" width="224" height="22" rx="11" fill="url(#mrk3-sc)" opacity="0.88"/>
+        <!-- Extremos -->
+        <text x="18" y="98" text-anchor="middle" font-family="Arial" font-size="9" font-weight="700" fill="#ef4444">0</text>
+        <text x="18" y="108" text-anchor="middle" font-family="Arial" font-size="7" style="fill:var(--muted)">Peor</text>
+        <text x="242" y="98" text-anchor="middle" font-family="Arial" font-size="9" font-weight="700" fill="#22c55e">100</text>
+        <text x="242" y="108" text-anchor="middle" font-family="Arial" font-size="7" style="fill:var(--muted)">Mejor</text>
+        <!-- Puntos de presidentes (ilustrativos) -->
+        <!-- Uribe ~82pts - encima -->
+        <circle cx="201" cy="71" r="7.5" fill="#1971c2" stroke="white" stroke-width="1.5"/>
+        <line x1="201" y1="28" x2="201" y2="63" stroke="#1971c2" stroke-width="1" stroke-dasharray="2,2" opacity="0.7"/>
+        <text x="201" y="23" text-anchor="middle" font-family="Arial" font-size="7.5" fill="#1971c2" font-weight="700">Uribe</text>
+        <text x="201" y="14" text-anchor="middle" font-family="Arial" font-size="7" fill="#1971c2">≈82 pts</text>
+        <!-- Santos ~68 -->
+        <circle cx="171" cy="71" r="7.5" fill="#2f9e44" stroke="white" stroke-width="1.5"/>
+        <!-- Petro ~41 - debajo -->
+        <circle cx="110" cy="71" r="7.5" fill="#f76707" stroke="white" stroke-width="1.5"/>
+        <line x1="110" y1="82" x2="110" y2="114" stroke="#f76707" stroke-width="1" stroke-dasharray="2,2" opacity="0.7"/>
+        <text x="110" y="121" text-anchor="middle" font-family="Arial" font-size="7.5" fill="#f76707" font-weight="700">Petro</text>
+        <text x="110" y="130" text-anchor="middle" font-family="Arial" font-size="7" fill="#f76707">≈41 pts</text>
+        <!-- Samper ~13 -->
+        <circle cx="47" cy="71" r="7.5" fill="#7048e8" stroke="white" stroke-width="1.5"/>
+        <line x1="47" y1="82" x2="47" y2="114" stroke="#7048e8" stroke-width="1" stroke-dasharray="2,2" opacity="0.7"/>
+        <text x="47" y="121" text-anchor="middle" font-family="Arial" font-size="7.5" fill="#7048e8" font-weight="700">Samper</text>
+        <text x="47" y="130" text-anchor="middle" font-family="Arial" font-size="7" fill="#7048e8">≈13 pts</text>
+        <!-- Fórmula al pie -->
+        <rect x="12" y="140" width="236" height="12" rx="4" fill="rgba(26,86,219,.08)"/>
+        <text x="130" y="149" text-anchor="middle" font-family="Arial" font-size="6.5" fill="#1a56db" font-weight="600">Puntaje = (delta − peor) ÷ (mejor − peor) × 100</text>
+      </svg>
+      <p class="mrank-card-text">Como los indicadores tienen unidades distintas (homicidios, %, pesos…), los llevamos a escala <strong>0–100</strong>. El que más mejoró ese indicador = <strong>100 pts</strong>. El que más lo empeoró = <strong>0 pts</strong>.</p>
+    </div>
+
+    <!-- Flecha 3→4 -->
+    <div class="mrank-arrow" aria-hidden="true">
+      <svg viewBox="0 0 24 44" width="24" height="44"><path d="M12 4 L12 36 M6 28 L12 38 L18 28" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+
+    <!-- ╔═ PASO 4: RANKING ══════════════════════ -->
+    <div class="mrank-card mrank-c4">
+      <div class="mrank-badge">PASO 04</div>
+      <div class="mrank-card-title">Suma y ranking final</div>
+      <svg class="mrank-svg" viewBox="0 0 260 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico de barras ilustrativo del ranking presidencial">
+        <!-- Barras horizontales (puntajes ilustrativos) -->
+        <text x="8" y="20" font-family="Arial" font-size="9">🥇</text>
+        <text x="22" y="20" font-family="Arial" font-size="7" fill="#22c55e" font-weight="700">Presidente 1</text>
+        <rect x="100" y="8" width="148" height="14" rx="4" fill="#22c55e" opacity="0.85"/>
+        <text x="244" y="19" text-anchor="end" font-family="Arial" font-size="7" fill="white" font-weight="700">84 pts</text>
+
+        <text x="8" y="42" font-family="Arial" font-size="9">🥈</text>
+        <text x="22" y="42" font-family="Arial" font-size="7" fill="#4ade80" font-weight="700">Presidente 2</text>
+        <rect x="100" y="30" width="130" height="14" rx="4" fill="#4ade80" opacity="0.85"/>
+        <text x="226" y="41" text-anchor="end" font-family="Arial" font-size="7" fill="white" font-weight="700">74 pts</text>
+
+        <text x="8" y="64" font-family="Arial" font-size="9">🥉</text>
+        <text x="22" y="64" font-family="Arial" font-size="7" fill="#eab308" font-weight="700">Presidente 3</text>
+        <rect x="100" y="52" width="105" height="14" rx="4" fill="#eab308" opacity="0.85"/>
+        <text x="201" y="63" text-anchor="end" font-family="Arial" font-size="7" fill="white" font-weight="700">60 pts</text>
+
+        <text x="22" y="86" font-family="Arial" font-size="7" fill="#f97316">Presidente 4</text>
+        <rect x="100" y="74" width="84" height="14" rx="4" fill="#f97316" opacity="0.72"/>
+        <text x="180" y="85" text-anchor="end" font-family="Arial" font-size="7" fill="white" font-weight="700">48 pts</text>
+
+        <text x="22" y="108" font-family="Arial" font-size="7" fill="#ef4444">Presidente 5</text>
+        <rect x="100" y="96" width="53" height="14" rx="4" fill="#ef4444" opacity="0.65"/>
+        <text x="149" y="107" text-anchor="end" font-family="Arial" font-size="7" fill="white" font-weight="700">30 pts</text>
+
+        <text x="22" y="130" font-family="Arial" font-size="7" fill="#b91c1c">Presidente 6</text>
+        <rect x="100" y="118" width="32" height="14" rx="4" fill="#b91c1c" opacity="0.65"/>
+        <text x="128" y="129" text-anchor="end" font-family="Arial" font-size="7" fill="white" font-weight="700">18 pts</text>
+
+        <text x="130" y="148" text-anchor="middle" font-family="Arial" font-size="6.5" style="fill:var(--muted)" font-style="italic">* Puntajes ilustrativos — ver ranking real abajo ↓</text>
+      </svg>
+      <p class="mrank-card-text">Se suman los puntajes de <strong>los 30+ indicadores</strong>. Sin pesos especiales — todos cuentan igual. Quien más mejoró en más áreas, encabeza el ranking. El resultado real está <strong>más abajo en esta página</strong>.</p>
+    </div>
+
+  </div><!-- /mrank-flow -->
+
+  <div class="mrank-nota">
+    <strong>Nota importante:</strong> El ranking mide <em>cambios relativos</em> durante el mandato, no el estado absoluto del país. Un presidente que recibió una crisis y la mejoró puede puntuar más que uno que recibió el país en buen estado y lo mantuvo igual. <strong>Gaviria (1990–1994)</strong> es el punto de partida y no figura en la clasificación porque no tiene antecesor con quien comparar en este período.
+  </div>
+</section>
 
 <!-- AVISO INDEPENDENCIA -->
 <div class="aviso-independiente">
@@ -5827,102 +6067,6 @@ window.setTheme = function(mode) {
     sobre los 6 deltas de cada indicador.
   </p>
 </section>
-
-<!-- ══ METODOLOGÍA RANKING ══ -->
-<div class="met-wrap">
-  <h2>📐 ¿Cómo se calcula el ranking?</h2>
-  <p style="font-size:10pt;color:var(--muted);margin-bottom:18px">El ranking <strong>no es una opinión</strong> — es el resultado de aplicar la misma fórmula matemática a todos los presidentes por igual. Aquí explicamos el proceso paso a paso, en lenguaje sencillo.</p>
-
-  <div class="met-steps">
-
-    <!-- PASO 1 -->
-    <div class="met-step">
-      <div class="met-step-num">1</div>
-      <div class="met-step-title">📊 Recolectamos los datos</div>
-      <div class="met-step-body">
-        Para cada presidente tomamos 30+ indicadores en 5 categorías:
-        <ul style="margin:8px 0 0 16px;line-height:1.8">
-          <li><strong>Seguridad:</strong> homicidios, masacres, secuestros…</li>
-          <li><strong>Economía:</strong> PIB, inflación, desempleo…</li>
-          <li><strong>Social:</strong> pobreza, IDH, educación…</li>
-          <li><strong>Gobernabilidad:</strong> transparencia, justicia…</li>
-          <li><strong>Ambiente:</strong> coca, deforestación…</li>
-        </ul>
-      </div>
-      <div class="met-step-ex">
-        <strong>Ejemplo:</strong> Uribe recibió el país con 63.5 homicidios por cada 100.000 habitantes y lo entregó con 38.6.
-      </div>
-    </div>
-
-    <!-- PASO 2 -->
-    <div class="met-step">
-      <div class="met-step-num">2</div>
-      <div class="met-step-title">📉 Calculamos el cambio</div>
-      <div class="met-step-body">
-        No miramos el valor absoluto, sino <strong>cuánto mejoró o empeoró</strong> cada presidente respecto al gobierno que le antecedió. Así comparamos en igualdad de condiciones — a quien recibió un país en crisis y a quien recibió uno estable.
-      </div>
-      <div class="met-step-ex">
-        <strong>Ejemplo:</strong> Uribe bajó los homicidios en −24.9 puntos.<br>
-        Santos los bajó −11.1 puntos más.<br>
-        Ambas son mejoras, pero de diferente magnitud.
-      </div>
-    </div>
-
-    <!-- PASO 3 -->
-    <div class="met-step">
-      <div class="met-step-num">3</div>
-      <div class="met-step-title">📐 Convertimos a escala 0–100</div>
-      <div class="met-step-body">
-        Para poder sumar indicadores de diferente naturaleza (homicidios, PIB, pobreza…) los convertimos a una escala común del 0 al 100.<br><br>
-        <strong>100 puntos</strong> = el presidente que más mejoró ese indicador.<br>
-        <strong>0 puntos</strong> = el que más lo empeoró.<br>
-        Los demás quedan en el rango según su resultado.
-      </div>
-      <div class="met-step-ex">
-        <strong>Ejemplo:</strong> En homicidios, Uribe tuvo la mayor baja histórica → <strong>100 pts</strong>. Gaviria tuvo el peor aumento → <strong>0 pts</strong> (por eso es la base).
-      </div>
-    </div>
-
-    <!-- PASO 4 -->
-    <div class="met-step">
-      <div class="met-step-num">4</div>
-      <div class="met-step-title">🏆 Sumamos el puntaje final</div>
-      <div class="met-step-body">
-        Se suman los puntajes de <strong>todos los indicadores</strong>. El presidente con mayor suma total encabeza el ranking. No hay indicadores "más importantes" — todos pesan igual.
-      </div>
-      <div class="met-step-ex">
-        <strong>Resultado:</strong> Si un presidente mejoró mucho en seguridad pero empeoró en economía, ambas cosas se reflejan en la suma final. No hay forma de ocultar los fracasos.
-      </div>
-    </div>
-
-  </div><!-- /met-steps -->
-
-  <div class="met-formula">
-    <div class="mf-title">FÓRMULA DE NORMALIZACIÓN (min-max)</div>
-    <div class="mf-eq">Puntaje = (delta − peor_delta) ÷ (mejor_delta − peor_delta) × 100</div>
-    <div style="font-size:8.5pt;color:#93b4e8;margin-top:6px">donde <em>delta</em> = valor al final del mandato − valor al inicio del mandato (heredado del presidente anterior)</div>
-  </div>
-
-  <div class="met-aclarations">
-    <div class="met-acl">
-      <strong>¿Por qué Gaviria no aparece en el ranking?</strong>
-      Es el primer presidente del período (1990–1994) y no tiene antecesor con quien comparar en este informe. Sus valores sirven como punto de partida para medir a Samper.
-    </div>
-    <div class="met-acl">
-      <strong>¿El ranking es definitivo?</strong>
-      No. Es una aproximación cuantitativa con los datos disponibles. Factores externos (guerras, pandemias, precios del petróleo) afectan los indicadores sin que sea culpa directa del presidente. El análisis cualitativo de cada sección complementa el número.
-    </div>
-    <div class="met-acl">
-      <strong>¿Qué significa un puntaje alto?</strong>
-      Que ese presidente, en promedio, mejoró más indicadores (o los empeoró menos) que sus colegas. No es un juicio moral — es una medición de resultados.
-    </div>
-    <div class="met-acl">
-      <strong>¿Las fuentes son confiables?</strong>
-      Todos los datos provienen de entidades como DANE, BanRep, INMLCF, UNODC, INDEPAZ y Banco Mundial. Cada cifra tiene su fuente citada. Los datos contradictorios entre fuentes se marcan con ⚠️ ALERTA.
-    </div>
-  </div>
-
-</div><!-- /met-wrap -->
 
 <section id="ranking-section">
   <h2 class="rk-title">🏆 Clasificación General</h2>
