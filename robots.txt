@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://secheverryl.github.io/votacioncolombia/sitemap.xml
+Sitemap: https://votacioncolombia.com/sitemap.xml
