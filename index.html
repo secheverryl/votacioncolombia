@@ -890,6 +890,61 @@
     body.light-mode .rk-score-hi  .rk-pts { color:#15803d !important; }
     body.light-mode .rk-score-mid .rk-pts { color:#92400e !important; }
     body.light-mode .rk-score-lo  .rk-pts { color:#b91c1c !important; }
+
+    /* ══ AVISO INDEPENDIENTE ══ */
+    .aviso-independiente {
+      display:flex; align-items:flex-start; gap:12px;
+      background:#e8f4fd; border-left:4px solid #1a56db;
+      border-radius:0 8px 8px 0; padding:14px 18px;
+      margin:0 0 20px; font-size:10pt; color:#1e3a5f; line-height:1.5;
+    }
+    .aviso-independiente .av-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+    .aviso-independiente strong { color:#0d2252; }
+    body.dark-mode .aviso-independiente {
+      background:#071e40; color:#93c5fd; border-left-color:#3b82f6;
+    }
+    body.dark-mode .aviso-independiente strong { color:#bfdbfe; }
+
+    /* ══ METODOLOGÍA RANKING INFOGRAFÍA ══ */
+    .met-wrap { margin:0 0 32px; }
+    .met-wrap h2 { font-size:15pt; color:#0d2252; border-bottom:2px solid #1a56db;
+      padding-bottom:8px; margin-bottom:20px; }
+    body.dark-mode .met-wrap h2 { color:var(--text); border-bottom-color:var(--accent); }
+    .met-steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px; margin-bottom:22px; }
+    .met-step { background:#f0f6ff; border-radius:10px; padding:18px 16px;
+      border:1px solid #c7d9f5; position:relative; }
+    body.dark-mode .met-step { background:#0d1e3e; border-color:#1e3462; }
+    .met-step-num { width:34px; height:34px; border-radius:50%;
+      background:#1a56db; color:#fff; font-weight:800; font-size:14pt;
+      display:flex; align-items:center; justify-content:center; margin-bottom:10px; }
+    .met-step-title { font-weight:700; font-size:11pt; color:#0d2252;
+      margin-bottom:6px; }
+    body.dark-mode .met-step-title { color:#bfdbfe; }
+    .met-step-body { font-size:9.5pt; color:#334155; line-height:1.55; }
+    body.dark-mode .met-step-body { color:var(--muted); }
+    .met-step-ex { background:#fff; border:1px dashed #93b4e8; border-radius:6px;
+      padding:8px 10px; margin-top:10px; font-size:8.5pt; color:#334155; }
+    body.dark-mode .met-step-ex { background:#071428; border-color:#1e3462;
+      color:#7ba7f0; }
+    .met-step-ex strong { color:#1a56db; }
+    body.dark-mode .met-step-ex strong { color:#60a5fa; }
+    .met-arrow { text-align:center; font-size:22px; color:#93b4e8;
+      display:flex; align-items:center; justify-content:center; padding-top:10px; }
+    @media(max-width:600px) { .met-arrow { display:none; } }
+    .met-formula { background:#0d2252; color:#fff; border-radius:10px;
+      padding:16px 20px; text-align:center; font-size:11pt; margin-bottom:16px; }
+    .met-formula .mf-title { font-size:9pt; color:#93b4e8; margin-bottom:6px; }
+    .met-formula .mf-eq { font-size:13pt; font-weight:700; font-family:monospace;
+      color:#fcd116; margin:4px 0; }
+    .met-aclarations { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .met-acl { background:#f0f6ff; border-radius:8px; padding:12px 14px;
+      border-left:3px solid #1a56db; font-size:9pt; color:#334155; }
+    body.dark-mode .met-acl { background:#0d1e3e; color:var(--muted);
+      border-left-color:#3b82f6; }
+    .met-acl strong { color:#0d2252; display:block; margin-bottom:3px; font-size:10pt; }
+    body.dark-mode .met-acl strong { color:#bfdbfe; }
+    @media(max-width:580px) { .met-aclarations { grid-template-columns:1fr; } }
   </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6272957192947399" crossorigin="anonymous"></script>
 </head>
@@ -1131,6 +1186,17 @@ window.setTheme = function(mode) {
       <div class="why-cta-item">🧠 <span>Entiende el contexto antes de juzgar</span></div>
       <div class="why-cta-item">🗳️ <span>Vota con información, no solo con emoción</span></div>
     </div>
+  </div>
+</div>
+
+<!-- AVISO INDEPENDENCIA -->
+<div class="aviso-independiente">
+  <span class="av-icon">ℹ️</span>
+  <div>
+    <strong>Sitio independiente — no es una página oficial del Gobierno de Colombia.</strong>
+    Este informe fue elaborado por ciudadanos colombianos como ejercicio cívico y educativo.
+    No tiene ninguna relación con el Gobierno Nacional, entidades estatales, partidos políticos ni candidatos.
+    No recibe financiación pública ni representa la posición oficial de ninguna institución.
   </div>
 </div>
 
@@ -5761,6 +5827,102 @@ window.setTheme = function(mode) {
     sobre los 6 deltas de cada indicador.
   </p>
 </section>
+
+<!-- ══ METODOLOGÍA RANKING ══ -->
+<div class="met-wrap">
+  <h2>📐 ¿Cómo se calcula el ranking?</h2>
+  <p style="font-size:10pt;color:var(--muted);margin-bottom:18px">El ranking <strong>no es una opinión</strong> — es el resultado de aplicar la misma fórmula matemática a todos los presidentes por igual. Aquí explicamos el proceso paso a paso, en lenguaje sencillo.</p>
+
+  <div class="met-steps">
+
+    <!-- PASO 1 -->
+    <div class="met-step">
+      <div class="met-step-num">1</div>
+      <div class="met-step-title">📊 Recolectamos los datos</div>
+      <div class="met-step-body">
+        Para cada presidente tomamos 30+ indicadores en 5 categorías:
+        <ul style="margin:8px 0 0 16px;line-height:1.8">
+          <li><strong>Seguridad:</strong> homicidios, masacres, secuestros…</li>
+          <li><strong>Economía:</strong> PIB, inflación, desempleo…</li>
+          <li><strong>Social:</strong> pobreza, IDH, educación…</li>
+          <li><strong>Gobernabilidad:</strong> transparencia, justicia…</li>
+          <li><strong>Ambiente:</strong> coca, deforestación…</li>
+        </ul>
+      </div>
+      <div class="met-step-ex">
+        <strong>Ejemplo:</strong> Uribe recibió el país con 63.5 homicidios por cada 100.000 habitantes y lo entregó con 38.6.
+      </div>
+    </div>
+
+    <!-- PASO 2 -->
+    <div class="met-step">
+      <div class="met-step-num">2</div>
+      <div class="met-step-title">📉 Calculamos el cambio</div>
+      <div class="met-step-body">
+        No miramos el valor absoluto, sino <strong>cuánto mejoró o empeoró</strong> cada presidente respecto al gobierno que le antecedió. Así comparamos en igualdad de condiciones — a quien recibió un país en crisis y a quien recibió uno estable.
+      </div>
+      <div class="met-step-ex">
+        <strong>Ejemplo:</strong> Uribe bajó los homicidios en −24.9 puntos.<br>
+        Santos los bajó −11.1 puntos más.<br>
+        Ambas son mejoras, pero de diferente magnitud.
+      </div>
+    </div>
+
+    <!-- PASO 3 -->
+    <div class="met-step">
+      <div class="met-step-num">3</div>
+      <div class="met-step-title">📐 Convertimos a escala 0–100</div>
+      <div class="met-step-body">
+        Para poder sumar indicadores de diferente naturaleza (homicidios, PIB, pobreza…) los convertimos a una escala común del 0 al 100.<br><br>
+        <strong>100 puntos</strong> = el presidente que más mejoró ese indicador.<br>
+        <strong>0 puntos</strong> = el que más lo empeoró.<br>
+        Los demás quedan en el rango según su resultado.
+      </div>
+      <div class="met-step-ex">
+        <strong>Ejemplo:</strong> En homicidios, Uribe tuvo la mayor baja histórica → <strong>100 pts</strong>. Gaviria tuvo el peor aumento → <strong>0 pts</strong> (por eso es la base).
+      </div>
+    </div>
+
+    <!-- PASO 4 -->
+    <div class="met-step">
+      <div class="met-step-num">4</div>
+      <div class="met-step-title">🏆 Sumamos el puntaje final</div>
+      <div class="met-step-body">
+        Se suman los puntajes de <strong>todos los indicadores</strong>. El presidente con mayor suma total encabeza el ranking. No hay indicadores "más importantes" — todos pesan igual.
+      </div>
+      <div class="met-step-ex">
+        <strong>Resultado:</strong> Si un presidente mejoró mucho en seguridad pero empeoró en economía, ambas cosas se reflejan en la suma final. No hay forma de ocultar los fracasos.
+      </div>
+    </div>
+
+  </div><!-- /met-steps -->
+
+  <div class="met-formula">
+    <div class="mf-title">FÓRMULA DE NORMALIZACIÓN (min-max)</div>
+    <div class="mf-eq">Puntaje = (delta − peor_delta) ÷ (mejor_delta − peor_delta) × 100</div>
+    <div style="font-size:8.5pt;color:#93b4e8;margin-top:6px">donde <em>delta</em> = valor al final del mandato − valor al inicio del mandato (heredado del presidente anterior)</div>
+  </div>
+
+  <div class="met-aclarations">
+    <div class="met-acl">
+      <strong>¿Por qué Gaviria no aparece en el ranking?</strong>
+      Es el primer presidente del período (1990–1994) y no tiene antecesor con quien comparar en este informe. Sus valores sirven como punto de partida para medir a Samper.
+    </div>
+    <div class="met-acl">
+      <strong>¿El ranking es definitivo?</strong>
+      No. Es una aproximación cuantitativa con los datos disponibles. Factores externos (guerras, pandemias, precios del petróleo) afectan los indicadores sin que sea culpa directa del presidente. El análisis cualitativo de cada sección complementa el número.
+    </div>
+    <div class="met-acl">
+      <strong>¿Qué significa un puntaje alto?</strong>
+      Que ese presidente, en promedio, mejoró más indicadores (o los empeoró menos) que sus colegas. No es un juicio moral — es una medición de resultados.
+    </div>
+    <div class="met-acl">
+      <strong>¿Las fuentes son confiables?</strong>
+      Todos los datos provienen de entidades como DANE, BanRep, INMLCF, UNODC, INDEPAZ y Banco Mundial. Cada cifra tiene su fuente citada. Los datos contradictorios entre fuentes se marcan con ⚠️ ALERTA.
+    </div>
+  </div>
+
+</div><!-- /met-wrap -->
 
 <section id="ranking-section">
   <h2 class="rk-title">🏆 Clasificación General</h2>
