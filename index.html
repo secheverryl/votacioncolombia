@@ -367,6 +367,24 @@
     .chart-blk-amb { background:rgba(100,190,220,.14); color:#7dd3fc; border-color:rgba(100,190,220,.3); }
     .chart-blk-hint { color:rgba(148,163,184,.5); margin-left:6px; }
     .chart-footnote { font-size:8pt !important; color:rgba(148,163,184,.5) !important; margin-top:10px !important; }
+    /* ── FULLSCREEN BUTTON ── */
+    .chart-fs-btn {
+      position:absolute; top:8px; right:8px; z-index:10;
+      background:rgba(0,0,0,.38); color:#fff; border:none; border-radius:6px;
+      padding:5px 9px; font-size:17px; line-height:1; cursor:pointer;
+      backdrop-filter:blur(4px); transition:background .15s;
+    }
+    .chart-fs-btn:hover { background:rgba(0,0,0,.62); }
+    /* fullscreen state — cross-browser */
+    #grafico-comparativo:fullscreen,
+    #grafico-comparativo:-webkit-full-screen {
+      background:var(--bg) !important; padding:16px !important;
+      display:flex !important; flex-direction:column !important; overflow:hidden !important;
+    }
+    #grafico-comparativo:fullscreen #chart-canvas-wrap,
+    #grafico-comparativo:-webkit-full-screen #chart-canvas-wrap {
+      flex:1 !important; height:auto !important;
+    }
     #ranking-section h2 { color:var(--text) !important; border-bottom-color:var(--accent) !important; }
     #ranking-section p  { color:var(--muted) !important; }
     /* override ranking table cells */
@@ -5669,8 +5687,9 @@ window.setTheme = function(mode) {
   <div id="chart-tooltip-fixed" style="display:none;position:fixed;background:rgba(20,30,60,0.96);color:#fff;padding:10px 14px;border-radius:8px;font-size:8.5pt;pointer-events:none;z-index:9999;max-width:280px;line-height:1.5;box-shadow:0 4px 18px rgba(0,0,0,0.4)"></div>
 
   <!-- Canvas -->
-  <div style="position:relative;width:100%;height:520px">
+  <div id="chart-canvas-wrap" style="position:relative;width:100%;height:520px">
     <canvas id="presChart"></canvas>
+    <button class="chart-fs-btn" id="chart-fs-btn" onclick="toggleChartFullscreen()" title="Ver pantalla completa">⛶</button>
   </div>
 
   <!-- Bloque legend -->
@@ -6012,6 +6031,45 @@ window.setTheme = function(mode) {
     buildLegend();
     refreshChart();
   };
+
+  /* ---- FULLSCREEN ---- */
+  window.toggleChartFullscreen = function() {
+    var section = document.getElementById('grafico-comparativo');
+    var btn     = document.getElementById('chart-fs-btn');
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+      var req = section.requestFullscreen || section.webkitRequestFullscreen;
+      if (req) {
+        req.call(section).then(function() {
+          if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock('landscape').catch(function(){});
+          }
+          if (btn) btn.textContent = '✕';
+          setTimeout(function(){ if (window.chart) window.chart.resize(); }, 120);
+        }).catch(function(){});
+      }
+    } else {
+      var ex = document.exitFullscreen || document.webkitExitFullscreen;
+      if (ex) ex.call(document);
+    }
+  };
+  document.addEventListener('fullscreenchange', function() {
+    var btn = document.getElementById('chart-fs-btn');
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+      if (screen.orientation && screen.orientation.unlock) screen.orientation.unlock();
+      if (btn) btn.textContent = '⛶';
+      setTimeout(function(){ if (window.chart) window.chart.resize(); }, 120);
+    }
+  });
+  document.addEventListener('webkitfullscreenchange', function() {
+    var btn = document.getElementById('chart-fs-btn');
+    if (!document.webkitFullscreenElement) {
+      if (btn) btn.textContent = '⛶';
+      setTimeout(function(){ if (window.chart) window.chart.resize(); }, 120);
+    } else {
+      if (btn) btn.textContent = '✕';
+      setTimeout(function(){ if (window.chart) window.chart.resize(); }, 120);
+    }
+  });
 
   buildLegend();
   document.getElementById('presChart').addEventListener('mouseleave', function() {
