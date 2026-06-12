@@ -376,14 +376,10 @@
     }
     .chart-fs-btn:hover { background:rgba(0,0,0,.62); }
     /* fullscreen state — cross-browser */
-    #grafico-comparativo:fullscreen,
-    #grafico-comparativo:-webkit-full-screen {
-      background:var(--bg) !important; padding:16px !important;
-      display:flex !important; flex-direction:column !important; overflow:hidden !important;
-    }
-    #grafico-comparativo:fullscreen #chart-canvas-wrap,
-    #grafico-comparativo:-webkit-full-screen #chart-canvas-wrap {
-      flex:1 !important; height:auto !important;
+    #chart-canvas-wrap:fullscreen,
+    #chart-canvas-wrap:-webkit-full-screen {
+      background:var(--bg) !important;
+      width:100vw !important; height:100vh !important;
     }
     #ranking-section h2 { color:var(--text) !important; border-bottom-color:var(--accent) !important; }
     #ranking-section p  { color:var(--muted) !important; }
@@ -6034,7 +6030,7 @@ window.setTheme = function(mode) {
 
   /* ---- FULLSCREEN ---- */
   window.toggleChartFullscreen = function() {
-    var section = document.getElementById('grafico-comparativo');
+    var section = document.getElementById('chart-canvas-wrap');
     var btn     = document.getElementById('chart-fs-btn');
     if (!document.fullscreenElement && !document.webkitFullscreenElement) {
       var req = section.requestFullscreen || section.webkitRequestFullscreen;
