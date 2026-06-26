@@ -50,6 +50,31 @@
     }
     .print-btn:hover { background: #1345ba; }
 
+    /* ── RANKING BUTTON ── */
+    .ranking-btn {
+      position: fixed;
+      top: 64px;
+      right: 24px;
+      z-index: 999;
+      background: #fff;
+      color: #0d2252;
+      border: 2px solid #0d2252;
+      padding: 10px 22px;
+      font-size: 13px;
+      font-family: sans-serif;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(0,0,0,.18);
+      transition: background .15s, color .15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    .ranking-btn:hover { background: #0d2252; color: #fff; }
+
     /* ── COVER ── */
     .cover {
       text-align: center;
@@ -5674,7 +5699,7 @@ window.setTheme = function(mode) {
   </p>
 </section>
 
-<section style="max-width:900px;margin:32px auto 0;padding:0 12px">
+<section id="ranking-section" style="max-width:900px;margin:32px auto 0;padding:0 12px">
   <h2 style="font-size:13pt;font-weight:700;color:#1a2a4a;border-bottom:2px solid #3b5bdb;padding-bottom:6px;margin-bottom:16px">
     Clasificación General — Suma de Puntuaciones (0–100 por indicador)
   </h2>
